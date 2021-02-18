@@ -3,7 +3,7 @@ This is the batch repository for the remote Fullstack Java and Microservices Rev
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
 ### Most Recent Slides can be found [here](https://docs.google.com/presentation/d/1Mfb745mCnQUEu-dqElkItbeV-aQLqLMbP0cHSIPPWLE/edit?usp=sharing)
-### Most Recent QC/Interview Guide can be found [here]
+### Most Recent QC/Interview Guide can be found [here](https://github.com/210222-reston-java-msa/demos/tree/main/week1)
 
 ### Environment Setup Guide can be found [here](https://github.com/sophiagavrila/environment-setup).
 ---
