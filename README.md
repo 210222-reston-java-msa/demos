@@ -28,3 +28,5 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 4:00    |         |         |           |          |            |
 5:00    |         |         |           |          |            | 
 6:00    |         |         |           |          |            |
+
+:heavy_check_mark: = Lunch
