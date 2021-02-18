@@ -24,7 +24,7 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :--------|---------|---------|-----------|----------|------------|
 10:00    |   :pencil2:      |         |           |          |            |
 11:00    |   :speech_balloon:      |         |           |          |            |
-12:45    |  | :pizza:        |           |          |            |
+12:45    | :speech_balloon: | :pizza:        |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
 2:00    |   :speech_balloon:      |         |  :pizza:          |          |   :question:         |
 3:00    |   :speech_balloon:      |         |           |          |            |
