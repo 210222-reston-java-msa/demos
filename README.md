@@ -10,15 +10,15 @@ Here you will find all of the notes from class aslong with study-guides, project
 
 ## Weekly Schedule:
 * Class starts 10:00am EST M-F, ends at 6:00pm M-Th, 3pm on Friday
-* Mondays will be our 1-on-1 Interview days - you will have a 10-15 minute interview with Sophia.  If you're not interviewing, you'll be working on your projects or studying for QC. QC's are often held on Mondays (or Tuesdays).
+* **Mondays** will be our 1-on-1 Interview days - you will have a 10-15 minute interview with Sophia.  If you're not interviewing, you'll be working on your projects or studying for QC. QC's are often held on Mondays as well (or Tuesdays).
+* Every **Monday at 10:00am EST** we will begin class with a quiz :pencil2: which will last for 1 hour.  We reconvene and begin the new content for that week at 11am.
+  > The Monday quizes serve as a review for all of the material covered in the week prior.
 
 * 1 hour lunch breaks are scheduled as follows:
   - **Mondays**: 12:45pm - 2pm EST
   - **Tuesday, Thursday**: 1pm - 2pm EST
   - **Wednesday**: 1pm - 3pm EST
-
-* Every **Monday at 10:00am EST** we will begin class with a quiz :pencil2: which will last for 1 hour.  We reconvene and begin the new content for that week at 11am.
-  > The Monday quizes serve as a review for all of the material covered in the week prior.
+ 
 
 Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :--------|---------|---------|-----------|----------|------------|
@@ -34,3 +34,5 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 
 :pizza: = Lunch <br>
 :pencil2: = Quiz
+:speech_balloon: = 1-on-1 Interviews
+`blank space` = lecture & demos
