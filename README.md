@@ -26,13 +26,14 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 11:00    |   :speech_balloon:      |         |           |          |            |
 12:45    |:pizza:  |         |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
-2:00    |   :speech_balloon:      |         |  :pizza:          |          |            |
+2:00    |   :speech_balloon:      |         |  :pizza:          |          |   :question:         |
 3:00    |   :speech_balloon:      |         |           |          |            |
 4:00    |  :speech_balloon:       |         |           |          |            |
-5:00    |  :speech_balloon:       |         |           |          |            | 
-6:00    |    :speech_balloon:     |         |           |          |            |
+5:00    |  :speech_balloon:       | :question:        |    :question:       |    :question:      |          | 
+6:00    |        |         |           |          |            |
 
 :pizza: = Lunch <br>
 :pencil2: = Quiz <br>
 :speech_balloon: = 1-on-1 Interviews <br>
+:question: = Office Hours <br>
 `blank space` = lecture & demos
