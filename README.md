@@ -21,12 +21,12 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :--------|---------|---------|-----------|----------|------------|
 10:00    |         |         |           |          |            |
 11:00    |         |         |           |          |            |
-12:45    |:heavy_check_mark:  |         |           |          |            |
-1:00    | :heavy_check_mark:  |  :heavy_check_mark:       |  :heavy_check_mark:         |    :heavy_check_mark:      |     :heavy_check_mark:       |
-2:00    |         |         |  :heavy_check_mark:           |          |            |
+12:45    |:pizza:  |         |           |          |            |
+1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
+2:00    |         |         |  :pizza:          |          |            |
 3:00    |         |         |           |          |            |
 4:00    |         |         |           |          |            |
 5:00    |         |         |           |          |            | 
 6:00    |         |         |           |          |            |
 
-:heavy_check_mark: = Lunch
+:pizza: = Lunch
