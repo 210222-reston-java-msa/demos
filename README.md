@@ -33,6 +33,6 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 6:00    |    :speech_balloon:     |         |           |          |            |
 
 :pizza: = Lunch <br>
-:pencil2: = Quiz
-:speech_balloon: = 1-on-1 Interviews
+:pencil2: = Quiz <br>
+:speech_balloon: = 1-on-1 Interviews <br>
 `blank space` = lecture & demos
