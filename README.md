@@ -23,14 +23,14 @@ Here you will find all of the notes from class aslong with study-guides, project
 Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :--------|---------|---------|-----------|----------|------------|
 10:00    |   :pencil2:      |         |           |          |            |
-11:00    |         |         |           |          |            |
+11:00    |   :speech_balloon:      |         |           |          |            |
 12:45    |:pizza:  |         |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
-2:00    |         |         |  :pizza:          |          |            |
-3:00    |         |         |           |          |            |
-4:00    |         |         |           |          |            |
-5:00    |         |         |           |          |            | 
-6:00    |         |         |           |          |            |
+2:00    |   :speech_balloon:      |         |  :pizza:          |          |            |
+3:00    |   :speech_balloon:      |         |           |          |            |
+4:00    |  :speech_balloon:       |         |           |          |            |
+5:00    |  :speech_balloon:       |         |           |          |            | 
+6:00    |    :speech_balloon:     |         |           |          |            |
 
 :pizza: = Lunch <br>
 :pencil2: = Quiz
