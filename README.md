@@ -32,5 +32,5 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 5:00    |         |         |           |          |            | 
 6:00    |         |         |           |          |            |
 
-:pizza: = Lunch
+:pizza: = Lunch <br>
 :pencil2: = Quiz
