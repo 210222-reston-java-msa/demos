@@ -17,9 +17,12 @@ Here you will find all of the notes from class aslong with study-guides, project
   - **Tuesday, Thursday**: 1pm - 2pm EST
   - **Wednesday**: 1pm - 3pm EST
 
+* Every **Monday at 10:00am EST** we will begin class with a quiz :pencil2: which will last for 1 hour.  We reconvene and begin the new content for that week at 11am.
+  > The Monday quizes serve as a review for all of the material covered in the week prior.
+
 Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :--------|---------|---------|-----------|----------|------------|
-10:00    |         |         |           |          |            |
+10:00    |   :pencil2:      |         |           |          |            |
 11:00    |         |         |           |          |            |
 12:45    |:pizza:  |         |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
@@ -30,3 +33,4 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 6:00    |         |         |           |          |            |
 
 :pizza: = Lunch
+:pencil2: = Quiz
