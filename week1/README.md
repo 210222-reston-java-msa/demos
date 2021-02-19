@@ -4,9 +4,10 @@
 *These are the general topics that you should look into.  Refer to our class notes or Google for continued study*
 
 - **HTML 5**
-  - Markup Language
+  - Markup Language (not a programming language!)
+  - HyperText Markup Language (HTML) is the standard markup language for creating web pages. HTML describes the **structure** of a web page.
   - DOCTYPE declaration:
-    - All HTML documents must start with a <!DOCTYPE> declaration. The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
+    - All HTML documents must start with a `<!DOCTYPE>` declaration. The declaration is ***not*** an HTML tag. It is an "information" to the browser about what document type to expect.
   - Miscellaneous tags - *list some*
     - `<a href>`, `<p>`, `<div>` vs `<span>`, `<script>`, `<head>`, etc...
   - Forms
