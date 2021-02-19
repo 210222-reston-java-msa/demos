@@ -1,3 +1,5 @@
+> Check out this [JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)!
+
 # Overview of HTML/CSS/JavaScript
 *These are the general topics that you should look into.  Refer to our class notes or Google for continued study*
 
