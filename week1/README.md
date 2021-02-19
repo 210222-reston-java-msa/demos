@@ -70,7 +70,7 @@
 
 19.  Explain how inheritance works in JS
 
-20.  What does the "this" keyword refer to?
+20.  What does the `this` keyword refer to?
 
 21.  Explain the concept of lexical scope
 
