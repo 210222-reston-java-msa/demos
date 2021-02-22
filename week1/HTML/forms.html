@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics: Forms</title>
+</head>
+<body>
+
+    <main>
+
+        <form action="http://www.example.com" method="GET">
+
+            <fieldset>
+                <legend>Your Details</legend>
+
+                <label>
+                    Name:
+                    <input type="text" name="username" maxLength="50" required/>
+                </label>
+                <br/><br/>
+                <label>
+                    Email:
+                    <input type="text" name="user-email"
+                    maxLength="255" size="30"
+                    placeholder="Enter your email address"
+                    />
+                </label>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Your Review</legend>
+
+                <p>
+                    <label for="hear-about">How did you hear about us?</label>
+                    <select name="referred" id="hear-about">
+                        <option value="">Please make a selection</option>
+                        <option value="google">Google</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="friend">Friend</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    Would you visit us again?
+                    <br />
+                    <label>
+                        Yes
+                        <input type="radio" name="will-return" value="yes"/>
+                    </label>
+                    <label>
+                        No
+                        <input type="radio" name="will-return" value="no"/>
+                    </label>
+                    <label>
+                        Maybe
+                        <input type="radio" name="will-return" value="maybe"/>
+                    </label>
+                </p>
+
+                <label>
+                    Please provide any additional comments: <br />
+                    <textarea name="comments" cols="30" rows="10"></textarea>
+                </label>
+
+                <br/><br/>
+
+                <label>
+                    Sign me up for email updates!
+                    <input type="checkbox" name="subscribe" checked="checked"/>
+                </label>
+
+            </fieldset>
+
+            <br />
+
+            <input type="submit" value="Submit Review"/>
+
+        </form>
+
+    </main>
+    
+</body>
+</html>
