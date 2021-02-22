@@ -1,0 +1,13 @@
+2021-02-01 14:48:03 INFO  LoggingDriver:33 - PROGRAM START!
+2021-02-01 14:52:37 INFO  LoggingDriver:33 - PROGRAM START!
+2021-02-01 14:57:13 INFO  LoggingDriver:33 - PROGRAM START!
+2021-02-01 15:03:12 INFO  LoggingDriver:33 - PROGRAM START!
+2021-02-01 15:03:12 INFO  LoggingDriver:38 - Computation successful!
+2021-02-01 15:03:12 INFO  LoggingDriver:46 - PROGRAM END!
+2021-02-01 15:03:31 INFO  LoggingDriver:33 - PROGRAM START!
+2021-02-01 15:03:31 WARN  LoggingDriver:42 - WARNING: Division by zero not successful
+2021-02-01 15:03:31 INFO  LoggingDriver:46 - PROGRAM END!
+2021-02-01 16:29:32 INFO  LoggingDriver:35 - PROGRAM START!
+2021-02-01 16:29:32 INFO  LoggingDriver:39 - Cactus created successfulCactus [height=0.0, waterStored=0.0, color=null, flowers=[]]
+2021-02-01 16:29:32 WARN  LoggingDriver:50 - WARNING: Division by zero not successful
+2021-02-01 16:29:32 INFO  LoggingDriver:54 - PROGRAM END!
