@@ -10,9 +10,6 @@ In this assignment, you'll build a professional portfolio site using HTML/CSS. T
 
 * This will be one of your harder assignments, if only because you're just getting your feet wet in web design. Trust us, though; it will get easier. Invest your time in this assignment, and it will pay dividends!
 
-### Submission on BCS
-
-* Please submit the link to the Github Repository!
 
 ### Instructions
 
