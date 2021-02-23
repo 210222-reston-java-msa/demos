@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics: Tables</title>
+    <style></style> <!-- This would be internal styling -->
+</head>
+<body>
+
+    <!-- 
+        HTML Table Tags
+
+        <table>
+            <thead>
+            <tbody>
+                <tr>
+                <th>
+                <td>
+    -->
+    
+    <main>
+        <h1>Transactions</h1>
+        <!-- Here I want to build a table showing all transactions featuring a column for Date, Description, Amount, Balance -->
+
+        <!-- Technically we should NOT manipulate styling inline, but it is certainly possible,
+        with the style attribute.  Typically we would use internal styling or external styling -->
+        <table style="border: solid 1px black; background-color: bisque;">
+
+            <!-- 4 columns, defined in our table head -->
+            <thead>
+                <tr> <!--This is one row-->
+                    <th width="150">Date</th>
+                    <th>Description</th>
+                    <th  width="100">Amount</th>
+                    <th  width="100">Balance</th>
+                </tr>
+            </thead>
+            <!-- 2 records = 2 rows-->
+            <tbody>
+                <tr>
+                    <!-- Here we'll enter the info corresponding to each column-->
+                    <td>02/22/2021</td>
+                    <td>OCA Reimbursement</td>
+                    <td>$250.00</td>
+                    <td>$470.00</td>
+                </tr>
+                <tr>
+                    <td>01/14/2021</td>
+                    <td>Gas</td>
+                    <td>$40.00</td>
+                    <td>$225.00</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+    </main>
+
+</body>
+</html>
