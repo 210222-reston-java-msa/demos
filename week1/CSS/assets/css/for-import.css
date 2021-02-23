@@ -1,0 +1,12 @@
+body {
+    background-color: silver;
+    color: white;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    background-color: #fff;
+    color: rgb(170, 170, 170);
+    padding: inherit;
+}
