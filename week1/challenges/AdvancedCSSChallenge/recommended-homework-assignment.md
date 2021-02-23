@@ -78,7 +78,7 @@ In this assignment, you'll build a professional portfolio site using HTML/CSS. T
 
 3. Profile Image Found on `index.html`:
    * Use a picture of yourself.
-   * If you don't have a picture, you can grab a placeholder image from [LoremPixel](http://lorempixel.com/). Save the images to your `images` folder.
+   * If you don't have a picture, you can grab a placeholder image from [LoremFlickr](https://loremflickr.com/). Save the images to your `images` folder.
 
 4. Portfolio Images:
    * Placeholder images can be found at [LoremFlickr](https://loremflickr.com/).
@@ -126,6 +126,6 @@ Attempt to complete homework assignment as described in instructions. If unable 
 
 ### One More Thing
 
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you!
 
 **Good Luck!**
