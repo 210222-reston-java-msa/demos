@@ -1,4 +1,4 @@
-# Recommended Assignment - That Portfolio Though
+# Recommended Assignment - Personal Portfolio
 
 ## Overview
 
