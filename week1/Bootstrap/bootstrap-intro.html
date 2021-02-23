@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Bootstrap</title>
+
+    <!-- In head we will link to Bootstrap styling through the use of CDN-->
+
+    <!-- When using bootstrap in your projects please use version 4.x -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+        /* We can add some of our own custom styles */
+        .jumbotron {
+            background-color: bisque!important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- What is BootStrap?
+    
+            Bootstrap is a free front-end framework for faster and easier web development. It includes HTML and 
+            CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels,
+            and many other components/features. Additionally, it has optional JavaScript, Popper.js, and jQuery
+            libraries that can be leveraged to increase the dynamic behavior of our web pages.
+
+            One of the main benefits of using Bootstrap is its ability to facilitate the creation of responsive
+            webpages. Responsiveness refers to the webpage's ability to maintain proper layout even when viewed
+            on various screen sizes and resolutions. This is accomplished by the application of the Boostrap
+            Grid System (12 columns).
+
+
+        What is Bootstrap CDN? 
+
+            BootstrapCDN is a public content delivery network. Users of Bootstrap can load CSS and JavaScript 
+            libraries remotely from a global network of servers. This way users can fetch the data with low 
+            latency, regardless of their geographic location.
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- let's include a jumbottron!-->
+
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to
+                featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+
+        <div class="container">
+        <!-- Let's create a row of 3 columns -->
+        <div class="row">
+            <!-- Bootstrap's framework automatically provides the formatting properties for these classes...-->
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores obcaecati illum ut! Distinctio,
+                    blanditiis animi dolorum nostrum consequuntur consequatur reiciendis? Sint tempore repudiandae a
+                    necessitatibus et exercitationem accusantium asperiores eaque!
+                </p>
+                <a class="btn btn-secondary" href="https://www.google.com/" target="_blank">View Details</a>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, deleniti dignissimos. Nostrum
+                    iure voluptate similique amet esse culpa ipsum neque unde officiis eligendi, adipisci voluptas
+                    laboriosam laudantium modi quia facilis?
+                </p>
+                <a class="btn btn-secondary" href="https://www.example.com" target="_blank">View Details</a>
+
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores earum impedit mollitia,
+                    distinctio corporis praesentium amet totam ratione vel dolor maxime commodi minima quae enim laborum
+                    et ducimus ad? Consequatur.
+                </p>
+                <a class="btn btn-secondary" href="https://www.example.com" target="_blank">View Details</a>
+
+            </div>
+        </div>
+
+    </div>
+    <br>
+
+    <footer class="container">
+        <p>&copy; Company 2017-2021</p>
+    </footer>
+</body>
+
+</html>
