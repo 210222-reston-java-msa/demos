@@ -10,8 +10,15 @@
     - string
     - null
     - undefined 
+
+    REFERENCE DATATYPES:
+    - functions
+    - objects
+        - arrays
 */
 
+// let and const ... are other ways to declare variables 
+// variables declared with car are automatically global
 var num = 5 // number
 num = "hola"; // we just reassigned it to a string without any problem
 
