@@ -5,7 +5,7 @@
 
     2. Functional Scope -- variables declared within a function's block {}
 
-    **3. Lexical/Block scoping -- introduces in 2015 by ES6\
+    **3. Lexical/Block scoping -- introduces in 2015 by ES6
 */
 
 function funScope() {

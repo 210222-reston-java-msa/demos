@@ -16,7 +16,8 @@ let templateLiteral = ``;
 // We can use the backtick character to declare what are
 // called template literals. It is effectively a string, however
 // it supports string interpolation.
-// This means we can insert placeholders for variables
+
+// String Interpolation means that we can insert placeholders for variables
 // and the template literal will use the value of the variable
 // when used.
 
