@@ -54,8 +54,8 @@
             var element = items[i];
 
             // 4. add eventlistener to the element captured
-            element.addEventListener("click", doSomething); // if you do not include a 3rd param, the event propagation LISTENER is set to BUBBLING (false)
-            // element.addEventListener("click", doSomething, false); 
+            element.addEventListener("click", doSomething, true); // if you do not include a 3rd param, the event propagation LISTENER is set to BUBBLING (false)
+            element.addEventListener("click", doSomething, false); 
 
 
             /*

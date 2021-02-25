@@ -41,11 +41,6 @@ var objLiteral = {
     lastName: 'smith'
 }
 
-// var secondObj = {
-//     "firstName" : "bob",
-//     "lastName" : "smith"
-// };
-
 // There are several ways to access the same value
 console.log(objLiteral["firstName"]); // output should be 'bob'
 console.log(objLiteral.firstName);  // this is more typical than the ["key's string value"]
