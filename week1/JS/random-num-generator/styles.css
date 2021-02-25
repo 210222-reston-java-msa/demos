@@ -1,0 +1,9 @@
+.container {
+    padding-top: 80px;
+}
+
+.display {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
