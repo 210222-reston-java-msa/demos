@@ -1,0 +1,79 @@
+<!--
+    Event propagation: describes wat will happen in the even of more than one EVENT LISTENER being triggered at the same time
+
+    2 diff types:
+    capturing: on the way down from the root element to te targe (outermost - innermost)
+
+    bubbling: on the way up to the root element which is the DEFAULt (innermost to outermost)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body id="theBody" class="item">
+
+    <div id="one_a" class="item">
+
+        <div id="two" class="item">
+
+            <div id="three_a" class="item">
+
+                <button id="buttonOne" class="item">one</button>
+
+            </div>
+            <div id="three_b" class="item">
+
+                <button id="buttonTwo" class="item">two</button>
+
+                <button id="buttonThree" class="item">three</button>
+
+            </div>
+        </div>
+    </div>
+    <div id="one_b" class="item">
+
+    </div>
+
+    <script>
+        // We will put our event listeneer script in here
+        // 1. put all of our items (node elements from our DOM) into an array called items
+        var items = document.querySelectorAll(".item") // this is a list of 8 items (nodes on our  DOM with the class of "item")
+
+        // document is the object built into js which represents the html doc
+
+        // try document.getElementsByClassName("item") -- this works too
+
+        // 2. create a for loop and iterate over our list of elements
+        for(let i=0; i<items.length; i++) {
+            // 3. capture the element retrieved
+            var element = items[i];
+
+            // 4. add eventlistener to the element captured
+            element.addEventListener("click", doSomething); // if you do not include a 3rd param, the event propagation LISTENER is set to BUBBLING (false)
+            // element.addEventListener("click", doSomething, false); 
+
+
+            /*
+                If the 3rd arg is set to "true" -- 
+                it means you want to listen to the event in the CAPTURING phase
+
+                If the 3rd arg is set to "false" (or not set at all) -- 
+                it means you want to listen to the event in the BUBBLING phase
+                This is default
+            */
+        }
+
+        function doSomething(e) {
+                console.log(e.currentTarget.id);
+                // this is how we extract its ID;
+        }
+
+
+    </script>
+</body>
+</html>

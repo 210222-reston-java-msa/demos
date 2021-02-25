@@ -27,6 +27,7 @@ function Computer(compName, ramSizeGb, cpuCores, cpuSpeedGhz) {
     // notice there is no return statment!
 };
 
+// new creates an empty object and assigns it the properties AND values
 var myComputer = new Computer("MyPC", 4, 4, 4.2);
 myComputer.printSpecs();
 
@@ -43,6 +44,7 @@ myComputer.printSpecs();
 // this is not typical
 function ComputerReWrite(compName, ramSizeGb, cpuCores, cpuSpeedGhz) {
 
+    // this is what the new keyword does
     var obj = {};
 
     obj.compName = compName;
@@ -125,16 +127,17 @@ Laptop.prototype = computerCopy; // set Laptop's prototype == to computerCopy (h
 
 // look into Mozilla's method for parasitic combo inheritance.
 var myLaptop2 = new Laptop('MyLaptop2', 4, 4, 3.0, 5);
-myLaptop2.printSpecs();
 
 // we need to overwrite the printSpecs() for laptop....
-Laptop.prototype.printSpecs() = function() {
+Laptop.prototype.printSpecs = function() {
     console.log(`This computer is named ${this.compName}.  It has ${this.ramSizeGb} GB RAM, and
     a ${this.cpuCores}-core ${this.cpuSpeedGhz} GHz processor.  OH and the weight is ${this.weight}`)
 }
 
 
 //we overWROTE not overrode....
+
+myLaptop2.printSpecs();
 
 
 
