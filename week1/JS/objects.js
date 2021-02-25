@@ -43,7 +43,7 @@ class Person{
         this.favFood = favFood;
     }
 
-    // this is a method (specific to an object)
+    // this is a method (function specific to an object)
     sayHello() {
         console.log(`Hello, my name is ${this.firstName}`)
     }
