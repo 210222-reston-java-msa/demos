@@ -6,7 +6,7 @@ We would say that a value coerced into true = truthy and value coerced into fals
 
 /*
     There are only a couple falsey values, and everything else is truthy.
-The falsey values are:
+    The falsey values are:
     - 0
     - null,
     - empty string,
@@ -15,7 +15,7 @@ The falsey values are:
     - undefined
 
 
-    !! (double bang operator) returns a variables truthy value. !! is it truthy?
+    !! (double bang operator) returns a variables truthy value. !! asks the question: "is it truthy?""
 */
 
 function checkTruthy(input) {
