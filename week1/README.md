@@ -94,8 +94,8 @@
 29.  What are event listeners? What are some events we can listen for? What are some different ways of setting event listeners?
 
 30.  What are some methods on the event object and what do they do?
-
+<br><br>
 <div align="center"><strong>Remember to harness the power of Google as you study.</strong></div>
 
-[![Image from Gyazo](https://i.gyazo.com/067549d67e91a451ad38e2fef1c02493.gif)](https://gyazo.com/067549d67e91a451ad38e2fef1c02493)
+[![Image from Gyazo](https://i.gyazo.com/bcde9cbc8b8b67bf3a4cefde4d069ba9.gif)](https://gyazo.com/bcde9cbc8b8b67bf3a4cefde4d069ba9)
 
