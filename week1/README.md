@@ -1,4 +1,5 @@
 > Check out this [JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)!
+> Don't forget to check out the guide on [**How To Do Well In QC**](https://github.com/210222-reston-java-msa/demos/blob/main/how-to-do-well-in-qc.md)
 
 # Week 1: HTML/CSS/JavaScript
 *These are the general topics that you should look into.  Refer to our class notes or Google for continued study*
