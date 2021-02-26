@@ -1,26 +1,87 @@
-> Check out this [JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)!
+> Check out this [JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)!<br>
+> Don't forget to check out the guide on [**How To Do Well In QC**](https://github.com/210222-reston-java-msa/demos/blob/main/how-to-do-well-in-qc.md)
 
 # Week 1: HTML/CSS/JavaScript
-*These are the general topics that you should look into.  Refer to our class notes or Google for continued study*
+*These are the general topics that you should look into.  Refer to our class notes or [Google](https://www.google.com/) for continued study*
 
-- **HTML 5**
-  - Markup Language (not a programming language!)
-  - HyperText Markup Language (HTML) is the standard markup language for creating web pages. HTML describes the **structure** of a web page.
-  - DOCTYPE declaration:
-    - All HTML documents must start with a `<!DOCTYPE>` declaration. The declaration is ***not*** an HTML tag. It is an "information" to the browser about what document type to expect.
-  - Miscellaneous tags - *list some*
-    - `<a href>`, `<p>`, `<div>` vs `<span>`, `<script>`, `<head>`, etc...
-  - Forms
+## HTML-CSS QC Questions 
 
-- **CSS - Cascading Style Sheets**
-  - Ways to include CSS
-    - Inline styling
-    - External styling
-    - Internal styling
-  - Different Selectors - *list some*
-  - Bootstrap (current version is 4)
-    - Mobile-first responsive CSS-framework
+1. What is HTML
+    + HTML stands for Hypertext Markup Language and consists of various tags to describe the content of a document - utilized as the basis for all web pages, along with CSS and JavaScript
+  
+2. What is the structure of an HTML document? List some tags. What is `<head>` used for? `<body>`?
+    + Start with the doctype declaration, then `<html>`, then `<head>` and `<body>`. The head contains the metadata for the page, while the body contains the content that is rendered to the screen. Other tags: div, span, p, ul, ol, li, strong, em, table
+  
+3. What is a doctype?
+    + First tag in the document - defines what type of file it is - whether html 4 or 5, etc
 
+4. What is the tag for an ordered list? Unordered list?
+    + ordered list: ol, unordered list: ul. Both use li - list items
+    
+5. What are some HTML5 tags? Why were HTML5 tags introduced?
+    + HTML5 introduced semantic tags to more accurately reflect the content of the tags. Examples: `<strong>` instead of `<b>`, `<em>` instead of `<i>`, `<nav>`, `<header>`, `<footer>`, `<section>`, `<article>`, and `<aside>` instead of reusing `<div>` tags everywhere
+
+6. Do all tags come in a pair? What are the other things inside tags called? list some.
+    + No - tags either have a closing tag or are self-closing (`<tag />`). Attributes are contained within tags - examples: id, class, style, height, width, etc
+
+7. What is the syntax for a comment in HTML?
+    + `<!-- comments go in here -->`
+
+8. Give me the HTML markup for a table.
+```html
+<table>
+  <caption>optional</caption>
+  <thead>
+    <tr>
+     <td>Heading 1</td><td>Heading 2</td>
+   </tr>
+  </thead>
+   <tr>
+    <td>Cell 1</td><td>Cell 2</td>
+   </tr>
+  <tbody>
+  </tbody>
+</table>
+```
+
+9. What are some tags you would use in a form?
+    + Form tags: `<form>`, `<input>`, `<label>`, `<textarea>`, `<button>`, `<select>`, `<option>`
+
+10. What is CSS? what are the different ways of styling an HTML file? Which is best? why?
+    + CSS stands for Cascading Style Sheets - it is a language for styling HTML documents by specifying certain rules for layout and display in key/value pairs. There are 3 ways of styling an HTML file:
+    + (1) inline - in the `style` attribute
+    + (2) internal stylesheet - in the `<style>` tag in the `<head>`
+    + (3) external stylesheet - using external `.css` file, use `<link>` in the `<head>`
+    + External stylesheet is best practice due to separation of concerns, reusability, modularity
+
+11. Describe the CSS box model.
+    + The box model consists of margin (outermost box), then border, then padding, then content (innermost). All box sizes / formatting can be styled with CSS
+
+12. Which way has highest priority when styles cascade: inline, internal, and external.
+    + Inline has highest priority, then internal/external depending on order. Cascading rules are determined by (1) importance (`!important` flag), (2) specificity of selector   (inline has no selector, highest specificity), then (3) source order.
+
+13. Syntax for styling an element? What is a class and how to style them? What is an id? how to style? difference?
+```css
+div { property: value}
+.class { property: value}
+#id { property: value}
+```
+
+14. What if I want to select child elements, What syntax is that?
+    + use direct descendant selector (`>`) or space for any level nested element
+
+15. Can I select multiple elements at once? How?
+    + yes, with a comma
+
+16. What is a psuedo-class? What is syntax for selecting that?
+    + psuedo-class selects an element in a certain state - for example, when hovered over. Use colon (`:psuedoselector`) syntax
+
+17. What is Bootstrap?
+    + Bootstrap is a CSS framework with pre-written CSS rules to easily style your page and incorporate responsive design seamlessly. Contains various utilities and components for making a great UI
+
+18. Describe the Bootstrap grid system
+    + The Bootstrap grid is divided into 12 columns. You wrap the columns in a `.row` which is in a `.container` or `.container-flex`. The columns are responsive - there are classes for different screen sizes which collapse on smaller windows
+<br><br>
 ## JavaScript Language Fundamentals
 
 1.  What is JavaScript? What do we use it for?
@@ -31,7 +92,7 @@
     > JavaScript is a prototype-based, multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
 
 4.  What are the data types in JS?
-    - What is the type of NaN? What is the isNaN function?
+    - What is the datatype of `NaN`? What is the `isNaN` function?
     - What is the data type of a function?
     - What about an array?
     - What is the difference between undefined and null?
@@ -93,3 +154,8 @@
 29.  What are event listeners? What are some events we can listen for? What are some different ways of setting event listeners?
 
 30.  What are some methods on the event object and what do they do?
+<br><br>
+<div align="center"><strong>Remember to harness the power of Google as you study.</strong></div>
+
+[![Image from Gyazo](https://i.gyazo.com/bcde9cbc8b8b67bf3a4cefde4d069ba9.gif)](https://gyazo.com/bcde9cbc8b8b67bf3a4cefde4d069ba9)
+
