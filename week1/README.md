@@ -92,7 +92,7 @@ div { property: value}
     > JavaScript is a prototype-based, multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
 
 4.  What are the data types in JS?
-    - What is the type of NaN? What is the isNaN function?
+    - What is the datatype of `NaN`? What is the `isNaN` function?
     - What is the data type of a function?
     - What about an array?
     - What is the difference between undefined and null?
