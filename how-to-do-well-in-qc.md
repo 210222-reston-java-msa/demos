@@ -2,7 +2,7 @@
 Performing well in technical interviews, including QC, requires confidently answering both high-level conceptual questions on specific technologies as well as low-level details about how you’ve worked with them.
 <br>
 <br>
-For example, as a developer you’ve most likely worked with git before. A common interview question to test your proficiency might be “Tell me about your experience working with git”. How would you answer this? Take a minute to think about it and then consider the sample responses below. Which answer would impress you more as an interviewer? Which one demonstrates an understanding and proficiency with the tool better?
+For example, as a developer you’ve most likely worked with git before. A common interview question to test your proficiency might be **“Tell me about your experience working with git”.** How would you answer this? Take a minute to think about it and then consider the sample responses below. Which answer would impress you more as an interviewer? Which one demonstrates an understanding and proficiency with the tool better?
 
 ## Response 1
 *“Well, **uh**, for git **uh** I think I’ve used it on a few projects for pushing code… it’s really **helpful, pretty easy** to work with, it lets me **keep track** of **stuff going on** in the project and **work with other** people well.”*
