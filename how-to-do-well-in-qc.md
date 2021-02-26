@@ -1,4 +1,4 @@
-# How to Do Well in QC Sessions
+# How to Do Well in QC Sessions :pencil2:
 Performing well in technical interviews, including QC, requires confidently answering both high-level conceptual questions on specific technologies as well as low-level details about how you’ve worked with them.
 <br>
 <br>
@@ -39,4 +39,4 @@ The exercise below should help you improve your answers in QC, one-on-ones, pane
 7. Find a partner (a roommate or batchmate or your trainer). Practice saying your answers out loud and gather feedback from your partner. Make final revisions to your answers.
 8. Record yourself practicing your answer and watch the video to notice any problems you need to correct
 
-If you do this every week, at the end of training you will have a complete set of answers to each language, framework, and major concept you’ve covered. You can use these to improve the bullet points and written sections in your portfolio as well as prepare for the final, cumulative QC session.
+If you do this every week, at the end of training you will have a complete set of answers to each language, framework, and major concept you’ve covered. You can use these to improve the bullet points and written sections in your portfolio as well as prepare for the final, cumulative QC session. :shipit:
