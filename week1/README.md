@@ -2,9 +2,9 @@
 > Don't forget to check out the guide on [**How To Do Well In QC**](https://github.com/210222-reston-java-msa/demos/blob/main/how-to-do-well-in-qc.md)
 
 # Week 1: HTML/CSS/JavaScript
-*These are the general topics that you should look into.  Refer to our class notes or [Google](google.com) for continued study*
+*These are the general topics that you should look into.  Refer to our class notes or [Google](https://www.google.com/) for continued study*
 
-# HTML-CSS QC Questions 
+## HTML-CSS QC Questions 
 
 1. What is HTML
     + HTML stands for Hypertext Markup Language and consists of various tags to describe the content of a document - utilized as the basis for all web pages, along with CSS and JavaScript
@@ -81,7 +81,7 @@ div { property: value}
 
 18. Describe the Bootstrap grid system
     + The Bootstrap grid is divided into 12 columns. You wrap the columns in a `.row` which is in a `.container` or `.container-flex`. The columns are responsive - there are classes for different screen sizes which collapse on smaller windows
-
+<br><br>
 ## JavaScript Language Fundamentals
 
 1.  What is JavaScript? What do we use it for?
