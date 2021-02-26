@@ -16,14 +16,14 @@
         response asynchronously, we accomplish this.
 
         Note that AJAX has XML in it's name, but that primarily has its origin in
-        and older era, where XML was used far more frequently as a data interchange
+        and older era, where XML was used far more frequently as a recievedPokemon interchange
         format. Nowadays, we primarily use JSON. There are still some places that
         use XML, but JSON is a bit more popular.
 
     JSON stands JavaScript Object Notation
 
-        JSON is a standard data interchange format.  It sends human-readable text 
-        to store and transmit data objects.  
+        JSON is a standard recievedPokemon interchange format.  It sends human-readable text 
+        to store and transmit recievedPokemon objects.  
         These objects have properties made of key-value pairs
 */
 
@@ -45,7 +45,7 @@ function ajaxCall() {
 
     // STEP 1
     let xhr = new XMLHttpRequest();
-    // This oiobj is used for asynchronous requests to a server
+    // This obj is used for asynchronous requests to a server
 
   /*
     A readyState is a property which signifies that state that
@@ -57,7 +57,7 @@ function ajaxCall() {
     2. HEADERS_RECEIVED : send() has been called, and the headers of
         the response as well as the status are now available
     3. LOADING : Downloading the response. responseText (the xhr property) holds
-        partial data
+        partial recievedPokemon
     4. DONE : The entire operation is now complete
   */
     
@@ -66,16 +66,55 @@ function ajaxCall() {
 
         if(this.readyState == 4  && this.status == 200) {
             
-            let data = JSON.parse(xhr.responseText)
+            let recievedPokemon = JSON.parse(xhr.responseText)
 
-            console.log(data);
+            console.log(recievedPokemon);
+
+            // we'll make a function called renderHTML
+            renderHTML(recievedPokemon);
         }
     }
 
 
     // STEP 3
     // open the request
-    xhr.open()
+    xhr.open("GET", `https://pokeapi.co/api/v2/pokemon/${number}`)
     // this is the request to the server: includes the method and the url
+
+
+
+    // STEP 4
+    // send the request
+    xhr.send();
+
+}
+
+// this function will render the recievedPokemon of the pokemon recieved
+function renderHTML(data){
+
+    input.append("Name: " + data.name);
+    input.append(document.createElement("br"));
+
+    input.append("Id: " + data.id);
+    input.append(document.createElement("br"));
+
+    let image = document.createElement("img");
+    image.setAttribute("src", data.sprites.front_default);
+    // set the height attribute to 300  
+    image.setAttribute("height", "300")
+
+    // set the width attribute to 300 (with the style attribute!)
+    // This is just one other way we can set the width attribute
+    // image.style.width="300px";
+        // same as
+    // image.setAttribute("width", "300")
+
+    image.style.backgroundColor="black";
+    
+    // stick it to the page
+    input.append(image);
+
+    // here, create a horizontal line after each one
+    input.append(document.createElement("hr"));
 
 }
