@@ -1,5 +1,27 @@
 /*
-    JSON = JavaScript Object Notation
+    AJAX stands for Asynchronous JavaScript And XML
+
+        It allows for performing javascript actions asynchronously.
+        Generally used in conjunction with http requests, as we can wait
+        for the response in the background while still doing other things.
+
+        One of the biggest advantages of JS is the responsiveness it provides
+        to our webpages. We can easily respond to events on our frontend and manipulate
+        the DOM using basic JS functions.
+
+        But the magic JS does not end there. We can use JS to make asynchronous
+        requests to servers. We do this with AJAX.
+        We want our application to continue to be responsive, while waiting
+        for the server to respond. By sending the request and receiving the
+        response asynchronously, we accomplish this.
+
+        Note that AJAX has XML in it's name, but that primarily has its origin in
+        and older era, where XML was used far more frequently as a data interchange
+        format. Nowadays, we primarily use JSON. There are still some places that
+        use XML, but JSON is a bit more popular.
+
+    JSON stands JavaScript Object Notation
+
         JSON is a standard data interchange format.  It sends human-readable text 
         to store and transmit data objects.  
         These objects have properties made of key-value pairs
@@ -9,7 +31,8 @@ let button = document.getElementById("btn");
 // add an event Listener to our button ("click", ajaxCall)
 button.addEventListener("click", ajaxCall);
 
-// capture the p tag
+// Capture the <p> tag
+// We will APPEND the Name and Id of the pokemon here
 let input = document.getElementById("input")
 
 
