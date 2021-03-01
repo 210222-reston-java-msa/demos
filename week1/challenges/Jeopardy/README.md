@@ -10,6 +10,6 @@ The code in the respective files <code>jeopardy.html</code> and <code>jeopardy.j
 <br>
 You may ask *Well how am I learning anything by copying code?*.  To that I reply, see if you can truly understand what's going on in the code, then stylize it.
 
-#### Strech Goal
+### Strech Goals
 - Modify the JavaScript file to make an HTTP request with the <code>Fetch</code> API, *instead* of using the <code>XMLHttpRequest</code> Object.
 - Implement Bootstrap 
