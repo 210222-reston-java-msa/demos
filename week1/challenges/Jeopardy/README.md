@@ -12,4 +12,4 @@ You may ask *Well how am I learning anything by copying code?*.  To that I reply
 
 #### Strech Goal
 - Modify the JavaScript file to make an HTTP request with the `Fetch` API, *instead* of using the `XMLHttpRequest` Object.
-- Implement Bootstrap
+- Implement Bootstrap 
