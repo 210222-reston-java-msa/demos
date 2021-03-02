@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+// gson
+import com.revature.model.SuperVillain;
+
 public class DirectServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -46,6 +50,23 @@ public class DirectServlet extends HttpServlet{
 		out.println("<html><body><h1>The Servlet is talking directly to the client!</h1></body></html>");
 		
 		log.info("We're inside the directServlet doGet() method");
+		
+	}
+	
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+		
+		// the object that I send back will correspond to an object that I've defined a CLASS for in my java app.
+		res.setContentType("application/json");
+		
+		// 1. create a supervillain
+		SuperVillain sheev = new SuperVillain("Sheev Palpatine", "Evilness", 250000);
+		
+		// 2. send this supervillain as a JSON object to the browser
+		// this will return the json object as the HTTP response;
+		res.getWriter().write(new ObjectMapper().writeValueAsString(sheev));
+		
+		log.info("we're in the post method");
 		
 		
 	}
