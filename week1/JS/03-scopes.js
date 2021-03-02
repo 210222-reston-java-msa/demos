@@ -52,10 +52,10 @@ function blockScope(){
         //console.log(d) // the variable is only accessible within this scope
     }
 
-    //console.log(d); // we cannot access d "dog" because it is confined to the lexical/block
+    console.log(d); // we cannot access d "dog" because it is confined to the lexical/block
     console.log(c) // c is fine because it's in the same scope
 }
 
 blockScope();
 
-// console.log(m); // this won't work because m is declared within the functional scope.
+console.log(m); // this won't work because m is declared within the functional scope.
