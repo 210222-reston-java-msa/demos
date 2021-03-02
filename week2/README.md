@@ -1,5 +1,6 @@
 # Week 2: Servlets & HTTP
-*The following is an overview of the topics to be covered in Week 2. You will be asked to answer the questions at the bottom in QC and your 1-on-1's with me.*
+*The following is an overview of the topics to be covered in Week 2.* <br>
+*You will be asked to answer the questions at the **bottom** in QC and your 1-on-1's with me.*
 
 ## HTTP:
 - Hyper Text Transfer Protocol
@@ -169,7 +170,7 @@
   - No other servlet can access another's config
 - The ServletContext is shared across all servlets
 
-## Servlet QC Questions
+# Servlet QC Questions
 
 1.  What is a servlet? What about a servlet container? Which servlet container have you worked with?
 
