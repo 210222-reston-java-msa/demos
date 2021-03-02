@@ -18,7 +18,7 @@ public class DirectServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Logger log = Logger.getLogger(DirectServlet.class);
+	private static Logger log = Logger.getLogger(DirectServlet.class);
 
 	
 	/*
@@ -48,12 +48,12 @@ public class DirectServlet extends HttpServlet{
 		// ctrl + shift + o will import all the things!
 		PrintWriter out = res.getWriter();
 		out.println("<html><body><h1>The Servlet is talking directly to the client!</h1></body></html>");
-		
+
 		log.info("We're inside the directServlet doGet() method");
 		
 	}
 	
-	
+	// We hit this method with a POST request from Postman at the http"//localhost:8080/HelloServlets/dirserv
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		
 		// the object that I send back will correspond to an object that I've defined a CLASS for in my java app.

@@ -1,0 +1,2 @@
+2021-03-02 16:03:18 INFO  Tester:11 - test test test
+2021-03-02 16:49:18 INFO  Tester:11 - test test 4:49pm which should be shown
