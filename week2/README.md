@@ -2,7 +2,7 @@
 *The following is an overview of the topics to be covered in Week 2.* <br>
 *You will be asked to answer the questions at the **bottom** in QC and your 1-on-1's with me.*
 
-## HTTP:
+## HTTP Study Guide:
 - Hyper Text Transfer Protocol
 
 - Primary networking protocol used for client-server communication
@@ -80,7 +80,9 @@
 - *Describe the difference between **2 Tier**, **3 Tier**, **n-Tier** architecture*
 
 <hr>
-## Servlet Study Guide
+
+
+# Servlet Study Guide
 *You are expected to know the following topics*:
 
 - **Servlet Inheritance Hierarchy**
