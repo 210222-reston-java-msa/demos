@@ -1,4 +1,7 @@
-# Demo: Configuring and Connecting to an Amazon RDS Oracle Engine from DBeaver
+# Demo: Configuring and Connecting to an Amazon RDS Engine from DBeaver
+
+## IMPORTANT! Wherever you see the word <code>Oracle</code> please use <code>PostgreSQL</code>!
+
 Login to your [AWS account](https://aws.amazon.com/) first. If you haven't created an AWS account yet, go ahead and create one [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start), and then follow the steps below:
 
 1. Upon logging in, navigate to the *RDS Dashboard* by searching `RDS` and clicking the first result. Click **Create database**.
