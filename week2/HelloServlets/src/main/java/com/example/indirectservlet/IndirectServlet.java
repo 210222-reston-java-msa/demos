@@ -24,6 +24,8 @@ public class IndirectServlet extends HttpServlet {
 		/*
 		 *  there is a method on the response object called sendRedirect()
 		 *  this allows us to redirect the user to another resource
+		 *  
+		 *  -- When you use sendRedirect, a new request is created 
 		 */
 		
 		// redirect to an external page
@@ -40,16 +42,33 @@ public class IndirectServlet extends HttpServlet {
 		
 	}
 
+	 /* Here is a list of major differences between servlet forward and sendRedirect:
+	 * 
+	 * Forward:
+	 * 
+	 * The request will be further processed on the server side 
+	 * The client isn't impacted by forward, 
+	 * URL in a browser stays the same 
+	 * Request and response objects will remain the same object after forwarding. 
+	 * Request-scope objects will be still available 
+	 * 
+	 * 
+	 * sendRedirect:
+	 * 
+	 * The request is redirected to a different resource 
+	 * The client will see the URL
+	 * change after the redirect 
+	 * A new request is created 
+	 * Redirect is normally used  within Post/Redirect/Get web development pattern
+	 */
 	
-	
-	
-	/*
-	 *  Request Dispatcher is an interface whose implementation 
-	 *  defines an object which can dispatch the request to any resources on the server.
-	 *  
-	*/	
+		
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		/*
+		 *  Request Dispatcher is an interface whose implementation 
+		 *  defines an object which can dispatch the request to any resources on the server.
+		*/
 		
 		// redirect to an html page
 		//RequestDispatcher rdis = request.getRequestDispatcher("resources/html/somepage.html");
