@@ -22,7 +22,18 @@ public class Employee {
 		this.username = username;
 		this.password = password;
 	}
+	
+	// also possible to create an employee with id set to 0 and will not cause problems.
 
+	// the DB creates the ID for them.
+	public Employee(String firstName, String lastName, String username, String password) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.password = password;
+	}
+	
 
 	public int getId() {
 		return id;
