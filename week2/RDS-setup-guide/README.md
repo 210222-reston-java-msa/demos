@@ -1,4 +1,5 @@
 # How to Configure and Connect to an Amazon RDS Engine from DBeaver
+Want to learn more about **what** and AWS RDS is? Go [here](https://github.com/210222-reston-java-msa/demos/blob/main/week2/RDS-setup-guide/rds-overview.md)
 
 ## IMPORTANT! Wherever you see the word <code>Oracle</code> please use <code>PostgreSQL</code>!
 
