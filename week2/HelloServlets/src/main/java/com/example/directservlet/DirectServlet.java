@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.example.model.SuperVillain;
 import com.fasterxml.jackson.databind.ObjectMapper;
-// gson
-import com.revature.model.SuperVillain;
 
 public class DirectServlet extends HttpServlet{
 
@@ -58,6 +57,9 @@ public class DirectServlet extends HttpServlet{
 		
 		// the object that I send back will correspond to an object that I've defined a CLASS for in my java app.
 		res.setContentType("application/json");
+		
+		// IF this is causing you problems, the setContentType can also be 
+//		res.setContentType("text/javascript");
 		
 		// 1. create a supervillain
 		SuperVillain sheev = new SuperVillain("Sheev Palpatine", "Evilness", 250000);

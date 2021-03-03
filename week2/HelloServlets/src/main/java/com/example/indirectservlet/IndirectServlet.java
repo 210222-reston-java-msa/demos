@@ -42,8 +42,7 @@ public class IndirectServlet extends HttpServlet {
 		
 	}
 
-	 /* Here is a list of major differences between servlet forward and sendRedirect:
-	 * 
+	 /* Here is a list of major differences between servlet forward and
 	 * Forward:
 	 * 
 	 * The request will be further processed on the server side 
@@ -71,10 +70,11 @@ public class IndirectServlet extends HttpServlet {
 		*/
 		
 		// redirect to an html page
-		//RequestDispatcher rdis = request.getRequestDispatcher("resources/html/somepage.html");
+		RequestDispatcher rdis = request.getRequestDispatcher("resources/html/somepage.html");
 		
 		// redirect to another servlet
-		RequestDispatcher rdis = request.getRequestDispatcher("/dirserv");
+		//RequestDispatcher rdis = request.getRequestDispatcher("/dirserv");
+	
 		
 		
 		rdis.forward(request, response);

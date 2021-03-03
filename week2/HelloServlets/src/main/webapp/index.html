@@ -3,9 +3,62 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Welcome!!</title>
+
+
+<link rel="stylesheet" type="text/css" href="./resources/css/styles.css" />
+
 </head>
 <body>
-	<h1>Welcome to index.html</h1>
-	
+	<div class="supervillain-container">
+
+		<h1>Welcome to the Supervillain Servlets</h1>
+
+		<!--  notice that I don't use a slash in the action when I'm
+		specifying that I want to contact that particular servlet -->
+
+		<!-- We are making a GET request to the /dirserv Direct Servlet (check the 
+		url pattern in the web.xml -->
+		<form method="GET" action="dirserv">
+			<p>Direct Servlet, GET!</p>
+			<input type="submit" value="Direct text Response">
+		</form>
+
+		<form method="POST" action="dirserv">
+			<p>Direct Servlet, POST!</p>
+			<input type="submit" value="Direct JSON Response">
+		</form>
+
+		<!-- 1 form to hit the doGet() method in the indirect servlet -->
+		<form method="GET" action="indirserv">
+			<p>Indirect Servlet, GET!</p>
+			<input type="submit" value="Redirect Response">
+		</form>
+
+		<!-- 1 form to hit the doPost() method in the indirect servlet -->
+		<form method="POST" action="indirserv">
+			<p>Indirect Servlet, POST!</p>
+			<input type="submit" value="Forward Response">
+		</form>
+
+	<!--  3 more forms hitting our session servlets that are soon to be made -->
+		<form method="GET" action="sesserv">
+			<p>Session Servlet, GET!</p>
+			<input type="submit" value="Push Mud Man to Session">
+		</form>
+		
+		<form method="POST" action="sesserv">
+			<p>Session Servlet, POST!</p>
+			<input type="text" name="name" placeholder="Enter an evil name" /> <br />
+			<input type="text" name="superpower" placeholder="Enter an evil superpower" /> <br />
+			<!--  setting the type as number prevents letter characters -->
+			<input type="number" name="bounty" placeholder="Enter an evil bounty ($)" /> <br />
+			<!-- This is the button below -->
+			<input type="submit" value="Push a custom villain to session" /> <br />
+		</form>
+
+
+
+	</div>
+
 </body>
 </html>

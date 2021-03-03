@@ -4,7 +4,6 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>DirServ</servlet-name>
     <servlet-class>com.example.directservlet.DirectServlet</servlet-class>
@@ -14,7 +13,6 @@
     <url-pattern>/dirserv</url-pattern>
   </servlet-mapping>
   
-  
   <servlet>
     <servlet-name>IndirectServlet</servlet-name>
     <servlet-class>com.example.indirectservlet.IndirectServlet</servlet-class>
@@ -23,5 +21,30 @@
     <servlet-name>IndirectServlet</servlet-name>
     <url-pattern>/indirserv</url-pattern>
   </servlet-mapping>
+  
+  <!--  Session Servlet -->
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>com.example.sessionservlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <!-- I like to cusotmize my url patterns you should too! -->
+    <url-pattern>/sesserv</url-pattern>
+  </servlet-mapping>
+  
+    <!--  Helper Session Servlet -->
+  <servlet>
+    <servlet-name>HelperSessionServlet</servlet-name>
+    <servlet-class>com.example.sessionservlet.HelperSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelperSessionServlet</servlet-name>
+        <!-- I like to cusotmize my url patterns -you should too! -->
+    <url-pattern>/helpersesserv</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
 </web-app>

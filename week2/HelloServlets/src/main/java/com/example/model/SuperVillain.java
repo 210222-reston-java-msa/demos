@@ -1,4 +1,4 @@
-package com.revature.model;
+package com.example.model;
 // POJO = plain old java object
 // model = a class which makes a bluepriont for an ibject in order to hold data
 public class SuperVillain {
