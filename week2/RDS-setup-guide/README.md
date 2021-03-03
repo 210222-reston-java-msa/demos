@@ -1,7 +1,7 @@
-# How to Configure and Connect to an Amazon RDS Engine from DBeaver
+# How to Configure and Connect to an Amazon RDS Engine from DBeaver 	:computer:
 Want to learn more about **what** and AWS RDS is? Go [here](https://github.com/210222-reston-java-msa/demos/blob/main/week2/RDS-setup-guide/rds-overview.md)
 
-## IMPORTANT! Wherever you see the word <code>Oracle</code> please use <code>PostgreSQL</code>!
+## :exclamation: IMPORTANT Wherever you see the word <code>Oracle</code> please use <code>PostgreSQL</code> :exclamation:
 
 Login to your [AWS account](https://aws.amazon.com/) first. If you haven't created an AWS account yet, go ahead and create one [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start), and then follow the steps below:
 
