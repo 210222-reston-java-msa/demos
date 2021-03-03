@@ -1,4 +1,4 @@
-# Demo: Configuring and Connecting to an Amazon RDS Engine from DBeaver
+# How to Configure and Connect to an Amazon RDS Engine from DBeaver
 
 ## IMPORTANT! Wherever you see the word <code>Oracle</code> please use <code>PostgreSQL</code>!
 
