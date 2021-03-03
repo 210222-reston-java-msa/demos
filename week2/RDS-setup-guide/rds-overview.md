@@ -11,8 +11,6 @@ The following overview will cover:
 Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks.
 <br />
 <br />
-<img src="https://i.gyazo.com/409463ab28ac0631d997be25b3a57263.gif" alt="Image from Gyazo" style="text-align:center;" width="300"/>
-<br />
 
 * RDS **automates** expensive and time consuming tasks such as managing backups, software patching, automatic failure detection, and recovery.  
 
