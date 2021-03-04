@@ -43,3 +43,6 @@ org.postgresql.util.PSQLException: ERROR: relation "sophiag.employee" does not e
 2021-03-04 15:37:13 INFO  ConnectionUtil:46 - connection successful
 2021-03-04 15:37:13 INFO  ConnectionUtil:56 - connected to db
 2021-03-04 15:37:13 INFO  RequestHelper:117 - [Employee [id=1, firstName=Timmy, lastName=Maximoff, username=tmax, password=secret], Employee [id=2, firstName=testy, lastName=McTestface, username=test123, password=pt]]
+2021-03-04 16:00:05 INFO  ConnectionUtil:46 - connection successful
+2021-03-04 16:00:05 INFO  ConnectionUtil:56 - connected to db
+2021-03-04 16:00:05 INFO  RequestHelper:117 - [Employee [id=1, firstName=Timmy, lastName=Maximoff, username=tmax, password=secret], Employee [id=2, firstName=testy, lastName=McTestface, username=test123, password=pt]]
