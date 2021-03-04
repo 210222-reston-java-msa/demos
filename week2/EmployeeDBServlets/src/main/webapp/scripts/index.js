@@ -45,6 +45,6 @@ function sendLogin() {
     xhr.open("POST", "http://localhost:8080/EmployeeDBServlets/login")
 
     // 4. xhr.send();
-    xhr.send(JSON.stringify(loginTemplate))
+    xhr.send(JSON.stringify(loginTemplate)) // this is converting out js object to JSON
 
 }
