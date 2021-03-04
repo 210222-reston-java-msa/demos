@@ -81,6 +81,95 @@
 
 <hr>
 
+# Web Services (REST & SOAP) 
+A **web service** is a collection of open protocols and standards used for exchanging data between applications or systems.<br>
+A **web service** is any service that:
+- Is available over the Internet
+- Uses a standardized XML messaging system
+- Is not tied to any one operating system or programming language
+- Is self-describing via a common XML grammar
+- Is discoverable via a simple find mechanism
+
+## What is a RESTful Web Service?
+A RESTful Web Service is a lightweight, maintainable, and scalable service that is built on the REST architecture.
+* A RESTful Web Service will expose an API from your application in a secure, uniform, stateless manner to the calling client. 
+* The calling client can perform predefined operations using the RESTful service. 
+* The underlying protocol for REST is HTTP.
+
+## What is REST?
+* REST stands for **RE**presentational **S**tate **T**ransfer.
+* REST is a way to access resources which lie in a particular environment.
+* [Overview of REST](https://restfulapi.net/rest-architectural-constraints/)
+
+>  For example, you could have a server that could be hosting important documents or pictures or videos. All of these are an example of resources. If a client, say a web browser needs any of these resources, it has to send a request to the server to access these resources. Now REST services defines a way on how these resources can be accessed.
+
+### 6 REST Constraints (*know these and google what they mean!*)
+There are six architectural constraints which makes any web service are listed below:
+1. Uniform Interface
+2. Stateless
+3. Cacheable
+4. Client-Server
+5. Layered System
+6. Code on Demand (optional)
+
+## What is SOAP?
+- Simple Object Access Protocol: used to "expose" and "consume" webservices
+- XML-based web service protocol
+- Platform and language independent
+- Legacy protocol: most companies switching to RESTful web services
+- Can be used in conjunction with any transport-layer protocol (HTTP, SMTP, FTP, etc)
+  - When used with HTTP, POST requests are used
+  - HTTP must set that content type to XML
+- Uses a contract (WSDL)
+  - WSDL = Web service description language
+  - Contract first vs contract last development
+- Built-in security
+- SOAP message elements
+  - envelope - (mandatory) defines the start and end of a message
+  - header - (optional) specifies attributes)
+  - body - (mandatory) this is the XML data
+  - fault - (optional) describes error that may have occured
+ 
+ Resources for the differences:
+ - [UpWork Resource](https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles)
+ 
+ ```
+ <xml version=1.0>
+ <soap-env:Envelope xmlns=soap-env=”www.w3.org/2001/12/soap-envelope” soap-env:encodingStyle=”www.w3.org/2001/12/soap-encoding”>
+  <soap-env:Header>
+  </soap-env:Header>
+  <soap-env:Body>
+      <soap-env:Fault>
+      </soap-env:Fault>
+  </soap-env:Body>
+</soap-env:Envelope>
+```
+#### WSDL
+- Web Service Description Language
+- XML file that describes the service
+- "Contract" or "Endpoint"
+- WSDL elements are placed within the namespaces like this:
+  - `xmlns:xsd, xmlns:soap`
+- WSDL specifies ports, messaes, operations, services
+
+### SOAP Questions
+
+14.  What does the acronym SOAP stand for?
+15.  What protocols and data format do SOAP services use?
+16.  What is the “contract” for a SOAP service?
+17.  What’s the structure of a SOAP message?
+18.  What are the SOAP messaging modes? Messaging Exchange Patterns?
+19.  Are SOAP messages delivered with GET or POST requests?
+    
+### REST Questions
+
+20.  What does the acronym REST stand for? What makes a service “RESTful”?  
+21.  What protocols and data format do REST services use?  
+22.  What are the architectural constraints of REST?  
+23.  What is a “resource” in a REST service?  
+24.  What does the “uniform interface” constraint mean? Give an example of some RESTful endpoints you would create for an API. Should the URLs contain nouns, verbs, or adjectives?      
+
+<hr>
 
 # Servlet Study Guide
 *You are expected to know the following topics*:
