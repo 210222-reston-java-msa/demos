@@ -27,18 +27,35 @@
 	
 	// set up some logic....
 	// IF the user is null....redirect them to the index.html page ("http://localhost:8080/EmployeeDBServlets/")
-	
-	// OTHERWISE.....
-		// we parse the user string, and set the textContent of welcome to welcome + currentUser.something.....
+	if (userString === null) {
+		window.location = "http://localhost:8080/EmployeeDBServlets/";
+	} else {
+		
+		let currentUser = JSON.parse(userString); // parse the data that we se == to that attribute
+		
+		console.log(currentUser);
+		
+		if (currentUser != null) {
+			
+			welcome.innerHTML = "Welcome " + currentUser.firstName + " " + currentUser.lastName;
+			
+		}
+		
+	}
+
 	
 	function logout() {
 		
+		let xhr = new XMLHttpRequest();
 		
+		xhr.open("POST", "http://localhost:8080/EmployeeDBServlets/logout");
+		xhr.send();
+		
+		sessionStorage.removeItem('currentUser');
+		window.location = "http://localhost:8080/EmployeeDBServlets/";
 		
 	}
-	
-	
-	
+
 	</script>
 	
 </body>
