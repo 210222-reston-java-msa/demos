@@ -105,12 +105,12 @@ A RESTful Web Service is a lightweight, maintainable, and scalable service that 
 
 ### 6 REST Constraints (*know these and google what they mean!*)
 There are six architectural constraints which makes any web service are listed below:
-1. Uniform Interface
-2. Stateless
-3. Cacheable
-4. Client-Server
-5. Layered System
-6. Code on Demand (optional)
+:one: Uniform Interface
+:two: Stateless
+:three: Cacheable
+:four: Client-Server
+:five: Layered System
+:six: Code on Demand (optional)
 
 ## What is SOAP?
 - Simple Object Access Protocol: used to "expose" and "consume" webservices
