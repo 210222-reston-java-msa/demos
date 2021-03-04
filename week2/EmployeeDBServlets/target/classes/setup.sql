@@ -11,4 +11,4 @@ CREATE TABLE sophiag.employee (
 INSERT INTO sophiag.employee (first_name, last_name, username, pass_word) 
 	VALUES ('Timmy', 'Maximoff', 'tmax', 'secret');
 
-
+SELECT * FROM sophiag.employee;

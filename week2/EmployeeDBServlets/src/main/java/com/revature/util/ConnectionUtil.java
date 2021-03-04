@@ -8,8 +8,10 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+import com.revature.models.Employee;
+import com.revature.services.EmployeeService;
+
 public class ConnectionUtil {
-	
 	
 	// this is boilerplate code 
 	private static Logger log = Logger.getLogger(ConnectionUtil.class);
@@ -41,6 +43,7 @@ public class ConnectionUtil {
 			
 			try {
 				conn = DriverManager.getConnection(url, username, password);
+				log.info("connection successful");
 			} catch (SQLException e) {
 				log.warn("unable to obtain a connection to the database");
 			}
@@ -50,11 +53,9 @@ public class ConnectionUtil {
 			ex.printStackTrace();
 		}
 		
+		log.info("connected to db");
 		return conn;
 	}
-	
-
-	
 	
 
 }
