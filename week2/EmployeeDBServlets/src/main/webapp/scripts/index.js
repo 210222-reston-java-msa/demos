@@ -1,9 +1,9 @@
 function sendLogin() {
 	console.log("send login triggered");
     // save some variables here
-    let uName = document.getElementById('uName');
+    let uName = document.getElementById('uName').value;
     // do the same thing with pWord....
-    let pWord = document.getElementById('pWord');
+    let pWord = document.getElementById('pWord').value;
 
     console.log(`Username: ${uName}`);
     console.log(`Password: ${pWord}`);
