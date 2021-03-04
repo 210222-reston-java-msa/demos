@@ -153,7 +153,7 @@ There are six architectural constraints which makes any web service are listed b
   - `xmlns:xsd, xmlns:soap`
 - WSDL specifies ports, messaes, operations, services
 
-### SOAP Questions
+:interrobang: ### SOAP Questions
 
 14.  What does the acronym SOAP stand for?
 15.  What protocols and data format do SOAP services use?
@@ -162,7 +162,7 @@ There are six architectural constraints which makes any web service are listed b
 18.  What are the SOAP messaging modes? Messaging Exchange Patterns?
 19.  Are SOAP messages delivered with GET or POST requests?
     
-### REST Questions
+:interrobang: ### REST Questions
 
 20.  What does the acronym REST stand for? What makes a service “RESTful”?  
 21.  What protocols and data format do REST services use?  
@@ -262,7 +262,7 @@ There are six architectural constraints which makes any web service are listed b
   - No other servlet can access another's config
 - The ServletContext is shared across all servlets
 
-# Servlet QC Questions
+:interrobang: # Servlet QC Questions
 
 1.  What is a servlet? What about a servlet container? Which servlet container have you worked with?
 
