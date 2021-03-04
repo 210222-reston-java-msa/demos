@@ -1,4 +1,4 @@
-# Week 2: Servlets & HTTP
+# Week 2: Servlets, HTTP & REST
 *The following is an overview of the topics to be covered in Week 2.* <br>
 *You will be asked to answer the questions at the **bottom** in QC and your 1-on-1's with me.*
 
