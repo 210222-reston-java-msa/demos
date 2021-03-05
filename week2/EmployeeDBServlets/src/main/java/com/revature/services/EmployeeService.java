@@ -33,6 +33,9 @@ public class EmployeeService {
 		for (Employee e : all) { // filtering with an enhanced for-loop!
 			if (e.getUsername().equals(username)) {
 				return e; // we return the Employee object with a matching ID
+			} else {
+				continue;   // if username doesn't match the username prop of the Employee element
+							// then continue coninue the loop to the next element.
 			}
 		}
 		
