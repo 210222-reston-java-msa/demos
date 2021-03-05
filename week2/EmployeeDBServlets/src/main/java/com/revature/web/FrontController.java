@@ -29,6 +29,9 @@ public class FrontController extends HttpServlet {
 		case "employees":
 			RequestHelper.processEmployees(request, response);
 			break;
+		case "error":
+			RequestHelper.processError(request, response);
+			break;
 		} 
 		
 	}

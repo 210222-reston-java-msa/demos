@@ -8,6 +8,7 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
+
 	<servlet>
 		<servlet-name>FrontController</servlet-name>
 		<servlet-class>com.revature.web.FrontController</servlet-class>
@@ -17,7 +18,20 @@
 		<url-pattern>/login</url-pattern>
 		<url-pattern>/logout</url-pattern>
 		<url-pattern>/employees</url-pattern>
+		<url-pattern>/error</url-pattern>
 	</servlet-mapping>
 
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error</location>
+	</error-page>
 
+	<!-- <servlet>
+		<servlet-name>ErrorServlet</servlet-name>
+		<servlet-class>com.revature.web.ErrorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorServlet</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping> -->
 </web-app>
