@@ -206,8 +206,10 @@ private List<Employee> emps;
   - Strategies/Use cases:
     - Read_Only – good for app config, things that are never updated
     - Read_Write – for objects to be updated, only aware of changes through hibernate
+
 <hr>
-# 	:interrobang: Hibernate QC Questions
+
+# :interrobang: Hibernate QC Questions
 
 1.  What is Hibernate? What is JPA?
     
