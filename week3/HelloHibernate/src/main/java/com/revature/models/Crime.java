@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 // All these annotations are from the javax.persistence API
 
-@Entity // entity means a class that will be a table
-@Table(name="Crime") // here swe specify the table name
+@Entity // entity means a class that will be a table 
+@Table(name="Crime") // here we specify the table name
 public class Crime {
 	
 	@Id // this means that this column will be the Primary Key

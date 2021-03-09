@@ -40,6 +40,7 @@ public class SuperPrisonDao {
 		Session ses = HibernateUtil.getSession();
 		
 		// HQL -- Hibernate Query Language
+		// Anything marked with @Entity can be queried by HQL
 		List<SuperPrison> prisons = ses.createQuery("from SuperPrison", SuperPrison.class).list();
 		
 		return prisons;

@@ -20,7 +20,7 @@ import javax.persistence.Table;
  * relationships from the JPA
  */
 
-@Entity
+@Entity // we can use HQL to target this Object
 @Table(name="Super_Villain") // tables can be capitalized
 public class SuperVillain {
 
@@ -30,7 +30,7 @@ public class SuperVillain {
 	private int sVillId;
 	
 	@Column(name="name", unique = true, nullable=false)
-	private String name;
+	private String name; // HQL targets this
 	
 	@Column(name="superpower")
 	private String superPower;
@@ -40,7 +40,7 @@ public class SuperVillain {
 
 	// Many to Many relationship
 	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-	// a separate "virtual" joins table will be created in memory 
+	// a separate joins table will be created in memory 
 	private List<Crime> crimes;
 	// 2 ways to retireve data
 	

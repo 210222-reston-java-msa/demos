@@ -51,6 +51,12 @@ public class SuperPrison {
 		this.villList = villList;
 	}
 	
+	public SuperPrison(String spName, String location) {
+		super();
+		this.spName = spName;
+		this.location = location;
+	}
+	
 
 	public int getSpId() {
 		return spId;
