@@ -60,10 +60,6 @@ public class HibernateUtil {
 		
 		// By closing our session, you free up the connections from the conn pool
 		// so that it can be used by a new session.
-	}
-	
-	
-	
-	
+	}	
 
 }

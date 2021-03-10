@@ -2,6 +2,7 @@ package com.revature.models;
 
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +21,8 @@ import javax.persistence.Table;
  * relationships from the JPA
  */
 
+
+@Cacheable
 @Entity // we can use HQL to target this Object
 @Table(name="Super_Villain") // tables can be capitalized
 public class SuperVillain {
