@@ -1,0 +1,69 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- DTD stands for Document Type Definition -->
+
+<!-- What is XML? XML stands for eXtensible Markup Language it's a markup 
+	language that defines a set of rule for encoding documents that is both human 
+	and machine readable -->
+
+<!-- Here we are defining the Hibernate Configuration Class object which 
+	defines the the properties of the session needed to communicate with our 
+	DB -->
+
+<!-- The most important file in a Hibernate based app is the hibernate.cfg.xml 
+	file (must be spelled like that) It must be in your src/main/resources folder. -->
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- JDBC properties -->
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://database-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=sophiag</property>
+
+		<!-- Driver properties -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+
+		<!-- Connection Pool properties: (Default size of connections is 20 The 
+			connection pool is a method of speeding up DB calls. Every time Hibernate 
+			starts up, 20 connections are established to our DB This way, when a session 
+			is created (an operation against our DB), it is much faster than just plain 
+			JDBC -->
+		<property name="hibernate.connection.pool_size">10</property>
+
+		<!-- hbm2ddl.auto this is special property that exports schema DDL to the 
+			database when the SessionFactory is created. -->
+		<property name="hibernate.hbm2ddl.auto">validate</property>
+		<!-- CREATE, VALIDATE, UPDATE, NONE -->
+
+		<!-- CREATE: drops all existing tables and objects with the names provided 
+			in annotations, and then Hibernate will recreate the schema for us (CREATE 
+			isn't the best for production, but useful for development -->
+
+
+		<!-- UPDATE: hibernate will not delete anything, but only add to a schema 
+			if there are objects that haven't been included yet -->
+
+		<!-- VALIDATE: best for production. Checks to make sure that everything 
+			is as expected (all tables and objects are where they're supposed to be -->
+
+		<!-- NONE: hibernate will not do anything (no removals, no addition) -->
+
+		<!-- Class mapping occurs here: The order does not matter for how we list 
+			the classes to be mapped -->
+			
+			
+		<mapping class="com.revature.models.Crime" />
+		<mapping class="com.revature.models.SuperVillain" />
+		<mapping class="com.revature.models.SuperPrison" />
+
+
+	</session-factory>
+
+</hibernate-configuration>
