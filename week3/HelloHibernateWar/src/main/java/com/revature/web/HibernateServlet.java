@@ -63,7 +63,7 @@ public class HibernateServlet extends HttpServlet {
 		
 		response.setContentType("application/json");
 		
-		response.getWriter().write(new ObjectMapper().writeValueAsString(joker));
+		response.getWriter().write(new ObjectMapper().writeValueAsString(joker.toString()));
 		
 		
 //		PrintWriter pw = response.getWriter();
