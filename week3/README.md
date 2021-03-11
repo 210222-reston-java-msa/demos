@@ -1,4 +1,4 @@
-> *Scroll to the bottom to view QC questions marked with a :interrobang:.  These may not be asked until your final QC and in panels since you will NOT have QC next weel Monday March 15th. Your Project 1 presentations will take the place of QC.*
+> *Scroll to the bottom to view QC questions marked with a :interrobang:.  These may not be asked until your final QC and in panels since you will have QC next weel Monday March 15th.*
 # Hibernate
 The Hibernate framework is a ORM (Object-Relational Mapping) implementation which is built around JDBC.
 
