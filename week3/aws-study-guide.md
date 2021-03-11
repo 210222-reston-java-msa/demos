@@ -49,3 +49,14 @@ When first connecting, answer `yes` to the prompt asking to register the new ser
 Elastic Block Store (EBS) provides hard storage for EC2 instances, with various hardware options for desired performance and capacity. EC2 memory is volatile, so EBS offers a file storage option to back up any data on an EC2 instance. Furthermore, EBS volumes can be detached and reattached at will, and even cloned or attached to completely new instances.
 
 EBS volumes are formatted with a file system for compatibility with an EC2 instance's operating system.
+
+# Linux
+Linux is a popular choice for a cloud server. There are a variety of open-source distributions each with a large community of hobbyists and professionals supporting them. Unique development tools are widespread and simple to install, use, and maintain. And most distributions are very capable without the resource overhead of a graphical desktop user interface, making the system very lightweight.
+
+On a headless server (without a graphical interface), the most popular way to interact with a server is through a terminal interface. The most widespread is a shell known as Bash, the Borne Again Shell.
+
+## Shell
+A shell is a program that interprets user input. Emulating the look and feel of an old mainframe terminal interface, many shells like Bash provide their users access to several command-line interface (CLI) tools as well as useful conveniences such as auto-completion, a scripting language syntax, and I/O redirection.
+
+To use a CLI tool a user types the name of a program followed by any parameters or flags.
+
