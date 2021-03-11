@@ -1,4 +1,4 @@
-# AWS & Cloud Computing QC Questions
+# ⁉️ AWS & Cloud Computing QC Questions
 *The following are questions that you may be asked about Amazon Web Services and Cloud Computing Models.*
 
 1. What is cloud computing?
