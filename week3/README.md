@@ -2,8 +2,7 @@
 >   - Hibernate Studyguide ***below***
 >   - DevOps/Jenkins Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/devops-jenkins-study-guide.md)
 >   - AWS Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/aws-study-guide.md)
-
-> *Scroll to the bottom to view QC questions marked with a :interrobang:
+> *Scroll to the bottom to view QC questions marked with a* :interrobang:
 # Hibernate
 The Hibernate framework is a ORM (Object-Relational Mapping) implementation which is built around JDBC.
 
