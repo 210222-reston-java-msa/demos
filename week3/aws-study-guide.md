@@ -1,3 +1,21 @@
+# AWS & Cloud Computing QC Questions
+*The following are questions that you may be asked about Amazon Web Services and Cloud Computing Models.*
+
+1. What is cloud computing?
+2. What are the 3 models of cloud computing? *(Explain IaaS, PaaS, SaaS).*
+3. List 3 advantages of cloud computing over the traditional on-premises model.
+4. What is AWS?
+5. What is Amazon RDS?
+6. What types of RDBMS Vendors does Amazon RDS support?
+7. What are security groups?
+8. How do you connect to an Amazon RDS?
+9. What is Amazon EC2?
+10. What is EBS and how is it used in relation to an EC2?
+11. How does Amzon EC2 differ from Amazon RDS?
+12. Name 2 ways to connect to an Linux EC2 Instance. *Hint: Check out AWS documentation [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html).  We connected using **one** of these methods in class.*
+13. What is an AMI (Amazon Machine Image)? How is it used in relation to and EC2?
+
+
 # AWS Study Guide
 AWS (Amazon Web Services) is a PaaS (Platform as a Service) which offers many SaaS (Software as a Service) and IaaS (Infrastructure as a Service) IT solutions on the cloud (i.e. hosted remotely on their many server farms). Amazon offers many services at various price points and dominates the cloud IT market today.
 
