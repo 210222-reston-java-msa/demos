@@ -1,4 +1,4 @@
-> Here you can find all of the topics that may be asked of you in QC. 
+> Here you can find all of the topics that may be asked of you in QC on Monday March 15th 2pm.
 >   - Hibernate Studyguide ***below***
 >   - DevOps/Jenkins Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/devops-jenkins-study-guide.md)
 >   - AWS Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/aws-study-guide.md)
