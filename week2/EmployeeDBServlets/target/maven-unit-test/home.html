@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="jumbotron">
+		<h1 id="welcome">You are Logged in!</h1>
+		
+		<a class="btn btn success" onclick="logout()">Logout</a>
+		
+	</div>
+	
+	<script>
+		
+	// capture the welcome element and modofy it so that it says welcome + username
+	let welcome = document.getElementById('welcome');
+	
+	// capture the userString by accessing the session.....
+	let userString = sessionStorage.getItem('currentUser');
+	
+	// set up some logic....
+	// IF the user is null....redirect them to the index.html page ("http://localhost:8080/EmployeeDBServlets/")
+	if (userString === null) {
+		window.location = "http://localhost:8080/EmployeeDBServlets/";
+	} else {
+		
+		let currentUser = JSON.parse(userString); // parse the data that we se == to that attribute
+		
+		console.log(currentUser);
+		
+		if (currentUser != null) {
+			
+			welcome.innerHTML = "Welcome " + currentUser.firstName + " " + currentUser.lastName;
+			
+		}
+		
+	}
+
+	
+	function logout() {
+		
+		let xhr = new XMLHttpRequest();
+		
+		xhr.open("POST", "http://localhost:8080/EmployeeDBServlets/logout");
+		xhr.send();
+		
+		sessionStorage.removeItem('currentUser');
+		window.location = "http://localhost:8080/EmployeeDBServlets/";
+		
+	}
+
+	</script>
+	
+</body>
+</html>

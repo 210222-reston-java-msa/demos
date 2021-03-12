@@ -8,6 +8,7 @@ import com.revature.repositories.EmployeeDAOImpl;
 
 public class EmployeeService {
 	
+	// EmployeeService class DEPENDS on the the EmployeeDAOImpl
 	public static EmployeeDAO eDao = new EmployeeDAOImpl();
 	
 	
