@@ -10,6 +10,8 @@
 5. What is a DevOps pipeline? Explain the steps to setting one up
 
 6. What is a “build”? What is the end result of a build? What is the build tool you’ve used for Java projects?
+   - * A **build** refers to the process that converts files and other assets under the developers' responsibility into a software product in its final or consumable form. The build may include: compiling source files. packaging compiled files into compressed formats (such as jar, zip, war).
+
 
 7. What are the Maven lifecycles? List the steps in the build lifecycle:
    - The Maven build follows a specific life cycle to deploy and distribute the target project.
