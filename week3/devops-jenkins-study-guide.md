@@ -1,5 +1,6 @@
 # :interrobang: DevOps, Jenkins and CI/CD QC Questions 
 1. What is DevOps? What is the goal of various DevOps processes?
+   > DevOps is a set of practices that combines software development and IT operations. It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
 
 2. Explain CI/CD. (Continuous Integration/Continuous Delivery)
 
