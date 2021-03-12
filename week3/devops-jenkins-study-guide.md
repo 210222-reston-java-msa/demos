@@ -8,6 +8,11 @@
 4. What tools have you used to achieve CI/CD? Explain how you’ve setup and used them
 
 5. What is a DevOps pipeline? Explain the steps to setting one up
+   - A DevOps pipeline is a set of practices that the development (Dev) and operations (Ops) teams implement to build, test, and deploy software faster and easier. 
+   - One of the primary purposes of a pipeline is to keep the software development process organized and focused.
+
+   - **Steps in setting one up**:
+      - A good pipeline consists of an automation tool to assist in integrating the teams code (CI - Continuous Integration) building the code and testing it (Continuous Delivery), and deploying it to end users (Continuous Deployment).  Hmmm can you think of a **[buld automation server](https://www.google.com/search?q=what+is+jenkins&rlz=1C1GTPM_enUS922US922&oq=what+is+jenkins&aqs=chrome..69i57j0l2j69i59j0l2j69i60l2.1704j0j4&sourceid=chrome&ie=UTF-8)** that we've set up before?
 
 6. What is a “build”? What is the end result of a build? What is the build tool you’ve used for Java projects?
    - * A **build** refers to the process that converts files and other assets under the developers' responsibility into a software product in its final or consumable form. The build may include: compiling source files. packaging compiled files into compressed formats (such as jar, zip, war).
