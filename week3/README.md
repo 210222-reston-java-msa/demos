@@ -1,5 +1,61 @@
-> *Scroll to the bottom to view QC questions marked with a :interrobang:.  These may not be asked until your final QC and in panels since you will NOT have QC next weel Monday March 15th. Your Project 1 presentations will take the place of QC.*
-# Hibernate
+> Here you can find all of the topics that may be asked of you in QC on Monday March 15th 2pm.
+>   - Hibernate Studyguide ***below***
+>   - DevOps/Jenkins Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/devops-jenkins-study-guide.md)
+>   - AWS Questions & Study Guide [here](https://github.com/210222-reston-java-msa/demos/blob/main/week3/aws-study-guide.md)
+
+# :interrobang: Hibernate QC Questions
+
+1.  What is Hibernate? What is JPA?
+    
+2.  What is the benefit of using Hibernate over JDBC?
+    
+3.  Tell me about some of the JPA annotations you have worked with? What do they do? How do you specify multiplicity relationships with JPA annotations?
+    
+4.  What are the interfaces of Hibernate?
+    
+5.  Tell me how you set up hibernate? What files are you editing, what goes in them, etc.
+    
+6.  What ways are available to you to map an object to database entities in Hibernate?
+    
+7.  In the session interface, what is the difference between save and persist methods? get and load methods? Update vs merge methods?
+    
+8.  What are the different session methods?
+    
+9.  What is the difference between Eager and Lazy fetching and how to setup either?
+    
+10.  Under what circumstances would your program throw a LazyInitializationException?
+    
+11.  What are the 4 ways to make a query using Hibernate?
+    
+12.  What is HQL? What makes it different from SQL?
+    
+13.  What is the Criteria API? Can you perform all DDL and DML commands with it? How do Restrictions and Projections work within this API?
+    
+14.  What is caching? What is the difference between L1 and L2 cache?
+    
+15.  How do you enable second level caching?
+    
+16.  Tell me about NamedQueries.
+    
+17.  Can you write native SQL with Hibernate? Is this a good idea?
+    
+18.  What are the configuration options for Hibernate?
+    
+*  How to specify the SQL dialect?
+    
+*  What data must be specified for the SessionFactory?
+    
+*  What is hbm2ddl?
+    
+19.  How would you configure Hibernate to print to the console all SQL statements run?
+    
+20.  What are the different object states in Hibernate? What methods move objects to different states?
+    
+21.  What is a proxy? When does the proxy resolve to the real object?
+
+<hr>
+
+# Hibernate Study Guide
 The Hibernate framework is a ORM (Object-Relational Mapping) implementation which is built around JDBC.
 
 ORM refers to the long-standing problem of setting up a relationship between a program's objects and rows in a SQL table.
@@ -206,63 +262,3 @@ private List<Employee> emps;
   - Strategies/Use cases:
     - Read_Only – good for app config, things that are never updated
     - Read_Write – for objects to be updated, only aware of changes through hibernate
-
-<hr>
-
-# :interrobang: Hibernate QC Questions
-
-1.  What is Hibernate? What is JPA?
-    
-2.  What is the benefit of using Hibernate over JDBC?
-    
-3.  Tell me about some of the JPA annotations you have worked with? What do they do? How do you specify multiplicity relationships with JPA annotations?
-    
-4.  What are the interfaces of Hibernate?
-    
-5.  Tell me how you set up hibernate? What files are you editing, what goes in them, etc.
-    
-6.  What ways are available to you to map an object to database entities in Hibernate?
-    
-7.  In the session interface, what is the difference between save and persist methods? get and load methods? Update vs merge methods?
-    
-8.  What are the different session methods?
-    
-9.  What is the difference between Eager and Lazy fetching and how to setup either?
-    
-10.  Under what circumstances would your program throw a LazyInitializationException?
-    
-11.  What are the 4 ways to make a query using Hibernate?
-    
-12.  What is HQL? What makes it different from SQL?
-    
-13.  What is the Criteria API? Can you perform all DDL and DML commands with it? How do Restrictions and Projections work within this API?
-    
-14.  What is caching? What is the difference between L1 and L2 cache?
-    
-15.  How do you enable second level caching?
-    
-16.  Tell me about NamedQueries.
-    
-17.  Can you write native SQL with Hibernate? Is this a good idea?
-    
-18.  What are the configuration options for Hibernate?
-    
-*  How to specify the SQL dialect?
-    
-*  What data must be specified for the SessionFactory?
-    
-*  What is hbm2ddl?
-    
-19.  How would you configure Hibernate to print to the console all SQL statements run?
-    
-20.  What are the different object states in Hibernate? What methods move objects to different states?
-    
-21.  What is a proxy? When does the proxy resolve to the real object?
-    
-22.  What is the difference between Dynamic Insert and Dynamic Update?
-    
-23.  What is automatic dirty checking?
-    
-24.  What is Transactional Write Behind?
-    
-25.  Explain how transaction propagation works
