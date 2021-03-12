@@ -28,7 +28,8 @@
 <br>
 <hr>
 <br>
-# Maven :feather:
+
+# Maven :star:
 There are three built-in build lifecycles: `default`, `clean` and `site`. 
 
 - The `default` lifecycle handles your project deployment
