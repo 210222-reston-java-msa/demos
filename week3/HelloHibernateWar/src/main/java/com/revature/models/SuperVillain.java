@@ -140,8 +140,7 @@ public class SuperVillain {
 	public void setSuperPrisonHolder(SuperPrison superPrisonHolder) {
 		this.superPrisonHolder = superPrisonHolder;
 	}
-
-
+	
 	@Override
 	public String toString() {
 		return "SuperVillain [sVillId=" + sVillId + ", name=" + name + ", superPower=" + superPower + ", bounty="

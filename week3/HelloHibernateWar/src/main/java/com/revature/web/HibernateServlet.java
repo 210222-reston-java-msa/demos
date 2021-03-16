@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.dao.CrimeDao;
@@ -52,6 +53,7 @@ public class HibernateServlet extends HttpServlet {
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		System.out.println("In doPost");
 		
 		System.out.println("\n About to select All");
@@ -65,10 +67,11 @@ public class HibernateServlet extends HttpServlet {
 		
 		response.getWriter().write(new ObjectMapper().writeValueAsString(joker.toString()));
 		
+		HttpSession session = request.getSession();
 		
-//		PrintWriter pw = response.getWriter();
-//		pw.println("<html><h1>Hello World</h1></html>");
-	
+		session.setAttribute("villain", joker);
+		
+
 	}
 	
 	

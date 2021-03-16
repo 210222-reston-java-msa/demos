@@ -12,4 +12,14 @@
     <servlet-name>HibernateServlet</servlet-name>
     <url-pattern>/hibserv</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AnotherServlet</display-name>
+    <servlet-name>AnotherServlet</servlet-name>
+    <servlet-class>com.revature.web.AnotherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AnotherServlet</servlet-name>
+    <url-pattern>/AnotherServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
