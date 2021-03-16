@@ -7,7 +7,7 @@
     We use interfaces to define the "shap" of an object
 */
 
-// We are deifning a custom type
+// We are defining a custom type
 export interface Cat {
     id: number;
     name: string;

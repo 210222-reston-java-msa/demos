@@ -1,24 +1,19 @@
-
-<h3>{{ cat.name | uppercase }} Details:</h3>
-
-<div><span>id: {{cat.id}}</span></div>
-
-<div>
-
-    <label for="name">Cat name: </label>
-    <input id="name" [(ngModel)]="cat.name" placeholder="something special">
-    <!-- ngModel is a directive
+<h2>My Cats</h2>
+<ul class = "cats">
+    <!-- NgFor is a structural directive -- meaning that it changes the strcuture of the dom
     
-        A directive is a function that executes whenever the Angular Compiler finds it in the DOM-->
+    ngFor allows us to create something similar to an enhanced loop, but strcuturally
 
-</div>
+        We typically use NgFor for lists-->
 
+    <!-- by adding something like [class.some-css-class] I am adding CSS conditionally -->
+    <li *ngFor="let myCat of allCats" [class.selected] = "myCat === selectedCat"  (click)="onSelect(myCat)">
+        <span class="box">{{ myCat.id }}</span> {{ myCat.name }}
+    </li>
 
-<!-- One - Way Data/Property Binding
-<h3>{{ cat.name | uppercase }} Details:</h3>
-Pipes are used to format displayed data such as strings, currency, dates, etc...
-<div><span>id: {{cat.id}}</span></div>
-<div><span>name: {{cat.name}}</span></div> -->
+</ul>
 
+<!-- Here we had some code which we allocated to a separate component....-->
 
-
+<!-- this is property binding! -->
+<app-cat-detail [cat] = "selectedCat"></app-cat-detail>

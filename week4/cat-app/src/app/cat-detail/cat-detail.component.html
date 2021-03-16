@@ -1,0 +1,13 @@
+<!-- we use ngIf to conditionally include or exclude a block of HTML-->
+<div *ngIf="cat">
+
+    <h2>{{ cat.name | uppercase }} Details:</h2>
+    <div><span>id: </span> {{ cat.id }} </div>
+
+    <!-- incorporating 2 way databinding  -->
+    <div>
+        <label for="cat-name">Cat name: </label>
+        <input id="cat-name" [(ngModel)]="cat.name" placeholder="cat name!">
+    </div>
+
+</div>

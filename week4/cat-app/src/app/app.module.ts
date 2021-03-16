@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
-import { FormsModule } from '@angular/forms'; // <-- the fomr
+import { FormsModule } from '@angular/forms';
+import { CatDetailComponent } from './cat-detail/cat-detail.component'; // <-- the fomr
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms'; // <-- the fomr
 @NgModule({
   declarations: [
     AppComponent,
-    CatsComponent
+    CatsComponent,
+    CatDetailComponent
   ],
   imports: [
     BrowserModule,
