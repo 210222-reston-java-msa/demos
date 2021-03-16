@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root', // this is for styling (in the global styles, or for
+  // featuring this component somewhere else)
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -1,0 +1,24 @@
+
+<h3>{{ cat.name | uppercase }} Details:</h3>
+
+<div><span>id: {{cat.id}}</span></div>
+
+<div>
+
+    <label for="name">Cat name: </label>
+    <input id="name" [(ngModel)]="cat.name" placeholder="something special">
+    <!-- ngModel is a directive
+    
+        A directive is a function that executes whenever the Angular Compiler finds it in the DOM-->
+
+</div>
+
+
+<!-- One - Way Data/Property Binding
+<h3>{{ cat.name | uppercase }} Details:</h3>
+Pipes are used to format displayed data such as strings, currency, dates, etc...
+<div><span>id: {{cat.id}}</span></div>
+<div><span>name: {{cat.name}}</span></div> -->
+
+
+
