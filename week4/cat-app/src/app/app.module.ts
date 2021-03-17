@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
 import { FormsModule } from '@angular/forms';
-import { CatDetailComponent } from './cat-detail/cat-detail.component'; // <-- the fomr
+import { CatDetailComponent } from './cat-detail/cat-detail.component';
+import { MessagesComponent } from './messages/messages.component'; // <-- the fomr
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -14,7 +15,8 @@ import { CatDetailComponent } from './cat-detail/cat-detail.component'; // <-- t
   declarations: [
     AppComponent,
     CatsComponent,
-    CatDetailComponent
+    CatDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

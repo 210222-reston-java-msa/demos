@@ -1,0 +1,15 @@
+
+<!-- This will only appear IF there are indeed some string objects in our fake cache belonging to the MessageService.ts-->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Messages:</h2>
+
+    <button class="clear-btn" (click)="messageService.clear()">Clear messages!</button>
+
+    <!-- we are going to display each message within he "fake cache"
+    that we've created in the MessageService-->
+    
+    <!-- in order to itera-->
+    <div *ngFor='let m of messageService.messages'>{{ m }}</div>
+
+</div>
