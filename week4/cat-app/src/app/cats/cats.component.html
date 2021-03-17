@@ -9,7 +9,10 @@
     <!-- by adding something like [class.some-css-class] I am adding CSS conditionally -->
     <li *ngFor="let myCat of allCats">
 
-        <a routerLink = "/detail/{{myCat.id}}"> <span class="box">{{ myCat.id }}</span> {{ myCat.name }} </a>
+        <a routerLink = "/detail/{{myCat.id}}"> 
+        
+            <span class="box">{{ myCat.id }}</span> {{ myCat.name }} </a>
+            
     </li>
 
 </ul>
@@ -17,4 +20,5 @@
 <!-- Here we had some code which we allocated to a separate component....-->
 
 <!-- this is property binding! -->
-<app-cat-detail [cat] = "selectedCat"></app-cat-detail>
+<!-- We are no longer capturing a cat from input, but rather extracting it from the query parameter
+    <app-cat-detail [cat] = "selectedCat"></app-cat-detail> -->

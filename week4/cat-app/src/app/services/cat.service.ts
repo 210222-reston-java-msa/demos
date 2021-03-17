@@ -34,10 +34,18 @@ export class CatService {
     return cats;
   }
 
-
   // This is the old synchronous way
   // getCats(): Cat[] {
   //   return CATS;
   // }
+
+
+  getCat(id: number): Observable<Cat | undefined> {
+
+    this.messageService.add(`CatService: fetched cat with id ${id}`);
+
+    return of(CATS.find(cat => cat.id === id));
+
+  }
 
 }
