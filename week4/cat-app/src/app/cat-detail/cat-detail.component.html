@@ -1,5 +1,5 @@
 <!-- we use ngIf to conditionally include or exclude a block of HTML-->
-<div *ngIf="cat">
+<div *ngIf="cat"> <!-- This refers to the cat? property in the cat-detail.component.ts file-->
 
     <h2>{{ cat.name | uppercase }} Details:</h2>
     <div><span>id: </span> {{ cat.id }} </div>

@@ -9,6 +9,9 @@ import { CatDetailComponent } from './cat-detail/cat-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// this is a custom service that we generate with the command: ng generate serivce services/InMemoryData
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -25,7 +28,15 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+
+    // The HttpClientInMemoryWebApiModule is intercepting our HTTP requests
+    // and returning simulated server responses.
+    // We will REMOVE THIS when we are ready to recieve REAL requests
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false}
+      )
   ],
   providers: [],
   bootstrap: [AppComponent]
