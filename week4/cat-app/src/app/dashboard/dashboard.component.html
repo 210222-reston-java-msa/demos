@@ -1,0 +1,10 @@
+<h2>Top Cats</h2>
+
+<div class="top-cats">
+
+    <!-- I will be displaying each cat within the topCats array (this is a property of the dashboard component)-->
+    <a *ngFor="let c of topCats" routerLink ="/detail/{{c.id}}" >
+        {{ c.name }}
+    </a>
+
+</div>

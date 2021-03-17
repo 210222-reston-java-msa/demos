@@ -1,3 +1,4 @@
+import { MessageService } from './../services/message.service';
 import { CatService } from './../services/cat.service';
 import { Component, OnInit } from '@angular/core';
 import { Cat } from '../cat';
@@ -19,8 +20,9 @@ export class CatsComponent implements OnInit {
   // the following works too
   // selectedCat: any;
 
-  // This is dependency injection
-  constructor(private catService: CatService) { }
+  // This is dependency injection (we are injecting an instance of the service into
+  // the component class)
+  constructor(private catService: CatService, private messageService: MessageService) { }
 
   // ngOnInit is a lifeCycle Hook, which means that WHEN the component is loaded and initalized, some methods will be called
   ngOnInit(): void {
@@ -34,6 +36,8 @@ export class CatsComponent implements OnInit {
 
     // every time we click on a Cat Item,  we add to the messages property inside the MessageService.
     // ----> It will say "You click on a Cat with Id of ${cat.id} and name of ${cat.name}"
+
+    this.messageService.add(`CatsComponent: You Selected cat ${cat.name} with the id: ${cat.id}`)
 
   }
 

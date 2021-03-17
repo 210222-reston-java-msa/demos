@@ -7,8 +7,9 @@
         We typically use NgFor for lists-->
 
     <!-- by adding something like [class.some-css-class] I am adding CSS conditionally -->
-    <li *ngFor="let myCat of allCats" [class.selected] = "myCat === selectedCat"  (click)="onSelect(myCat)">
-        <span class="box">{{ myCat.id }}</span> {{ myCat.name }}
+    <li *ngFor="let myCat of allCats">
+
+        <a routerLink = "/detail/{{myCat.id}}"> <span class="box">{{ myCat.id }}</span> {{ myCat.name }} </a>
     </li>
 
 </ul>

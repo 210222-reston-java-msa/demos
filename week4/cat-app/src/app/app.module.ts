@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
 import { FormsModule } from '@angular/forms';
 import { CatDetailComponent } from './cat-detail/cat-detail.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- the fomr
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; // <-- the fomr
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -16,7 +17,8 @@ import { MessagesComponent } from './messages/messages.component'; // <-- the fo
     AppComponent,
     CatsComponent,
     CatDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

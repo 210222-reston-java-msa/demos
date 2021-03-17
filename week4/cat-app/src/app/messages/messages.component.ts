@@ -11,6 +11,8 @@ export class MessagesComponent implements OnInit {
   // we are making this service public because we will bind it to the template (html page a.k.a skeleton)
   constructor(public messageService: MessageService) { }
 
+  
+
   ngOnInit(): void {
   }
 

@@ -1,7 +1,22 @@
 <!-- This it the html page of my AppComponent-->
 <h1>{{ title }}</h1>
-<app-cats></app-cats>
+
+<nav>
+
+  <!-- the path that I set to the routerLink will trigger the component that I've correlated with that path in
+  the AppRoutingModule -->
+  <a routerLink = "/everySingleCat">All the cats!</a>
+  
+  <a routerLink = "/dashboard">Dashboard</a>
+
+</nav>
+
+
+<!-- Router-Outlet is actually a directive which binds to the app-routing.module-->
+<router-outlet></router-outlet>
+
 <app-messages></app-messages>
+
 
 <!-- When I use {{}} I am PROPERTY BINDING.  I am capturing a property of the class
 and injecting it or structuring it with HTML. -->
