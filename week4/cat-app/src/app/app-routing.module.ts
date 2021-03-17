@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'everySingleCat', component: CatsComponent }, // localhost:4200/cats --> display my CatsComponent
   { path: 'dashboard', component: DashboardComponent },
 
-  // the color represents a placeholder for a NUMBER that will be injected later
+  // the colon represents a placeholder for a NUMBER that will be injected later
   { path: 'detail/:id',  component: CatDetailComponent },
 
   // Im going to make Dashboard my default route

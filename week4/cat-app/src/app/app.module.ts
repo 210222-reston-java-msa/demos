@@ -7,7 +7,8 @@ import { CatsComponent } from './cats/cats.component';
 import { FormsModule } from '@angular/forms';
 import { CatDetailComponent } from './cat-detail/cat-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; // <-- the fomr
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -23,7 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- the
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,6 +40,8 @@ export class CatService {
   // }
 
 
+  // We use this method in the cat-detail.component.ts file......
+  // because we need to get the details of 1 individual Cat
   getCat(id: number): Observable<Cat | undefined> {
 
     this.messageService.add(`CatService: fetched cat with id ${id}`);
