@@ -10,6 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
 
   constructor() { }
 
+  // we are imagining that this is a DB in some RDS somewhere like in PostGresQL
   createDb() {
 
     const allOfTheCats = [

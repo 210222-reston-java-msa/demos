@@ -46,3 +46,7 @@ For software teams, the stand-up is like the team’s huddle. It’s even common
 ## Suggestions:
 - Use a [Kanban Board](https://www.atlassian.com/agile/kanban/boards) like [Trello](https://trello.com/?&aceid=&adposition=&adgroup=105703214328&campaign=9843285532&creative=437184392320&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p53016490704&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gclid=Cj0KCQiA2af-BRDzARIsAIVQUOfgZifIwr-ClvNLXs4m9zn7VFhTU4bXoVdq1iBVe7SNfiXGeVVNKlgaAsHAEALw_wcB&gclsrc=aw.ds)
 - Use a [Burndown Chart](http://www.agilenutshell.com/burndown)
+
+<h2>If Software were Built Like Cars...(Waterfall vs. Agile)</h2>
+
+<img src="software-dev-with-cars.jpg">
