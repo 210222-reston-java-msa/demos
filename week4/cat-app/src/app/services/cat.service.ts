@@ -55,10 +55,49 @@ export class CatService {
 
         catchError(this.handleError<Cat>(`getCat id=${id}`))
       );
-
-    
-
   }
+
+  // 1. create a save button in the html template cat-detail component -- CHECK 
+
+  // 2. create a method in the cat-detail.ts file which calls on a udpate method in the cat-service - CHECK 
+
+  // 3. Create an update method in the service -- WHAT WE'RE DOING NOW
+
+  //**PUT method to update a resource in DB  */
+  updateCat(cat?: Cat): Observable<any> {
+    // We are updating our resource (all the cats held in our server) with the cat object we pass through to add.
+    return this.http.put(this.catsUrl, cat)
+      .pipe(
+        tap( _ => this.log(`updated cat id=${cat?.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
+        catchError(this.handleError<any>('updateCat'))
+      );
+  } 
+
+  /*
+      POST METHOD
+  */
+      addCat(cat: Cat): Observable<any> {
+        return this.http.post(this.catsUrl, cat) // this is the only part of the method we want to focus on.
+        .pipe(
+          tap( _ => this.log(`added cat id=${cat.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
+          catchError(this.handleError<any>('addCat'))
+        );
+      }
+
+      
+  /*
+      DELETE METHOD
+  */
+
+
+  /**
+   * 
+   * @param operation 
+   * @param result 
+   * @returns 
+   */
+
+
 
 
   

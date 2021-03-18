@@ -1,4 +1,18 @@
 <h2>My Cats</h2>
+
+<div>
+
+    <label for="new-cat">Cat name:</label>
+    <input id="new-cat" #catName>
+
+    <button class="add-button" (click)="add(catName.value)">Add Cat</button>
+
+
+</div>
+
+
+
+
 <ul class = "cats">
     <!-- NgFor is a structural directive -- meaning that it changes the strcuture of the dom
     

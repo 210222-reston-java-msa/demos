@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 // just like a front controller
 const routes: Routes = [
 
-  { path: 'everySingleCat', component: CatsComponent }, // localhost:4200/cats --> display my CatsComponent
+  { path: 'everySingleCat', component: CatsComponent }, // localhost:4200/everySingleCat --> display my CatsComponent
   { path: 'dashboard', component: DashboardComponent },
 
   // the colon represents a placeholder for a NUMBER that will be injected later

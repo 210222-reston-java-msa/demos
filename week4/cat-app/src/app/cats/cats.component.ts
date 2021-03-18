@@ -54,4 +54,17 @@ export class CatsComponent implements OnInit {
   // getAllCats(): void {
   //   this.allCats = this.catService.getCats();
   // }
+
+
+  add(name: string): void {
+
+    name = name.trim();
+
+    if (!name) {return;}
+
+    // I'm loosely converting the name into a Cat object
+    this.catService.addCat({name} as Cat).subscribe(cat => { // when we recieve data back, we push that cat to the list
+      // that's displayed.
+      this.allCats.push(cat)});
+  }
 }

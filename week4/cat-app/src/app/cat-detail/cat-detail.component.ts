@@ -17,7 +17,7 @@ export class CatDetailComponent implements OnInit {
   // can be input from another source.
   // @Input() cat?: Cat; -----> this is what we originally had 
 
-  // When we come back after lunch (3pm)
+  // This property represents the cat whose details are being displayed
   cat?: Cat;
   // the ? mark here represents a safe navigation operator -- it is protecting us incase the value is undefined
 
@@ -49,32 +49,16 @@ export class CatDetailComponent implements OnInit {
     this.catService.getCat(id).subscribe(cat => this.cat = cat);
   }
 
-
-  // Xing's solution to the above method -- no need for this at all! (just another way to do the above)
-  // xingGetCat(): void {
-  //   this.route.params.subscribe(params => {
-  //     console.log(params)
-
-  //     // params id
-  //     let id: string = params.id;
-
-  //     // all cats
-  //     this.catService.getCats().subscribe(data => {
-  //       this.allCats = data;
-
-  //       for (let i: number = 0; i < this.allCats.length; i++) {
-  //         if (this.allCats[i].id == Number(id)) {
-
-  //           this.cat = this.allCats[i];
-  //         }
-  //       }
-  //     });
-  //   })
-  // }
-
+  /*
+      save() Method which calls on an updateCat method in the service (we will then build the updateCat method
+        in the service...)
+  */
+  save(): void {
+    this.catService.updateCat(this.cat).subscribe(() => this.goBack());
+  }
 
   goBack() {
-    // we'll use the location
+    // we'll use the location object
     this.location.back();
   }
 
