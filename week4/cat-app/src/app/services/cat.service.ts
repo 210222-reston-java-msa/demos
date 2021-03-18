@@ -87,7 +87,7 @@ export class CatService {
 
 
   /*
-      DELETE METHOD
+      DELETE METHOD --> HTTP DELETE
   */
   deleteCat(cat: Cat | number): Observable<Cat> {
 

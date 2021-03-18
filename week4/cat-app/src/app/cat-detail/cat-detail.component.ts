@@ -49,12 +49,15 @@ export class CatDetailComponent implements OnInit {
     this.catService.getCat(id).subscribe(cat => this.cat = cat);
   }
 
+
+
   /*
       save() Method which calls on an updateCat method in the service (we will then build the updateCat method
         in the service...)
   */
   save(): void {
     this.catService.updateCat(this.cat).subscribe(() => this.goBack());
+    console.log(`The cat is ${this.cat?.name}`)
   }
 
   goBack() {
