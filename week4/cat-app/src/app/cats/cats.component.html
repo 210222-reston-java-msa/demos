@@ -26,7 +26,9 @@
         <a routerLink = "/detail/{{myCat.id}}"> 
         
             <span class="box">{{ myCat.id }}</span> {{ myCat.name }} </a>
-            
+            <!-- Shout out to Jesus for catching this! You must select "myCat" because that's 
+            what we refer to each element as in the directive. -->
+            <button class="delete" title="Delete Cat" (click)="delete(myCat)">X</button>
     </li>
 
 </ul>

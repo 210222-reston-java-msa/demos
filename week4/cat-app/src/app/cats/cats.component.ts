@@ -67,4 +67,15 @@ export class CatsComponent implements OnInit {
       // that's displayed.
       this.allCats.push(cat)});
   }
+
+  delete(cat: Cat): void {
+
+    // validation logic to remove it from the displayed list
+    this.allCats = this.allCats.filter(c => c !== cat) // == vs. ===
+    // we're using filter() method to say" only the cats that
+    // are NOT equal to the cat passsed through as a param can stay...
+    this.catService.deleteCat(cat).subscribe();
+  }
+
+
 }

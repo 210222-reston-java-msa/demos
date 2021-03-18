@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
+
 // This Injectable Decorator (anything with an @ sign is a decorator)
 // means that this service and it s functionality can be passed to, or INJECTED 
 // into a separate component, so that the component can use its service.
@@ -17,10 +18,10 @@ export class CatService {
 
   // We are defining a catsUrl in the form of :base/:collectionName
   private catsUrl = 'api/allOfTheCats'; // URL to web api --> "allOfTheCats refers to the name 
-                                        // of what we're returning in our in-memory-data.service.ts"
+  // of what we're returning in our in-memory-data.service.ts"
 
   constructor(
-    private logger: LoggerService, 
+    private logger: LoggerService,
     private messageService: MessageService,
     private http: HttpClient) { }
 
@@ -68,39 +69,46 @@ export class CatService {
     // We are updating our resource (all the cats held in our server) with the cat object we pass through to add.
     return this.http.put(this.catsUrl, cat)
       .pipe(
-        tap( _ => this.log(`updated cat id=${cat?.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
+        tap(_ => this.log(`updated cat id=${cat?.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
         catchError(this.handleError<any>('updateCat'))
       );
-  } 
+  }
 
   /*
       POST METHOD
   */
-      addCat(cat: Cat): Observable<any> {
-        return this.http.post(this.catsUrl, cat) // this is the only part of the method we want to focus on.
-        .pipe(
-          tap( _ => this.log(`added cat id=${cat.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
-          catchError(this.handleError<any>('addCat'))
-        );
-      }
+  addCat(cat: Cat): Observable<any> {
+    return this.http.post(this.catsUrl, cat) // this is the only part of the method we want to focus on.
+      .pipe(
+        tap(_ => this.log(`added cat id=${cat?.id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
+        catchError(this.handleError<any>('addCat'))
+      );
+  }
 
-      
+
   /*
       DELETE METHOD
   */
+  deleteCat(cat: Cat | number): Observable<Cat> {
+
+    // here we are checking did we pass in a number (id)? or a Cat?
+    const id = (typeof cat === 'number') ? cat : cat.id;
+
+    // console.log(typeof 14); // this would return the STRING 'number'
+
+    const url = `${this.catsUrl}/${id}`;
+
+    return this.http.delete<Cat>(url)
+      .pipe(
+        tap(_ => this.log(`deleted cat id=${id}`)), // this isn't totally necessary, but good for logging pruposes and error handling 
+        catchError(this.handleError<any>('deleteCat'))
+      );
+
+  }
 
 
-  /**
-   * 
-   * @param operation 
-   * @param result 
-   * @returns 
-   */
 
 
-
-
-  
   // TODO: transform this to a method that utilizes HttpClient  Service
   // getCat(id: number): Observable<Cat | undefined> {
 
@@ -118,7 +126,7 @@ export class CatService {
     * @param operation - name of the operation that fails
     * @param result - optional value that is returned as the OBSERVABLE result 
   */
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       // TODO: send the error to a remote logging infrastructure
@@ -126,7 +134,7 @@ export class CatService {
       console.error(error) // we'll just log it to the console
 
       // TODO: better job transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}` );
+      this.log(`${operation} failed: ${error.message}`);
 
       // we want to ensure that the app keeps running by returning an empty result
       return of(result as T);
