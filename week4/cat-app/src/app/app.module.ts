@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // this is a custom service that we generate with the command: ng generate serivce services/InMemoryData
 import { InMemoryDataService } from './services/in-memory-data.service';
+import { CatSearchComponent } from './cat-search/cat-search.component';
 
 // The AppModule stores metadata about our entire application
 // For example, if we want to use the 2 way property binding feature of the FormsModule,
@@ -22,7 +23,8 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     CatsComponent,
     CatDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    CatSearchComponent
   ],
   imports: [
     BrowserModule,

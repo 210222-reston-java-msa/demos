@@ -106,6 +106,21 @@ export class CatService {
 
   }
 
+  /*
+
+      SEARCH CATS! --> GET cats whose name contains search term
+  */
+
+  searchCats(term: string): Observable<Cat[]> {
+
+        if(!term.trim()) {
+          // if no search term exists, we send back an empty array as an observable
+          return of([]);
+        }
+
+        return this.http.get<Cat[]>(`${this.catsUrl}/?name=${term}`);
+  }
+
 
 
 

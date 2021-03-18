@@ -1,0 +1,18 @@
+<div id="search-component">
+
+    <label for="search-box">Cat Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+
+    <ul class="search-result">
+
+        <li *ngFor="let c of cats$ | async" > 
+            <!-- the | async is called an Async Pipe and means that we are subscribing to an observable and doing
+            something with the data that is emitted -->
+            <!-- these elements will load aynchronously-->
+        <!-- the $ indicates that cats will be an observable, NOT an array -->
+            <a routerLink= "/detail/{{c.id}}">
+                {{c.name}}
+            </a>
+        </li>
+    </ul>
+</div>
