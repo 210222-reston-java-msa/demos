@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { AlertButtonComponent } from './alert-button.component';
 import { tick, fakeAsync } from '@angular/core/testing';
+import { of } from 'rxjs';
 
 // describe is describing what this test suite is all about
 describe('AlertButtonComponent', () => {
@@ -10,16 +11,19 @@ describe('AlertButtonComponent', () => {
   let fixture: ComponentFixture<AlertButtonComponent>;
   let de: DebugElement; // Debug element helps us test elements within HTML tree
   let serviceStub: any;
+  let service: MessageService;
+  let spy: jasmine.Spy;
 
   beforeEach(async () => {
 
+    // this is a fake object to be returned
     serviceStub = {
-      getContent: () => of('you have been warned');
+      getContent: () => of('you have been warned'),
     }
 
     await TestBed.configureTestingModule({
       declarations: [ AlertButtonComponent ],
-      providers: [MessageService] // this is configuring our Test Bed
+      providers: [{provide: MessageService, useValue: serviceStub}] // this is configuring our Test Bed
     })
     .compileComponents(); // this generates the css and html files associates with the class
   });
@@ -70,6 +74,18 @@ describe('AlertButtonComponent', () => {
     // before testing
     expect(component.hideContent).toBeFalsy();
   })) 
+
+  it('should  have message content defined from an observable', () => {
+    component.content?.subscribe(content => {
+      expect(content).toBeDefined(); // check that it's not undefined
+      expect(content).toBe('you have been warned'); 
+      // even though our actuall Message Service relies on FireBase, 
+      // we're using stubbing to intercept the request and NOT make a live request to our DB.
+
+      // we are just making sure that we recieve back observable data (that we can subscribe to)
+
+    })
+  })
 
 
 });
