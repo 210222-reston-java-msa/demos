@@ -18,7 +18,7 @@ Your group is going to practice git flow, and get a little creative at the same 
 
 * `one-line-test.md` should have a `"Hello world!"` message on line one, and a single line of text on line 2 (`"Replace me!"`).
 
-* The repo owner should save these files and `git push` them to a remote branch, and create a pull request to the master branch. Someone else should review it and approve it!
+* The repo owner should save these files and `git push` them to a remote branch, and create a pull request to the main branch. Someone else should review it and approve it!
 
 <br>
 
@@ -57,18 +57,18 @@ Your group is going to practice git flow, and get a little creative at the same 
 ## Round :two:
 The second round begins in the same way. This time, the group works on the one-line-test.md file at the same time.
 
-* Each group member should pull the updated master, and overwrite line 2 with something - anything - that comes to mind.
+* Each group member should pull the updated main, and overwrite line 2 with something - anything - that comes to mind.
 
 * Save changes and push to the remote origin, and then create simultaneous pull requests.
-  - As you take turns to merge another person's pull request with the master branch, you'll note that the first merge is fine - github has no problem with people overwriting files!
+  - As you take turns to merge another person's pull request with the main branch, you'll note that the first merge is fine - github has no problem with people overwriting files!
 
 * The second attempt to merge another person's pull request will, however, cause an error. Github will instruct you that it cannot automatically merge the request, and that you will need to solve the problem on your local branch.
-  - This is because github sees four pull requests, attempting to compare to one master file (Let's call it M), but the moment the first pull request is merged, M ceases to exist - replaced by an updated one-line-test.md file that we'll call M1. The second pull request expects to be compared to M, but that doesn't exist anymore, and github can tell that it is attempting to overwrite a line. In a computer programme, this could cause a serious error, since the person creating the second pull request might have no idea that they were attempting to overwrite M1, instead of M.
+  - This is because github sees four pull requests, attempting to compare to one main/master file (Let's call it M), but the moment the first pull request is merged, M ceases to exist - replaced by an updated one-line-test.md file that we'll call M1. The second pull request expects to be compared to M, but that doesn't exist anymore, and github can tell that it is attempting to overwrite a line. In a computer programme, this could cause a serious error, since the person creating the second pull request might have no idea that they were attempting to overwrite M1, instead of M.
   
-* Now each team member is going to have to pull the new master down to their local master branch, merge the master with their local branch, and push the result.
+* Now each team member is going to have to pull the new main down to their local main branch, merge the main with their local branch, and push the result.
 
 * **This process will keep repeating! As you will see, it could take four people almost ten minutes to resolve the issues from attempting to write one line at the same time.**
 
-### Hopefully after this, you will understand why ***it is important to check the most up to date master branch before pushing to a remote branch, and creating a pull request to the master branch.***
+### Hopefully after this, you will understand why ***it is important to check the most up to date main branch before pushing to a remote branch, and creating a pull request to the main branch.***
 
-* You can run this test a second time, with each person waiting to pull the updated master, overwrite it in their local branch, and pushing to a remote branch to create a pull request to the master. As you will see, a little communication and co-ordination goes a long way!
+* You can run this test a second time, with each person waiting to pull the updated main, overwrite it in their local branch, and pushing to a remote branch to create a pull request to the main. As you will see, a little communication and co-ordination goes a long way!
