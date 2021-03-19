@@ -12,13 +12,13 @@ Your group is going to practice git flow, and get a little creative at the same 
 
 * Add all the group as collaborators on the repo
 
-* The repo owner should initialise the exercise by cloning the repo, and creating two files (haiku.md and one-line-test.md) on a local branch.
+* The repo owner should initialize the exercise by cloning the repo, and creating two files (`haiku.md` and `one-line-test.md`) on a local branch.
 
-* haiku.md should have a one line introduction ("Hello World!" or similar) on line one, and a goodbye line ("Goodbye world!") however, **the important part is to leave three blank lines for each member of the group**. In a four person group, line 1 will say "Hello world!", lines 2-13 will be blank, and line 14 will have a goodbye message.
+* `haiku.md` should have a one line introduction (`"Hello World!"` or similar) on line one, and a goodbye line (`"Goodbye world!"`) however, **the important part is to leave three blank lines for each member of the group**. In a four person group, line 1 will say `"Hello world!"`, lines 2-13 will be blank, and line 14 will have a goodbye message.
 
-* `one-line-test.md` should have a "Hello world!" message on line one, and a single line of text on line 2 ("Replace me!").
+* `one-line-test.md` should have a `"Hello world!"` message on line one, and a single line of text on line 2 (`"Replace me!"`).
 
-* The repo owner should save these files and push them to a remote branch, and create a pull request to the master branch. Someone else should review it and approve it!
+* The repo owner should save these files and `git push` them to a remote branch, and create a pull request to the master branch. Someone else should review it and approve it!
 
 <br>
 
