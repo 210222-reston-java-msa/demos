@@ -69,6 +69,6 @@ The second round begins in the same way. This time, the group works on the one-l
 
 * **This process will keep repeating! As you will see, it could take four people almost ten minutes to resolve the issues from attempting to write one line at the same time.**
 
-* Hopefully after this, you will understand why ***it is important to check the most up to date master branch before pushing to a remote branch, and creating a pull request to the master branch.***
+### Hopefully after this, you will understand why ***it is important to check the most up to date master branch before pushing to a remote branch, and creating a pull request to the master branch.***
 
 * You can run this test a second time, with each person waiting to pull the updated master, overwrite it in their local branch, and pushing to a remote branch to create a pull request to the master. As you will see, a little communication and co-ordination goes a long way!
