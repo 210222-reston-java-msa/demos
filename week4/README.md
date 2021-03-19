@@ -20,10 +20,10 @@
     
 10.  List some decorators for Angular apps
 
-    - Class decorators, e.g. `@Component` and `@NgModule`
-    - Property decorators for properties inside classes, e.g. `@Input` and `@Output`
-    - Method decorators for methods inside classes, e.g. `@HostListener`
-    - Parameter decorators for parameters inside class constructors, e.g. `@Inject`
+    - Class decorators, e.g. @Component and @NgModule
+    - Property decorators for properties inside classes, e.g. @Input and @Output
+    - Method decorators for methods inside classes, e.g. @HostListener
+    - Parameter decorators for parameters inside class constructors, e.g. @Inject
     
 11.  What is the lifecycle of a component? List some lifecycle hooks:
 
