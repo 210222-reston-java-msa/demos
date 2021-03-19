@@ -45,8 +45,8 @@
     
 18.  What’s the difference between a JavaScript module and Angular module? What are some common Angular modules?
 
-    > An NgModule is a class marked by the @NgModule decorator with a metadata object that describes how that particular part of the app fits together with the other parts. NgModules are specific to Angular. While classes with an @NgModule decorator are by convention kept in their own files, they differ from JavaScript modules because they include this metadata.
-    > https://angular.io/guide/ngmodule-vs-jsmodule
+- An NgModule is a class marked by the @NgModule decorator with a metadata object that describes how that particular part of the app fits together with the other parts. NgModules are specific to Angular. While classes with an @NgModule decorator are by convention kept in their own files, they differ from JavaScript modules because they include this metadata.
+- NG Module vs. JS Module(https://angular.io/guide/ngmodule-vs-jsmodule)
     
 19.  How would you run your unit tests for an Angular project?
     
