@@ -1,5 +1,5 @@
 # ERS Project-1 Examples
-*Here are some examples to some completed ERS Project 1's with different strong points:*
+*Here are some examples of some completed ERS Project 1's with different strong points:*
 <br>
 <br>
 ### Strong Testing and standard JDBC implementation:
