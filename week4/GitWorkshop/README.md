@@ -1,7 +1,8 @@
 # Group Exercises for Understanding GitHub
 
-> Before you attempt this exercise, check out [this video on Git](https://app.pluralsight.com/course-player?clipId=8dc1a5de-01c5-452e-a45f-d2f77a980e1c)! <br>
-> More resources are available on the [resources page](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/resources.md)
+> Before you attempt this exercise, check out [this video on Git](https://app.pluralsight.com/course-player?clipId=8dc1a5de-01c5-452e-a45f-d2f77a980e1c)! :point_left: <br>
+> More resources are available on the [resources page](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/resources.md) <br>
+> If you get stuck, use the [cheatsheet](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/cheatsheet.md).
 
 ## Git Haiku
 
