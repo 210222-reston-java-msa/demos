@@ -27,7 +27,9 @@
     
 11.  What is the lifecycle of a component? List some lifecycle hooks:
 
-    > There are 8 different stages in the component lifecycle. Every stage is called as lifecycle hook event. So, we can use these hook events in different phases of our       application to obtain control of the components. Since a component is a TypeScript class, every component must have a constructor method. The constructor of the component class executes, first, before the execution of any other lifecycle hook events. 
+    - There are 8 different stages in the component lifecycle. 
+    - Every stage is called as lifecycle hook event. So, we can use these hook events in different phases of our application to obtain control of the components.
+    - LiefeCycleHooks include: ngOnInit, ngOnDestroy, ngDoChecks(), ngAfterViewInit()
     
 12.  What is a directive and what are the different types? How to tell these directives apart with syntax?
     
