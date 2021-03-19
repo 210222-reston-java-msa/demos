@@ -20,7 +20,11 @@ Your group is going to practice git flow, and get a little creative at the same 
 
 * The repo owner should save these files and push them to a remote branch, and create a pull request to the master branch. Someone else should review it and approve it!
 
+<br>
+
 <hr>
+
+<br>
 
 ## Round :one: Now the fun begins...
 
@@ -43,6 +47,12 @@ Your group is going to practice git flow, and get a little creative at the same 
   - As you will see while merging, github can automatically merge each and every request, without issue, because it can detect that the file changes aren't deleting anything, and they aren't overwriting anything that has been committed since the pull request was created.
 
 * **But beware, this is the best case scenario for merge conflicts - the reason that you should pull and merge master copies on the local branch prior to pushing commits is that most merge conflicts involve people deleting or altering the work of others.**
+
+<br>
+
+<hr>
+
+<br>
 
 ## Round :two:
 The second round begins in the same way. This time, the group works on the one-line-test.md file at the same time.
