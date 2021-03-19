@@ -4,12 +4,14 @@
 > More resources are available on the [resources page](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/resources.md) <br>
 > If you get stuck, use the [cheatsheet](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/cheatsheet.md).
 
+<br>
+
 ## Git Haiku
 
 This is an exercise that works best with 4-5 people working from a single git repo. The aim is to demonstrate in a simple fashion how Github treats file merges, and how merge conflicts arise.
 Your group is going to practice git flow, and get a little creative at the same time!
 
-## Preparatory steps:
+## Preparatory steps: :triangular_flag_on_post:
 * Nominate a repo owner
 
 * Create a repo on github
