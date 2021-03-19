@@ -1,5 +1,7 @@
 # Group Exercises for Understanding GitHub
 
+> Before you attempt this exercise, check out [this video on Git](https://app.pluralsight.com/course-player?clipId=8dc1a5de-01c5-452e-a45f-d2f77a980e1c)! More resources are available on the [resources page](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/resources.md)
+
 ## Git Haiku
 
 This is an exercise that works best with 4-5 people working from a single git repo. The aim is to demonstrate in a simple fashion how Github treats file merges, and how merge conflicts arise.
