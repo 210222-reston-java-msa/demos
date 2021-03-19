@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Account</title>
+</head>
+<body>
+
+	<!-- Validate passwords in js -->
+	<form class="form-signin" action="">
+		<div class="text-center mb-4">
+		<img class="mb-4"
+			src="https://png2.kisspng.com/sh/2e1bc693ec2339ec49ce303f02698014/L0KzQYm3UsE6N6t2fZH0aYP2gLBuTgBqb5hARdRqbnuwg7L9if5oNZduhtN3Y3WwfbF1hgkubKNmj9t3Zz35dbT7jCIucJJzfJ95YXnxhLbrTgBqb5hARdRqbnuwRbKBgsc6aZNpfqZrMkSxQIO4WMY2Pmo2TaMEMEmzQIq4WcE1Pl91htk=/kisspng-piggy-bank-saving-finance-money-drawing-vector-hand-painted-piggy-bank-5a8b79abdf4b24.0218656915190900919146.png"
+			alt="" width="100" height="100">
+			<h1 class="h3 mb-3 font-weight-normal">Welcome to the Expense Reimbursement System</h1>
+			<p>Create an Account</p>
+		</div>
+
+		<div class="input-group mb-3">
+		<select required class="custom-select" name="uTypeSelect" id="uTypeSelect">
+			<option disabled selected>Account Type...</option>
+			<option value="1">Employee</option>
+			<option value="2">Manager</option>
+		</select>
+		</div>
+
+		<div class="form-label-group">
+			<input type="text" id="inputFirst" class="form-control"
+				placeholder="First Name" required autofocus=""> <br>
+		</div>
+
+		<div class="form-label-group">
+			<input type="text" id="inputLast" class="form-control"
+				placeholder="Last Name" required autofocus=""> <br>
+		</div>
+
+		<div class="form-label-group">
+			<input type="email" id="inputEmail" class="form-control"
+				placeholder="Email address" required autofocus=""> <br>
+		</div>
+
+		<div class="form-label-group">
+			<input type="password" id="inputPassword" class="form-control"
+				placeholder="Password" required> <br>
+		</div>
+
+		<div class="form-label-group">
+			<input type="password" id="reInputPassword" class="form-control"
+				placeholder="Re-enter Password" required> <br>
+		</div>
+		
+		<p id="error" class="text-danger"></p> <br>
+
+		<button class="btn btn-lg btn-success btn-block" type="button" id="createAccount">Create Account</button>
+		<hr>
+		<p>
+			Have an account?<input type="submit" id="loginPage"
+				class="btn btn-link" value="Sign in">
+		</p>
+
+	</form>
+
+
+</body>
+</html>

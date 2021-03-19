@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Account</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">ERS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngHome.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngApproveDeny.html">Approve/Deny</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngReq.html">Request</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngDashboard.html">Dashboard </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngEmployees.html">Employees </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MngSearch.html">Search</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Settings
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./MngFeedback.html">Feedback</a>
+                            <a class="dropdown-item" href="./MngProfile.html">Profile</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./signout.html">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2> Update Personal Account</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <form class="container" action="#" id="myForm">
+
+                <div class="form-group row">
+                    <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="password" name="Password" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputConfirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPhoto" class="col-sm-2 col-form-label">Photo</label>
+  
+                    <div class="form-group col-md-4">
+                        <input type="file" id="photo">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-5">
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary" id="btn" value="Login">Update</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div>
+            <p id="app"></p>
+        </div>
+    </div>
+    <script src="../scripts/updateUser.js"></script>
+</body>
+
+</html>

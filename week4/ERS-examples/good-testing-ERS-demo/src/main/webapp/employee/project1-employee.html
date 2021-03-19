@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <title>Expense Reimbursement</title>
+    
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .panel-body {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.5 em;
+            font-weight: 700;
+        }
+
+        #headerdate {
+            position: absolute;
+            right: 12%;
+            /*   bottom: 0;  */
+        }
+
+        thead {
+            background-color:rgb(255, 145, 0);
+            text-decoration: underline;
+            font-weight: 700;
+            
+        }
+        th {
+            cursor: pointer;
+             
+        } 
+    </style>
+
+	<script src="../scripts/loginscript.js"></script>
+	<!-- <script src="scripts/newreimbursementscript.js"></script>	 -->
+	
+    <script>
+    	function logout() {
+    		let xhr = new XMLHttpRequest();
+    		
+    		sessionStorage.removeItem('currentUser'); 
+    		sessionStorage.clear();
+    		xhr.open("POST", "http://localhost:8080/Project1/logout");	// maps to logout servlet
+    		xhr.send();
+    		//end current session that we set in loginscript.js
+    		
+    		// move the browser/window back to the <welcome> login page
+    		window.location = "http://localhost:8080/Project1/";
+    	}
+    </script>
+    
+    
+	
+
+</head>
+
+<body>
+   <div class="container">
+        
+        <div class="jumbotron" style="background-color: rgb(255, 145, 0); font-family: 'Ubuntu', sans-serif;">
+            <div class="container">
+            <!--    <a href="project1-login.html" style="position: absolute; right: 10%; top: .7em; border: rgb(255, 255, 255) 1.5px solid; background-color: rgb(165, 163, 159); border-radius: 7px 7px 7px;">Logout</a> -->
+            <button onclick="logout()"  id="logout" class="btn btn-secondary btn-sm" style="position: absolute; right: 10%; top: .7em; background-color: rgb(91, 91, 190);">Logout</button>
+           
+            </div>
+            
+            <p style="text-align: center; font-size: 30pt; color: white; font-weight: 800;">
+                Employee Reimbursements
+            </p>
+        </div>
+    </div>
+    <div class="container employeehead">
+        <div class="panel">
+            <div class="panel-body">
+                <span style="font-size: 2em;">Welcome</span>
+                <span style="font-size: 1.5em" id="displayname">Firstname Lastname</span>
+                
+                <span id="headerdate">
+                    <script>document.write(new Date().toDateString());</script>
+                </span>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container new">
+        <div class="row">
+            <div class="container">
+            <a href="#newReimburse" class="btn btn-primary" data-toggle="collapse">New Reimbursement</a>
+            </div>
+        </div>
+
+        <div id="newReimburse" class="collapse"
+            style="border: rgb(230, 226, 226) 1.5px solid; background-color: whitesmoke;">
+
+
+			<!-- onsubmit="submitNew(event.preventDefault())" -->
+            <form method="post" action="http://localhost:8080/Project1/newReimbursement"  name="newReimbursementForm"  style="border: 0;" enctype="multipart/form-data">
+                <div class="row">
+                    <input type="number" step="0.01" max= "99999999999999999999999999999999999999999.99" min="0.00" placeholder="Enter Amount xx.xx" class="col-lg-3 col-md-3 col-xs-12" name ="amount" id="amount">
+                    <select class="form-control col-lg-3 col-md-3 col-xs-12" placeholder="Select Type" name="typeNum">
+                        <option value="" disabled selected>Select Type</option>
+                        <option value="1">Lodging</option>
+                        <option value="2">Travel</option>
+                        <option value="3">Food</option>
+                        <option value="4">Other</option>
+                    </select>
+                    <input type="file"  id="fileUpload" onchange="handle(event)" class="btn btn-info" name="filename">
+                    <input type="submit" class="btn btn-primary btn-lg" onSubmit="submitReimbursement(event.preventDefault())">
+                </div>
+                <div class="row">
+                    <textarea maxlength="250" name="description" id="descriptBox" cols="30" rows="6" class="col-lg-4 col-sm-12"
+                        placeholder="Enter a description...(250 character max)"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    
+    <div class="container prior">
+    <hr><br><br>
+        <h2>Expense Reimbursements</h2>
+        <table class="table table-hover table-striped" id="reimTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Reimbursement ID</th>
+                    <th onclick="sortTable(1)">Date Submitted</th>
+                    <th onclick="sortTable(2)">Amount</th>
+                    <th onclick="sortTable(3)">Type</th>
+                    <th onclick="sortTable(4)">Description</th>
+                    <th onclick="sortTable(5)">Status</th>
+                    <th onclick="sortTable(6)">Resolver</th>
+                    <th onclick="sortTable(7)">Date Resolved</th>
+                </tr>
+               
+            </thead>
+            <tbody id="ReimbursementTable">
+          <!--     <tr>
+                   <td>0001</td>
+                   <td>12/24/2019</td>
+                   <td>$82.15</td>
+                   <td>Food</td>
+                   <td>Applebee's</td>
+                   <td>Approved</td>
+                   <td>Jim Halpert</td>
+                   <td>12/29/2019</td>
+               </tr>
+               <tr>
+                <td>0002</td>
+                <td>12/24/2011</td>
+                <td>$582.15</td>
+                <td>Lodging</td>
+                <td>Hilton</td>
+                <td>Approved</td>
+                <td>Dwight Schrute</td>
+                <td>12/29/2011</td>
+            </tr>
+            <tr>
+                <td>0003</td>
+                <td>12/24/2015</td>
+                <td>$500.36</td>
+                <td>Travel</td>
+                <td>Plane Ticket</td>
+                <td>Approved</td>
+                <td>Jim Halpert</td>
+                <td>12/29/2015</td>
+            </tr>
+            <tr>
+                <td>0004</td>
+                <td>12/24/2020</td>
+                <td>$25.99</td>
+                <td>Food</td>
+                <td>Houlihan's</td>
+                <td>Pending</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>0005</td>
+                <td>12/01/2019</td>
+                <td>$8202.15</td>
+                <td>Food</td>
+                <td>Applebee's</td>
+                <td>Denied</td>
+                <td>Jim Halpert</td>
+                <td>12/29/2019</td>
+            </tr>		 --> 
+
+            </tbody>
+
+        </table>
+
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+   	<script src="../scripts/popper.js"></script>
+   	<!-- 
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+     -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<!-- SORTING TABLE-->
+<script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("reimTable");
+      switching = true;
+      // Set the sorting direction to ascending:
+      dir = "asc";
+      /* Make a loop that will continue until
+      no switching has been done: */
+      while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+          // Start by saying there should be no switching:
+          shouldSwitch = false;
+          /* Get the two elements you want to compare,
+          one from current row and one from the next: */
+          x = rows[i].getElementsByTagName("td")[n];
+          y = rows[i + 1].getElementsByTagName("td")[n];
+          /* Check if the two rows should switch place,
+          based on the direction, asc or desc: */
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /* If a switch has been marked, make the switch
+          and mark that a switch has been done: */
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          // Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /* If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again. */
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+    </script>
+  <!-- USER LOGIN NAME DISPLAY 'displayname' -->
+  <script>
+  	function populateEmployeeTable(userString) {
+  		if(userString === null) {
+  	  		window.location = "http://localhost:8080/Project1/"; // redirect back to the initial html 
+  	  	} else {
+  	  		let wholeUser = JSON.parse(userString);
+  	  		if(wholeUser != null) {
+  	  			// implement individual user DOM manipulation here...
+  	  			// display welcome user names
+  	  			displayname.innerHTML = wholeUser.firstName + " " + wholeUser.lastName;
+  	  	
+  	  			// input reimbursement data
+  	  			let reims = wholeUser.userReimbursements;
+  	  			
+  	  			
+  	  			for(key in reims) {
+  	  				var tr = document.createElement('tr');
+  	  				tr.innerHTML = '<td>' + reims[key].reimId + '</td>' +
+  	  				'<td>' + reims[key].timeSubmitted + '</td>' +
+  	  				'<td>$' + reims[key].amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + '</td>' +
+  	  				'<td>' + reims[key].type + '</td>' +
+  	  				'<td>' + reims[key].description + '</td>' +
+  	  				'<td>' + reims[key].status + '</td>' +
+  	  				'<td>' + reims[key].resolver + '</td>' +
+  	  				'<td>' + reims[key].timeResolved + '</td>';
+  	  				reimbursementTable.appendChild(tr);
+  	  			};
+  	  			
+  	  			
+  	  		}
+  	  	}
+  	}
+  </script>
+  
+  <script>
+  	let displayname = document.getElementById('displayname');
+  	let reimbursementTable = document.getElementById('ReimbursementTable');
+  	let reimTable = document.getElementById('reimTable');
+  	// grab the user object associated with the session
+  	let userString = sessionStorage.getItem('currentUser');
+  	// make sure not empty, 
+  	populateEmployeeTable(userString);
+  
+  </script>
+  
+  <script>
+  	//$document.
+  
+  	function handle(event) {
+  		var reader = new FileReader();
+  		let file = event.target.files[0];
+  		reader.onloadend = () => {
+  			
+  			
+  		  
+  			var data = reader.result.split(",")[1];
+  			sessionStorage.setItem("data", data);
+  			
+  		}
+  		if(file) {
+  			reader.readAsDataURL(file)
+  		}
+  		
+  	}
+  
+  
+    function submitReimbursement() {
+    	/*
+    	// grab the form
+    	let form = document.newReimbursementForm;
+    	// get the values
+    	let amount = form.amount.value;
+    	let typeNum = form.typeNum.value;
+    	let description = form.description.value;
+    	// may want to comment out file until more investigation, we'll see...
+    	//let file = form.file.value;		
+    	
+    	// create temp js object to hold input
+    	let newReimbursementJSObject = {
+    			amount: amount,
+    			typeNum: typeNum,
+    			description: description,
+    			file: file,
+    	}
+    	*/
+        console.log("inside sumbitReimbursement() function");
+    	let form = document.newReimbursementForm;
+    	let formdata = new FormData();
+    	formdata.append('amount', form.amount.value);
+    	formdata.append('typeNum', form.typeNum.value);
+    	formdata.append('description', form.description.value);
+    	formdata.append('file', sessionStorage.getItem('data'));
+        
+        if((!sessionStorage.getItem('data').includes(".jpg")) && (!sessionStorage.getItem('data').includes(".png"))) {
+            alert(".png and .jpg are acceptable file types");
+            window.location = "http://localhost:8080/Project1/project1-employee.html";
+            
+        }
+    	
+    	
+    	// instantiate xhr
+    	let xhr = new XMLHttpRequest();
+    	
+       
+    	xhr.onreadystatechange = function() {
+    		if((this.readyState === 4) && (this.status === 201)) {
+    			alert("Reimbursement Submission Succesful");
+    			console.log("reimbursement succesful");
+    			// refresh the page to show reimbursement submitted in the all reimbursements table??
+    			//document.location.reload(true);  ~~ this causes me to have to submit twice for 1 to go through...
+    			
+				let userString = sessionStorage.getItem('currentUser');
+				let wholeUser = JSON.parse(userString);
+				let username = wholeUser.userName;
+				let password = wholeUser.userPassword;
+    			getUser(username,password);
+    			console.log("just did the getUser() method from login script");
+    			populateEmployeeTable(userString);
+    			
+    		} else if ((this.readyState === 4) && (this.status !== 201)) {
+    			alert("Reimbursement Submission Failed.");
+    			console.log("reimbursement failed");
+    		} else if (xhr.response != null) {
+                alert("an alert");
+                console.log("response is no longer null after readystatechange");
+            } else {
+    			console.log("else on readystatechange");
+    			alert("neither of the if conditional blocks for submitReimbursement() xhr request are working..");
+    		}
+    	}
+    	
+    	xhr.open("POST", "http://localhost:8080/Project1/newReimbursement");
+    	xhr.send(formdata);		/*JSON.stringify(newReimbursementJSObject)*/
+    }
+    </script>
+    
+    <script>
+		function submitNew() {
+			console.log("in submitNew function");
+			let userString = sessionStorage.getItem('currentUser');
+			let wholeUser = JSON.parse(userString);
+			let username = wholeUser.userName;
+			let password = wholeUser.userPassword;
+			getUser(username,password);
+			populateEmployeeTable(userString);
+			//window.location = "http://localhost:8080/Project1/employee/project1-employee.html";
+			if (this.status == 204) {
+				alert("submission unsucessful.")	
+			}
+			
+		}
+	</script>
+</body>
+
+</html>

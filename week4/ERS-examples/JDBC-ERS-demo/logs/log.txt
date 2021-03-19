@@ -1,0 +1,7 @@
+2020-51-12 00:51:01.414 [http-nio-8080-exec-19] INFO  com.revature.web.LoginServlet - msmith@gmail.com
+2020-51-12 00:51:01.437 [http-nio-8080-exec-19] INFO  com.revature.web.LoginServlet - rick
+2020-51-12 00:51:39.904 [http-nio-8080-exec-20] INFO  com.revature.web.LoginServlet - msmith@gmail.com
+2020-51-12 00:51:39.906 [http-nio-8080-exec-20] INFO  com.revature.web.LoginServlet - rick
+2020-06-12 11:06:37.246 [main] DEBUG com.revature.RTypeServiceTest - Travel
+2020-07-12 11:07:06.012 [main] DEBUG com.revature.RTypeServiceTest - Travel
+2020-09-12 11:09:02.743 [main] DEBUG com.revature.RTypeServiceTest - Travel

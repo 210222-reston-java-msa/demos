@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>project-1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<description></description>
+		<display-name>FrontController</display-name>
+		<servlet-name>FrontController</servlet-name>
+		<servlet-class>com.revature.web.FrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FrontController</servlet-name>
+		<url-pattern>/home</url-pattern>
+		<url-pattern>/addReimb</url-pattern>
+		<url-pattern>/getAllReimbs</url-pattern>
+		<url-pattern>/getReimbsByStatus</url-pattern>
+		<url-pattern>/getUser</url-pattern>
+		<url-pattern>/getAllUsers</url-pattern>
+		<url-pattern>/updateUser</url-pattern>
+		<url-pattern>/approveReimb</url-pattern>
+		<url-pattern>/denyReimb</url-pattern>
+		<url-pattern>/searchReimb</url-pattern>
+		<url-pattern>/getReceipt</url-pattern>
+		<url-pattern>/feedback</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>AuthorizationServlet</display-name>
+		<servlet-name>AuthorizationServlet</servlet-name>
+		<servlet-class>com.revature.web.AuthorizationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthorizationServlet</servlet-name>
+		<url-pattern>/signin</url-pattern>
+		<url-pattern>/signout</url-pattern>
+		<url-pattern>/signup</url-pattern>
+		<url-pattern>/forgotPass</url-pattern>
+	</servlet-mapping>
+
+
+
+</web-app>

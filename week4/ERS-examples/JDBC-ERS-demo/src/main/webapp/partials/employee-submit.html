@@ -1,0 +1,47 @@
+<style>
+element.style {
+	
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 420px;
+	padding: 15px;
+	margin: auto;
+}
+
+</style>
+
+
+<div class="form-signin" action="submit-request">
+	<div class="text-center mb-4">
+		<h1 class="h3 mb-3 font-weight-normal">Submit a Reimbursement Request</h1>
+	</div>
+
+	<div class="input-group mb-3">
+		<select required class="custom-select" name="rTypeSelect" id="rTypeSelect">
+			<option disabled selected>Type...</option>
+		</select>
+	</div>
+
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<input type="number" class="form-control" placeholder="Amount" name="amount" id="amount"
+			min="0" step=".01" aria-label="Amount">
+	</div>
+
+	<div class="input-group">
+		<textarea class="form-control" name="description" id="description" aria-label="With textarea" 
+			placeholder="Description (max 250 characters)" maxlength=250></textarea>
+	</div>
+
+	<br>
+	<button class="btn btn-lg btn-success btn-block" type="submit"
+		id="submitRequest">Submit</button>
+</div>
+
+<div class="text-center mb-4">
+<button class="btn btn-link" id="cancelSubmit" align="center">Cancel</button>	
+</div>

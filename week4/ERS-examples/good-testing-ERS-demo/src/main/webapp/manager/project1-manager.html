@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <title>ERS Manager</title>
+    <script src="../scripts/loginscript.js"></script>
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .panel-body {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.5 em;
+            font-weight: 700;
+        }
+
+        #headerdate {
+            position: absolute;
+            right: 12%;
+            /*   bottom: 0;  */
+        }
+
+        thead {
+            background-color:rgb(255, 145, 0);
+            text-decoration: underline;
+            font-weight: 700;
+            
+        }
+        th {
+            cursor: pointer;
+             
+        } 
+    </style>
+	<script>
+    	function logout() {
+    		let xhr = new XMLHttpRequest();
+    		
+    		xhr.open("POST", "http://localhost:8080/Project1/logout");	// maps to logout servlet
+    		xhr.send();
+    		//end current session that we set in loginscript.js
+    		//sessionStorage.removeItem('currentUser'); 
+    		sessionStorage.clear();
+    		// move the browser/window back to the <welcome> login page
+    		window.location = "http://localhost:8080/Project1/";
+    	}
+    </script>
+    
+
+</head>
+
+<body >
+    <div class="container">
+        
+        <div class="jumbotron" style="background-color: rgb(255, 145, 0); font-family: 'Ubuntu', sans-serif;">
+            <div class="container">
+            <!--    <a href="project1-login.html" style="position: absolute; right: 10%; top: .7em; border: rgb(255, 255, 255) 1.5px solid; background-color: rgb(165, 163, 159); border-radius: 7px 7px 7px;">Logout</a> -->
+            <button onclick="logout()"  id="logout" class="btn btn-secondary btn-sm" style="position: absolute; right: 10%; top: .7em; background-color: rgb(91, 91, 190);">Logout</button>
+           
+            </div>
+            
+            <p style="text-align: center; font-size: 30pt; color: white; font-weight: 800;">
+                Employee Reimbursements
+            </p>
+        </div>
+    </div>
+    <div class="container employeehead">
+        <div class="panel">
+            <div class="panel-body">
+                <span style="font-size: 2em;">Welcome</span>
+                <span id="displayname">Firstname Lastname</span>
+                
+                <span id="headerdate">
+                    <script>document.write(new Date().toDateString());</script>
+                </span>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+	
+	<div class="container newUser">
+    <hr><br><br>
+        <div class="row">
+            <div class="container">
+            <h2>Create new user:</h2>
+            <a href="#newUser" class="btn btn-primary" data-toggle="collapse">New User</a>
+            </div>
+        </div>
+
+        <div id="newUser" class="collapse"
+            style="border: rgb(230, 226, 226) 1.5px solid; background-color: whitesmoke;">
+
+            <form name="createNewUserForm" onSubmit="createNewUser(event.preventDefault())" style="border: 0;" enctype="multipart/form-data">
+                <div class="row">
+                    <input name ="userName" title="Must be atleast 6 characters long" type="text" placeholder="Enter Username" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <select title="Please select users role" class="form-control col-lg-3 col-md-3 col-xs-12" name="userRole">
+                        <option value="" disabled selected>Select Role:</option>
+                        <option value="1">Employee</option>
+                        <option value="2">Finance Manager</option>
+                    </select>
+                    <input name ="password" title= "passwords must be atleast 6 characters long and  &#010 contain atleast: &#010 &#8226 1  uppercase letter &#010 &#8226 1 lowercase letter &#010 &#8226 1 digit 0-9" type="password" placeholder="Enter Password" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <input name ="verifyPassword" title= "Verify password" type="password" placeholder="Re-Enter Password" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <input name ="firstName" title="Please enter first name" type="text" placeholder="Enter first name" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <input name ="lastName" title="Please enter last name" type="text" placeholder="Enter last name" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <input name ="email" title="Please enter email address" type="text" placeholder="Enter email" class="col-lg-3 col-md-3 col-xs-12" required>
+                    <input type="submit" class="btn btn-primary btn-lg">
+                </div>
+            </form>
+        </div>
+    </div>			
+	
+    <div class="container new">
+    <hr><br><br>
+        <div class="row">
+            <div class="container">
+            <h2>Reimbursement status:</h2>
+            <a href="#approveDeny" class="btn btn-primary" data-toggle="collapse">Approve/Deny</a>
+            </div>
+        </div>
+
+        <div id="approveDeny" class="collapse"
+            style="border: rgb(230, 226, 226) 1.5px solid; background-color: whitesmoke;">
+
+            <form name="setReimbursementStatusForm" onSubmit="updateStatus(event.preventDefault())" style="border: 0;" enctype="multipart/form-data">
+                <div class="row">
+                    <input name ="reimID" type="text" placeholder="Enter Reimbursement ID number" class="col-lg-3 col-md-3 col-xs-12">
+                    <select class="form-control col-lg-3 col-md-3 col-xs-12" name="statusNum">
+                        <option value="" disabled selected>Pending</option>
+                        <option value="1">Approve</option>
+                        <option value="-1">Deny</option>
+                    </select>
+                    <input type="submit" class="btn btn-primary btn-lg">
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    
+    <div class="container prior">
+    <hr><br><br>
+        <h2>All Reimbursements</h2>
+        <a href="#reimTable" class="btn btn-primary" data-toggle="collapse" >View All</a>
+        <table class="table table-hover table-striped collapse" id="reimTable">
+            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search or empty for all...">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Reimbursement ID</th>
+                    <th onclick="sortTable(1)">Date Submitted</th>
+                    <th onclick="sortTable(2)">Amount</th>
+                    <th onclick="sortTable(3)">Type</th>
+                    <th onclick="sortTable(4)">Description</th>
+                    <th onclick="sortTable(5)">Status</th>
+                    <th onclick="sortTable(6)">Author</th>
+                    <th onclick="sortTable(7)">Resolver</th>
+                    <th onclick="sortTable(8)">Date Resolved</th>
+                    <th onclick="sortTable(9)">Receipt</th>
+                </tr>
+               
+            </thead>
+            <tbody id="AllReimbursementsTable">
+             
+            </tbody>
+
+        </table>
+        
+    
+		<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Receipt</h4>
+        </div>
+        <div class="modal-body">
+          <img id="modalImg" src="" width="150%" height="150%" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    
+    </div>
+    <div style="height: 70px;"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<!-- SORTING TABLE-->
+<script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("reimTable");
+      switching = true;
+      // Set the sorting direction to ascending:
+      dir = "asc";
+      /* Make a loop that will continue until
+      no switching has been done: */
+      while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+          // Start by saying there should be no switching:
+          shouldSwitch = false;
+          /* Get the two elements you want to compare,
+          one from current row and one from the next: */
+          x = rows[i].getElementsByTagName("td")[n];
+          y = rows[i + 1].getElementsByTagName("td")[n];
+          /* Check if the two rows should switch place,
+          based on the direction, asc or desc: */
+          if (dir == "asc") {												
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /* If a switch has been marked, make the switch
+          and mark that a switch has been done: */
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          // Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /* If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again. */
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+    </script>
+    
+  
+  <script>
+function searchTable() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("AllReimbursementsTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
+ 
+  <script>
+  	function showReceipt(reimId) {
+  		//probably need to start an xhr that links to a servlet that retrieves the reciept by reimId
+
+      //instantiate js object for json request
+      let reimIdObject = {
+        id: reimId,
+      }
+
+      // instantiate XHR object
+      let xhr = new XMLHttpRequest();
+
+      // create function with conditions for ready state change
+      xhr.onreadystatechange = function() {
+        if((this.readyState === 4) && (this.status === 200)) {
+         
+          let imageEle = document.getElementById("modalImg");
+          let res = this.responseText;
+          let src = "data:image/png;base64," + res;
+         
+          imageEle.setAttribute("src", src);
+          sessionStorage.removeItem('')
+          
+          
+          
+          
+          // write code for doing something to img tag with id=modalImg (i want to change the src attribute to the actual src code data i believe)
+        } else if ((this.status === 200) || (this.readyState != 4)) {
+        	
+        } else {
+          // write some text about error in displaying reciept
+          alert("Receipt retrieval unsuccessful.")
+    
+        }
+      }
+
+      xhr.open("POST", "http://localhost:8080/Project1/getImage");
+      xhr.send(JSON.stringify(reimIdObject));
+      // ^^^^ i think this will work.. might need to do a post??
+
+  	}
+  </script>
+  
+   <script>
+   var allReimbursementsString = sessionStorage.getItem("allReimbursements");
+   var allReimbursements = JSON.parse(allReimbursementsString);
+  	function populateTable(userString) {
+  		if(userString === null) {
+  	  		window.location = "http://localhost:8080/Project1/"; // redirect back to the initial html 
+  	  	} else {
+  	  		let wholeUser = JSON.parse(userString);
+  	  		if(wholeUser != null) {
+  	  			// implement individual user DOM manipulation here...
+  	  			// display welcome user names
+  	  			displayname.innerHTML = wholeUser.firstName + " " + wholeUser.lastName;
+  	  		
+  	  			// input reimbursement data
+  	  			let allReimbursements = JSON.parse(allReimbursementsString);
+  	  			
+  	  		
+  	  			for(key in allReimbursements) {
+  	  			let num = allReimbursements[key];
+  	  				var tr = document.createElement('tr');
+  	  				tr.innerHTML = '<td>' + allReimbursements[key].reimId + '</td>' +
+  	  				'<td>' + allReimbursements[key].timeSubmitted + '</td>' +
+  	  				'<td>$' + allReimbursements[key].amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + '</td>' +
+  	  				'<td>' + allReimbursements[key].type + '</td>' +
+  	  				'<td>' + allReimbursements[key].description + '</td>' +
+  	  				'<td>' + allReimbursements[key].status + '</td>' +
+  	  				'<td>' + allReimbursements[key].author + '</td>' +
+  	  				'<td>' + allReimbursements[key].resolver + '</td>' +
+  	  				'<td>' + allReimbursements[key].timeResolved + '</td>' +
+  	  				'<td>' + '<button id="' + allReimbursements[key].reimId + '" class="btn btn-primary btn-sm" onclick="showReceipt(this.id)" data-toggle="modal" data-target="#myModal">View</button>' + '</td>';
+  	  				AllReimbursementsTable.appendChild(tr);
+  	  				
+  	  				
+  	  			};
+  
+  	  		}
+  	  		
+  	  	}
+  	}
+  </script>
+     <!-- USER LOGIN NAME DISPLAY 'displayname' -->
+  <script>
+ 
+  	let displayname = document.getElementById('displayname');
+  	let reimbursementTable = document.getElementById('AllReimbursementsTable');
+  
+  	// grab the user object associated with the session
+  	let userString = sessionStorage.getItem('currentUser');
+  	var allReimbursementsString = sessionStorage.getItem("allReimbursements");
+  	// make sure not empty,
+ 
+  	populateTable(userString);
+  </script>
+ 
+  
+  <script>
+  	function updateStatus() {
+
+  		let statusForm = document.setReimbursementStatusForm;
+  		let reimID = statusForm.reimID.value;
+  		let statusNum = statusForm.statusNum.value;
+  		let statusUpdateObject = {
+  				reimID: reimID,
+  				statusNum: statusNum,
+  		}
+  		let xhr = new XMLHttpRequest();
+  		xhr.onreadystatechange = function() {
+  			if((this.readyState === 4) && (this.status === 200)) {
+  				alert("Status was succesfully changed");
+  				getReimbursements();
+  				populateTable(userString);
+  				
+  			} 
+  			if((this.readyState === 4) && (this.status != 200))  {
+  				alert("Unable to update status.")
+  			}
+  		}
+  		xhr.open("POST", "http://localhost:8080/Project1/updateStatus");
+  		xhr.send(JSON.stringify(statusUpdateObject));
+  	}
+  </script>
+  
+  <script>
+  //userName userRole password verifyPassword firstName lastName email 
+	function createNewUser() {
+	
+	let userForm = document.createNewUserForm;
+	let userName = createNewUserForm.userName.value;
+	let userRole = createNewUserForm.userRole.value;
+	let password = createNewUserForm.password.value;
+	let verifyPassword = createNewUserForm.verifyPassword.value;
+	let firstName = createNewUserForm.firstName.value;
+	let lastName = createNewUserForm.lastName.value;
+	let email = createNewUserForm.email.value;
+	let newUserObject = {
+			userName: userName,
+			userRole: userRole,
+			password: password,
+			firstName: firstName,
+			lastName: lastName,
+			email: email,
+	}
+	//Validation
+	if(password != verifyPassword) {
+		alert("Passwords do not match");
+		return;
+	}
+	if((!email.includes("@")) || (!email.includes("."))) {
+		alert("Please enter a valid email address.");
+		return;
+	}
+	if(userName.length < 6) {
+		alert("Usernames must be atleast 6 characters long \n" 
+				+ "Please try again.");
+		return;
+	}
+	if(((!password.includes("1")) && (!password.includes("2")) && (!password.includes("3")) && (!password.includes("4")) && (!password.includes("5"))
+			&& (!password.includes("6")) && (!password.includes("7")) && (!password.includes("8")) && (!password.includes("9")) && (!password.includes("0"))) 
+			|| ((!password.includes("a")) && (!password.includes("b")) && (!password.includes("c")) && (!password.includes("d")) && (!password.includes("e")) 
+					&& (!password.includes("f")) && (!password.includes("g")) && (!password.includes("h")) && (!password.includes("i")) && (!password.includes("j")) 
+					&& (!password.includes("k")) && (!password.includes("l")) && (!password.includes("m")) && (!password.includes("n")) && (!password.includes("o")) 
+					&& (!password.includes("p")) && (!password.includes("q")) && (!password.includes("r")) && (!password.includes("s")) && (!password.includes("t")) 
+					&& (!password.includes("u")) && (!password.includes("v")) && (!password.includes("w")) && (!password.includes("x")) && (!password.includes("y")) 
+					&& (!password.includes("z"))) 
+			|| ((!password.includes("A")) && (!password.includes("B")) && (!password.includes("C")) && (!password.includes("D")) && (!password.includes("E")) 
+					&& (!password.includes("F")) && (!password.includes("G")) && (!password.includes("H")) && (!password.includes("I")) && (!password.includes("J")) 
+					&& (!password.includes("K")) && (!password.includes("L")) && (!password.includes("M")) && (!password.includes("N")) && (!password.includes("O")) 
+					&& (!password.includes("P")) && (!password.includes("Q")) && (!password.includes("R")) && (!password.includes("S")) && (!password.includes("T")) 
+					&& (!password.includes("U")) && (!password.includes("V")) && (!password.includes("W")) && (!password.includes("X")) && (!password.includes("Y")) 
+					&& (!password.includes("Z")))
+			|| (password.length < 6))
+			{
+		alert("Passwords must contain atleast 1 uppercase letter, 1 lowercase letter, 1 number 0-9, and be atleast 6 characters long. \n"
+				+ "Please try again.")
+				return;
+	}
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+		if((this.readyState === 4) && (this.status === 204)) {
+			alert("Username already exists \n Please select a different Username.");
+		} 
+		if((this.readyState === 4) && (this.status === 201)) {
+			alert("Success! \n" +
+				 "User: " + userName + " was created.");
+			userForm.reset();
+		}
+		if((this.readyState === 4) && (this.status === 202)) {
+			alert("New user was unable to be created, \n please try again later.");
+		} 
+		if((this.readyState === 4) && ((this.status != 200) && (this.status != 204) 
+				&& (this.status != 201) && this.status != 202))  {
+			alert("Unable to create new user");
+		}
+	}
+	xhr.open("POST", "http://localhost:8080/Project1/newUser");
+	xhr.send(JSON.stringify(newUserObject));
+}
+  </script>
+</body>
+
+</html>
