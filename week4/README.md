@@ -19,8 +19,15 @@
 9.  Explain the relevance of npm to Angular projects. Which file does npm use to track dependencies?
     
 10.  List some decorators for Angular apps
+
+    - Class decorators, e.g. `@Component` and `@NgModule`
+    - Property decorators for properties inside classes, e.g. `@Input` and `@Output`
+    - Method decorators for methods inside classes, e.g. `@HostListener`
+    - Parameter decorators for parameters inside class constructors, e.g. `@Inject`
     
-11.  What is the lifecycle of a component? List some lifecycle hooks
+11.  What is the lifecycle of a component? List some lifecycle hooks:
+
+    > There are 8 different stages in the component lifecycle. Every stage is called as lifecycle hook event. So, we can use these hook events in different phases of our       application to obtain control of the components. Since a component is a TypeScript class, every component must have a constructor method. The constructor of the component class executes, first, before the execution of any other lifecycle hook events. 
     
 12.  What is a directive and what are the different types? How to tell these directives apart with syntax?
     
@@ -35,24 +42,26 @@
 17.  What is an Angular module? What properties should you set inside it?
     
 18.  What’s the difference between a JavaScript module and Angular module? What are some common Angular modules?
+
+    > An NgModule is a class marked by the @NgModule decorator with a metadata object that describes how that particular part of the app fits together with the other parts. NgModules are specific to Angular. While classes with an @NgModule decorator are by convention kept in their own files, they differ from JavaScript modules because they include this metadata.
+    > https://angular.io/guide/ngmodule-vs-jsmodule
     
-19.  How would you lazy load a module?
+19.  How would you run your unit tests for an Angular project?
     
 20.  How have you used the HttpClient? What methods does it have and what do they return?
     
 21.  What is an Observable? What’s the difference between it and a Promise?
+
+    > Promises deal with **one** asynchronous event at a time, while observables handle a **sequence** of asynchronous events over a period of time.
     
 22.  What forms of data binding does Angular support? Explain the syntax for each
     
 23.  What does Webpack do for your ng project?
+24.  
+    > Webpack is a tool that lets you compile JavaScript modules, also known as module bundler. Given a large number of files, it generates a single file (or a few files) that run your app. It can perform many operations: helps you bundle your resources
     
 24.  How would you implement routing in your project?
     
-25.  What is an EventEmitter and when would you use one?
-    
-26.  What’s the difference between using reactive and template-driven forms? How would you setup each?
-    
-27.  How would you run your unit tests for an Angular project?
 
 #### But first, What's a framework?
 A framework is a platform for developing software applications. It provides a foundation on which software developers can build programs for a specific platform. A framework may also include code libraries, a compiler, and other programs used in the software development process.
