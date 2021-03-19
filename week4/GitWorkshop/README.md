@@ -36,7 +36,7 @@ Your group is going to practice git flow, and get a little creative at the same 
 
     - A [haiku](https://en.wikipedia.org/wiki/Haiku) is a three line Japanese poetry form, with five syllables on the first line, seven on the second, and five on the final line.
 
-    - If your creative energies ebb, you can always google for Haiku generators online, or just use [this one](http://www.everypoet.com/haiku/default.htm).
+    - If your creative energies ebb, you can always google for Haiku generators online, or just use [this one](http://www.everypoet.com/haiku/default.htm). :point_left:
 
 * Once each group member has penned their masterpiece, they should save it and `git push` it to a remote branch on the repo.
 
