@@ -1,4 +1,4 @@
-# Week 4: Angular QC Questions
+# ⁉️ Week 4: Angular QC Questions ⁉️
 
 1.  What makes a “single page application” (SPA) different from a normal web page?
     
@@ -59,11 +59,17 @@
 22.  What forms of data binding does Angular support? Explain the syntax for each
     
 23.  What does Webpack do for your ng project?
-24.  
-    > Webpack is a tool that lets you compile JavaScript modules, also known as module bundler. Given a large number of files, it generates a single file (or a few files) that run your app. It can perform many operations: helps you bundle your resources
+
+- Webpack is a tool that lets you compile JavaScript modules, also known as module bundler. Given a large number of files, it generates a single file (or a few files) that run your app. It can perform many operations: helps you bundle your resources
     
 24.  How would you implement routing in your project?
     
+
+<hr> 
+
+<br>
+# Angular Study Guide
+
 
 #### But first, What's a framework?
 A framework is a platform for developing software applications. It provides a foundation on which software developers can build programs for a specific platform. A framework may also include code libraries, a compiler, and other programs used in the software development process.
