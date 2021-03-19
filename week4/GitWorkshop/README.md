@@ -20,7 +20,9 @@ Your group is going to practice git flow, and get a little creative at the same 
 
 * The repo owner should save these files and push them to a remote branch, and create a pull request to the master branch. Someone else should review it and approve it!
 
-## Now the fun begins...
+<hr>
+
+## Round :one: Now the fun begins...
 
 * Each group member should clone the repo (or pull a fresh copy if they have already cloned it).
 
