@@ -67,7 +67,7 @@
 
 <hr> 
 
-<br>
+
 # Angular Study Guide
 
 
