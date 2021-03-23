@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>SpringMVC</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
   
  <!-- Tell your App where the application Context file is -->
  <context-param> <!--  think global!!! -->
@@ -12,13 +9,11 @@
  </context-param>
   
   <!--  We need to add something called the Context Load Listener -->
-  <!--  The context-load liostener reads and parses our applicationContext.xml file -->
+  <!--  The context-load listener reads and parses our applicationContext.xml file -->
   <listener>
   		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   		<!-- This automates the create of the Application Context so that Tomcat start up both the instantiation of beans and our servlet -->
   </listener>
-  
-  
   
   
   <!--  Step 1. Declare the Dispatcher Servlet in your web.xml -->

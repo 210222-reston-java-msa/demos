@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>static</value> <!-- /static/index.html -->
+		</property>
+		<property name="suffix">
+			<value>.html</value>
+		</property>
+	</bean>
+	
+	<!-- 1. HTTP request will arrive at the Dispatcher servlet
+		 2. Dispatcher Servlet will consult the HandlerMapping.... 
+		 3. Passes relevant info to the controller
+		 4. the controller will consult the business layer to do something
+		 5. the controller will build the model/view to send back to the DISPATCHER SERVLET
+		 6. the response is handed BACK to the dispatcher servlet and the d.s consults the ViewRESOLVER to process the view
+		 7. the response is sent to the client
+		 /-->
+	
+
+</beans>
