@@ -1,22 +1,22 @@
 # Spring Notes
-* [spring](spring.md)
-* [spring bean](spring-bean.md)
-* [ioc](ioc.md)
-* [BeanFactory vs ApplicationContext](beanfactory-vs-applicationcontext.md)
-* [bean-wiring](bean-wiring.md)
-* [autowiring](autowiring.md)
+* [spring](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring.md)
+* [spring bean](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-bean.md)
+* [ioc](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/ioc.md)
+* [BeanFactory vs ApplicationContext](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/beanfactory-vs-applicationcontext.md)
+* [bean-wiring](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/bean-wiring.md)
+* [autowiring](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/autowiring.md)
 
 <br/>
 
-* [aop](aop.md)
-* [mvc](mvc.md)
-* [rest](rest.md)
-* [orm](orm.md)
+* [aop](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/aop.md)
+* [mvc](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/mvc.md)
+* [rest](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/rest.md)
+* [orm](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/orm.md)
 
 <br/>
 
-* [data (a Spring Project)](https://github.com/201026-reston-java-msa/demos/blob/main/week6/spring-notes/spring-projects.md)
-* [boot (a Spring Project)](https://github.com/201026-reston-java-msa/demos/blob/main/week6/spring-notes/spring-projects.md)
+* [data (a Spring Project)](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-projects.md)
+* [boot (a Spring Project)](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-projects.md)
 
 # Spring QC Questions
 *These will be asked on **Monday March. 29th***
