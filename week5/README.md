@@ -19,7 +19,7 @@
 * [boot (a Spring Project)](https://github.com/201026-reston-java-msa/demos/blob/main/week6/spring-notes/spring-projects.md)
 
 # Spring QC Questions
-*These will be asked on **Monday Dec. 14th***
+*These will be asked on **Monday March. 29th***
 
 > Watch [this video on Spring Framework for a brief overview!](https://www.youtube.com/watch?v=gq4S-ovWVlM&ab_channel=JavaBrains)
 
