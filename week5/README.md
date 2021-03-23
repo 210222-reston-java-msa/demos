@@ -55,6 +55,7 @@
     
 14.  What is Spring Expression Language? What can you reference using SpEL? What is the difference between $ and # in @value expressions?
     
+<br>
 
 ### Spring MVC
 
@@ -106,7 +107,8 @@
 33.  Explain the pointcut expression syntax
     
 34.  What visibility must Spring bean methods have to be proxied using Spring AOP?
-    
+        
+<br>    
 
 ### Spring Data
 
@@ -130,6 +132,7 @@
     
 43.  What is @Query used for?
     
+<br>
 
 ### Spring Boot
 
