@@ -1,3 +1,5 @@
+> Watch [this video on Spring Framework for a brief overview!](https://www.youtube.com/watch?v=gq4S-ovWVlM&ab_channel=JavaBrains)
+
 # Spring Notes
 * [What is Spring?](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring.md)
 * [spring bean](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-bean.md)
@@ -18,10 +20,10 @@
 * [data (a Spring Project)](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-projects.md)
 * [boot (a Spring Project)](https://github.com/210222-reston-java-msa/demos/blob/main/week5/spring-notes/spring-projects.md)
 
+<br>
+
 # Spring QC Questions
 *These will be asked on **Monday March. 29th***
-
-> Watch [this video on Spring Framework for a brief overview!](https://www.youtube.com/watch?v=gq4S-ovWVlM&ab_channel=JavaBrains)
 
 ### Spring Core
 
