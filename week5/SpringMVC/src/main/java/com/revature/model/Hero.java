@@ -21,7 +21,7 @@ public class Hero {
 	@SequenceGenerator(name="heroSequence", sequenceName="HERO_SEQ", allocationSize=1)
 	private int id;
 	
-	@Column(name="H_NAME")
+	@Column(name="H_NAME", unique=true, nullable=false)
 	private String name;
 	
 	@Column(name="H_SUPER_POWER")

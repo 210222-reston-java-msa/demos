@@ -7,7 +7,7 @@
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
-			<value>static</value> <!-- /static/index.html -->
+			<value>/index</value> <!-- /static/index.html -->
 		</property>
 		<property name="suffix">
 			<value>.html</value>
