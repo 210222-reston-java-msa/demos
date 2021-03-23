@@ -5,6 +5,19 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
+ <!-- Tell your App where the application Context file is -->
+ <context-param> <!--  think global!!! -->
+ 	<param-name>contextConfigLocation</param-name>
+ 	<param-value>/WEB-INF/applicationContext.xml</param-value>
+ </context-param>
+  
+  <!--  We need to add something called the Context Load Listener -->
+  <!--  The context-load liostener reads and parses our applicationContext.xml file -->
+  <listener>
+  		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  		<!-- This automates the create of the Application Context so that Tomcat start up both the instantiation of beans and our servlet -->
+  </listener>
+  
   
   
   
