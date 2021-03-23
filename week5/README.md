@@ -25,7 +25,9 @@
 # Spring QC Questions
 *These will be asked on **Monday March. 29th***
 
-### Spring Core
+<br>
+
+## Spring Core
 
 1.  What are Spring Projects and Spring Modules?
     
@@ -57,7 +59,7 @@
     
 <br>
 
-### Spring MVC
+## Spring MVC
 
 15.  Explain the MVC architecture and how HTTP requests are processed in the architecture
     
@@ -85,6 +87,7 @@
     
 27.  What are the advantages of using RestTemplate?
     
+<br>
 
 ### Spring AOP
 
@@ -110,7 +113,7 @@
         
 <br>    
 
-### Spring Data
+## Spring Data
 
 34.  What is Spring ORM and Spring Data?
     
@@ -134,7 +137,7 @@
     
 <br>
 
-### Spring Boot
+## Spring Boot
 
 44.  How is Spring Boot different from legacy Spring applications? What does it mean that it is “opinionated”?
     
