@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+	<!-- This is called my Spring Context a.k.a the IoC container -->
+
+	<!-- We are enabling our application to read Spring MVC specific annotations 
+		-> @Controller -->
+	<mvc:annotation-driven />
+
+
+	<!-- A bean is an object that is instantiated, assembled, and managed by 
+		the Spring IoC container (Inversion of Control) -->
+
+	<!-- this enables the @Transactional -->
+	<tx:annotation-driven />
+
+	<!-- Inversion of Control (or IoC) is the process in which an object defines 
+		its dependencies without creating them. Instead, it's the IoC Container's 
+		job to construct these dependencies. -->
+
+	<!-- Context Scanning: it will scan all of the packages to be managed -->
+	<!-- Here we scan all the classes, etc... -->
+	<context:component-scan
+		base-package="com.revature.repository" />
+	<context:component-scan
+		base-package="com.revature.service" />
+	<context:component-scan
+		base-package="com.revature.controller" />
+	<context:component-scan
+		base-package="com.revature.view" />
+
+
+
+	<!-- dataSource bean (JDBC creds) -->
+	<bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="org.postgresql.Driver" />
+		<!-- customize this -->
+		<property name="url"
+			value="jdbc:postgresql://reston-java.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres" />
+		<property name="username" value="postgres" />
+		<property name="password" value="postgres" />
+	</bean>
+
+	<!-- sessionFactory beans to work with hibernate -->
+
+	<!-- hibernate properties go here -->
+	<bean name="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+
+		<!-- We are wiring our dataSource bean into our sessionFactory bean -->
+		<property name="dataSource" ref="dataSource" />
+
+
+		<!-- Annotation Mapping -->
+		<property name="packagesToScan" value="com.revature.model" />
+		<property name="hibernateProperties">
+
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<!-- customize this -->
+				<prop key="hibernate.default_schema">sophiag</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Here we are manually injecting the transaction manager into the SessionFactory 
+		Bean -->
+	<!-- This will make all sessions capable of a transaction -->
+	<bean name="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+
+	</bean>
+</beans>
