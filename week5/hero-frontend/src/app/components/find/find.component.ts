@@ -25,7 +25,9 @@ export class FindComponent {
   constructor(private heroService: HeroService) { }
 
   public findHeroFromService(): void {
-    this.heroService.findHero(this.hero).subscribe(data => this.recievedHero = data,
+
+    this.heroService.findHero(this.hero).subscribe(data => this.recievedHero = data, // make sure you are setting your data equal here
+
       error => this.clientMessage.message = 'SOMETHING WENT WRONG');
   }
 
