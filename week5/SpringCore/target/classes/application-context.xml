@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+<!-- Spring configurations tell the IOC container how beans are to be created and
+how they are dependant on each other. 
+
+In this example the class Main.java requires
+and instance of the MotdServiceBean, and the MotdServiceBean requires a value for
+the defaultMotdIndex property. This context configuration tells the IOC container
+how to build each bean and its relationships.
+
+ -->        
+        
+
+	<!-- Here we're going to use XML configuration of the Spring ApplicationContext... 
+		You can also use annotations. Spring Configurations tell the IoC container 
+		how to build each bean and its relationships -->
+
+       
+       
+       <!--  CONSTRUCTOR INJECTION -->
+       	<!-- The first bean to register is the Main.java which uses CONSTRUCTOR 
+		INJECTION to REFERENCE MotdServiceBean -->
+       <bean name="MainBean" class="com.example.MainBean">
+       		<constructor-arg name="motdServiceBean"  ref="MotdServiceBean" />
+       
+       </bean>
+       
+       <!--  SETTER INJECTION  we are setting certain properties of this class upon instantiation -->
+       <bean name="MotdServiceBean" class="com.example.services.MotdServiceBean" init-method="initMotds">
+       		<property name="defaultMotdIndex"> <value>4</value></property>
+       </bean>
+        
+</beans>
