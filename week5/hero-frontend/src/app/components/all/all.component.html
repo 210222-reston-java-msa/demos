@@ -1,1 +1,34 @@
-<p>all works!</p>
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+
+    <div class="panel-body">
+        <div class="list-group">
+
+            <div class="list-group-item">
+
+                <div *ngFor="let h of heroes" class="list-group-item">
+                    <!-- the "heroes" part of our *ngFor directive represents the heores array in our .ts file.-->
+
+                    <strong>ID</strong>: {{ h.id }}
+                    <strong>Name</strong>: {{ h.name }}
+                    <strong>Power</strong>: {{ h.superPower }}
+                    <strong>Has Cape?</strong>: {{ (h.hasCape) ? 'Yes' : 'No' }} <!-- Here I'm using a ternary operator-->
+
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-center" (click)="findAllHeroesFromService()">GET THE HEROES!</button>
+                </div>
+
+                <div *ngIf="heroes.length == 0">
+                    {{ clientMessage.message }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

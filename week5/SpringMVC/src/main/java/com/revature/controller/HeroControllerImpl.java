@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import com.revature.model.Hero;
 import com.revature.service.HeroService;
 
 @Controller("heroController")
+@CrossOrigin(origins = "http://localhost:4200")
 public class HeroControllerImpl implements HeroController{
 	
 	@Autowired
@@ -43,7 +45,7 @@ public class HeroControllerImpl implements HeroController{
 		return heroService.getHero(hero.getName());
 	}
 
-	@GetMapping("/findAllHeroes")
+	@GetMapping("/findAllHeroes") // localhost:8080/SpringMVC/findAllHeroes
 	public @ResponseBody List<Hero> findAllHeroes() {
 		return heroService.getAllHeroes();
 	}
