@@ -13,7 +13,8 @@ import { catchError } from 'rxjs/operators';
 export class HeroService {
 
   httpOptions = {
-    headers: new HttpHeaders({'Content Type' : 'application/json'})
+    // Shout out to Farid for figuring out that Content-Type must have a "-" if used
+    headers: new HttpHeaders({'Content-Type' : 'application/json'})
   }
 
   constructor(private http: HttpClient) { }
