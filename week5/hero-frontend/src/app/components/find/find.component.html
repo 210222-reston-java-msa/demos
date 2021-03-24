@@ -21,8 +21,8 @@
                     <button class="btn btn-primary btn-center" (click)="findHeroFromService()">FIND HERO!</button>
                 </div>
 
-                <div *ngIf="recievedHero">
-                    {{ recievedHero.superPower }} --- {{recievedHero.id}}
+                <div *ngIf="recievedHero.name">
+                    {{ recievedHero.superPower }} 
                 </div>
                 <div>
                     {{ clientMessage.message }}

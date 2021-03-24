@@ -26,6 +26,7 @@ export class RegisterComponent {
   public registerHeroFromService(): void {
 
     this.heroService.registerHero(this.hero).subscribe(data => this.clientMessage = data, 
+      
       error => this.clientMessage.message = 'SOMETHING WENT WRONG!');
       
   }
