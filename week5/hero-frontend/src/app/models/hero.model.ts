@@ -12,5 +12,4 @@ export class Hero {
         this.hasCape = hasCape;
     }
 
-
 }

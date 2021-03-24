@@ -3,6 +3,7 @@ import { ClientMessage } from './../models/client-message.model';
 import { Hero } from './../models/hero.model';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+// Remember to add HTTPClient to your imports[] in your app.module.ts
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 

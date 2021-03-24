@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+
+                <div class="form-group">
+                    <!-- Here I want to take input from the user, and change the property of the hero object in my ts file -->
+                    <input [(ngModel)]="hero.name" placeholder="Name" class="form-control">
+                    <input [(ngModel)]="hero.superPower" placeholder="Superpower" class="form-control">
+                    <input [(ngModel)]="hero.hasCape" placeholder="Do they have a cape?" class="form-control">
+                </div>
+
+                <div>
+                    <button class ="btn btn-primary btn-center" (click)="registerHeroFromService()">REGISTER HERO!</button>
+                </div>
+                <div>
+
+                    {{ clientMessage.message }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,1 +1,38 @@
-<p>find works!</p>
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="list-group">
+
+            <div class="list-group-item">
+
+                <div class="form-group">
+                    
+                    <!-- here we take in some usre input and bind it to our component.ts hero property
+                    This repreents the hero object that we include in our post request to our server.  -->
+                    <input [(ngModel)]="hero.name" placeholder="Hero's name" class="form-control" />
+
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-center" (click)="findHeroFromService()">FIND HERO!</button>
+                </div>
+
+                <div *ngIf="recievedHero">
+                    {{ recievedHero.superPower }} --- {{recievedHero.id}}
+                </div>
+                <div>
+                    {{ clientMessage.message }}
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+
+</div>
