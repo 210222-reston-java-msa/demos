@@ -26,7 +26,6 @@ how to build each bean and its relationships.
 		INJECTION to REFERENCE MotdServiceBean -->
        <bean name="MainBean" class="com.example.MainBean">
        		<constructor-arg name="motdServiceBean"  ref="MotdServiceBean" />
-       
        </bean>
        
        <!--  SETTER INJECTION  we are setting certain properties of this class upon instantiation -->

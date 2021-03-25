@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- ApplicationContext is an interface that extends the BeanFactory interface 
+		and allows us to wire our beans and define their relationships to enforce 
+		dependency injection -->
+
+	<context:annotation-config />
+
+	<!-- BEANS --> <!-- something in this package relies on another bean -->
+	<context:component-scan
+		base-package="com.revature.repository" />
+
+	<!-- @Transactional -->
+	<tx:annotation-driven />
+
+	<!-- DATASOURCE -->
+	<bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="org.postgresql.Driver" />
+		<!-- customize this -->
+		<property name="url"
+			value="jdbc:postgresql://reston-java.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres" />
+		<property name="username" value="postgres" />
+		<property name="password" value="postgres" />
+	</bean>
+
+
+	<!-- SESSION FACTORY -->
+	<bean name="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+
+		<!-- We are wiring our dataSource bean into our sessionFactory bean -->
+		<property name="dataSource" ref="dataSource" />
+
+
+		<!-- Annotation Mapping -->
+		<property name="packagesToScan" value="com.revature.model" />
+		<property name="hibernateProperties">
+
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<!-- customize this -->
+				<prop key="hibernate.default_schema">sophiag</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- TRANSACTION MANAGER -->
+		<!-- Here we are manually injecting the transaction manager into the SessionFactory 
+		Bean -->
+	<!-- This will make all sessions capable of a transaction -->
+	<bean name="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+
+</beans>
+		

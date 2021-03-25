@@ -30,7 +30,7 @@ public class MotdServiceBean {
 	protected void initMotds() {
 		motds.addAll(Arrays.asList("Good Morning", "You always pass failure on your way to success",
 				"It seems impossible until it's done", "Positive anything is better than negative nothing", 
-				"The first step of the journey is always the mst difficult"));
+				"The first step of the journey is always the most difficult"));
 	}
 	
 	
