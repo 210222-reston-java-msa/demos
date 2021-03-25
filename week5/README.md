@@ -89,30 +89,6 @@
     
 <br>
 
-### Spring AOP
-
-28.  What is “aspect-oriented programming”? Define an aspect.
-    
-29.  Give an example of a cross-cutting concern you could use AOP to address
-    
-30.  Define the following:
-    
-
-*  Join point
-    
-*  Pointcut
-    
-*  Advice
-    
-
-31.  What are the different types of advice? What is special about the @Around advice? How is the ProceedingJoinPoint used?
-    
-33.  Explain the pointcut expression syntax
-    
-34.  What visibility must Spring bean methods have to be proxied using Spring AOP?
-        
-<br>    
-
 ## Spring Data
 
 34.  What is Spring ORM and Spring Data?
