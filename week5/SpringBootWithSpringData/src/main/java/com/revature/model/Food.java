@@ -17,12 +17,11 @@ import lombok.ToString;
  * 
  * Lambok is a java library that automatically plugs
  * into your editor (IDE).  It allows you to generate methods and
- * constructors using JUST annotations.
+ * constructors using JUST annotations. @ToString, @Gette
  */
 
 @Entity
 @Table(name="FOOD")
-@Getter @Setter @EqualsAndHashCode @ToString
 public class Food {
 	
 	@Id
@@ -30,11 +29,12 @@ public class Food {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int foodId;
 	
-	@Column(name="dish_name")
+	@Column(name="dish_name", unique=true)
 	private String dishName;
 	
 	@Column(name="calories")
 	private double calories;
+	
 	
 	public Food() {}
 
@@ -50,10 +50,75 @@ public class Food {
 		this.dishName = dishName;
 		this.calories = calories;
 	}
+
+	public int getFoodId() {
+		return foodId;
+	}
+
+	public void setFoodId(int foodId) {
+		this.foodId = foodId;
+	}
+
+	public String getDishName() {
+		return dishName;
+	}
+
+	public void setDishName(String dishName) {
+		this.dishName = dishName;
+	}
+
+	public double getCalories() {
+		return calories;
+	}
+
+	public void setCalories(double calories) {
+		this.calories = calories;
+	}
+
+	@Override
+	public String toString() {
+		return "Food [foodId=" + foodId + ", dishName=" + dishName + ", calories=" + calories + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(calories);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((dishName == null) ? 0 : dishName.hashCode());
+		result = prime * result + foodId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Food other = (Food) obj;
+		if (Double.doubleToLongBits(calories) != Double.doubleToLongBits(other.calories))
+			return false;
+		if (dishName == null) {
+			if (other.dishName != null)
+				return false;
+		} else if (!dishName.equals(other.dishName))
+			return false;
+		if (foodId != other.foodId)
+			return false;
+		return true;
+	}
 	
 	// getters & setters
 	
+	
+	
 	// to String
+	
 	
 
 }
