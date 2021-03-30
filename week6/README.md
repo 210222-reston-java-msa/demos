@@ -1,3 +1,6 @@
+> *Below are the questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.*
+> *I will post more material regarding Docker including a shell script of all of the commands we ran today so that you have these resources for future work.
+
 ## Docker
 
 1.  What is containerization?
