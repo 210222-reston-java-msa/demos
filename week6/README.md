@@ -23,5 +23,4 @@
 11.  What is Docker compose and why is it useful?
     
 12.  If you want to store state for a container, how does Docker recommend doing that?
-    
-13.  What is a Docker Network?
+   
