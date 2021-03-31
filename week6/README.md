@@ -99,8 +99,11 @@ FROM nginx:1.17.1-alpine
 COPY dist/hero-frontend /usr/share/nginx/html
 ```
 
-5. Build an image from the docker 
+5. Build an image from the Dockerfile with the following command: <br>
+    > `docker build -t hero-frontend:latest`
 
+6. Create a command by running the imamge on port 80 with the following command. <br>
+    > `docker run -p 80:80 -d --name my-hero-container  hero-frontend:latest`
 
 # Docker Images
 Blueprint for a container 
