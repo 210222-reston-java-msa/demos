@@ -8,8 +8,10 @@
 - The first half of this document contains guides on how to run a Docker container in an EC2.
 - The second half guides you in how to Dockerize your own Angular application.
 
+<br>
+<br>
 
-## *Running* `nsnake` *Container in an EC2*
+## *Running* `nsnake` *Container in an EC2* 🐍
 
 1. SSH into an EC2 instance.  You will only need 1 security rule which is supplied to you by default (SSH port 20).
 
@@ -56,7 +58,7 @@ CMD ["/usr/games/nsnake"]
 
 <br>
 
-## How to `Dockerize` and Angular app
+## How to `Dockerize` and Angular app 🦸
 
 1. Open an angular applicaiton (like [hero-frontend](https://github.com/210222-reston-java-msa/demos/tree/main/week5/hero-frontend)) in VScode.
 
