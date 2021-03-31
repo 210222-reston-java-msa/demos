@@ -1,7 +1,7 @@
 # Week 6: Docker and Microservices
 
-> *Below are some questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.* <br><br>
-> *Note that I've also included MicroService Questions.  I suggest dedicating 85% of your time to MSA and 15% to Docker.*
+> *Below are some questions that may be asked about Docker & Web/Microservices.  Most likely 2 or 3 of the Docker questions will be asked in your cumulative QC.  They are good questions to research.* <br><br>
+> *I suggest dedicating 85% of your time to MSA and 15% to Docker.*
 <br>
 
 ## Microservice Questions ⁉️
