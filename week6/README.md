@@ -1,8 +1,11 @@
-> *Below are the questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.* <br><br>
-<br>
+# Week 6: Docker and Microservices
+
+> *Below are the questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.* <br>
 
 ## Docker
 *Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.*
+
+> [Here](https://github.com/210222-reston-java-msa/demos/blob/main/week6/docker.md) are the notes and guide on Docker
 
 1.  What is containerization?
     
