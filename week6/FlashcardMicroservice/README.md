@@ -30,7 +30,7 @@ The details can be found in [Phase 1](./phase1).
 
 Now that we have our services communicating, we notice that there is a potential issue as we expand our application. We would have to keep track of the location of every service in order for our RestTemplate to communicate with. This is not sustainable, especially if our goal is to use horizontal scaling, where the location of our services will be changing dynamically.
 
-So we resolve this by levering Service Discovery with [Netflix Eureka](https://spring.io/guides/gs/service-registration-and-discovery/) and an API Gateway with [Netflix Zuul](https://spring.io/guides/gs/routing-and-filtering/).
+So we resolve this by levering Service Discovery with [Consul Discovery Agent[(https://www.consul.io/use-cases/service-discovery-and-health-checking) instead of [Netflix Eureka](https://spring.io/guides/gs/service-registration-and-discovery/) and an API Gateway with [Netflix Zuul](https://spring.io/guides/gs/routing-and-filtering/).
 
 The details can be found in [Phase 2](./phase2).
 
