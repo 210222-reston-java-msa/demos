@@ -61,8 +61,7 @@ nano Dockerfile
 FROM ubuntu:18.04
 
 # RUN specifies the duty of the container.  It should install this software
-RUN apt-get update && apt-get install -y libncurses5-dev && apt-get 
-install -y nsnake
+RUN apt-get update && apt-get install -y libncurses5-dev && apt-get install -y nsnake
 
 # CMD specifies the instruction that is to be executed when a Docker container starts
 # In this case, we are running the executable located at /usr/games/nsnake within the nginx container
