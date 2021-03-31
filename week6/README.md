@@ -78,7 +78,11 @@ CMD ["/usr/games/nsnake"]
     >`sudo docker run -it snake:auto` <br>
         the `-it` flag allows you to interact with the executable file, which, in this case, is the game itself.
 
+<br>
+
 <hr>
+
+<br>
 
 ## Creating our Own `Dockerfile` to deploy Angular resources onto nginx web server
 
@@ -104,6 +108,12 @@ COPY dist/hero-frontend /usr/share/nginx/html
 
 6. Create a command by running the imamge on port 80 with the following command. <br>
     > `docker run -p 80:80 -d --name my-hero-container  hero-frontend:latest`
+
+<br>
+
+<hr>
+
+<br>
 
 # Docker Images
 Blueprint for a container 
