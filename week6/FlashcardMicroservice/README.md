@@ -8,9 +8,9 @@ This tutorial will cover converting a basic monolithic Spring Boot application i
 
 * Obtain the starting application by cloning this repository
 ```bash
-git clone https://gitlab.com/revature_training/microservices-team.git
+git clone 
 ```
-The starting project is located at `microservices-team/microservices-standard-examples/example0/initial/`
+The starting project is located at ``
 
 * You will need to have an IDE, we recommend [Spring Tool Suite](https://spring.io/tools)
 
