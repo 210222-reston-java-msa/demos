@@ -1,5 +1,6 @@
 # Web & MicroServices
-> *A common accronym for Microservices is **MSA***.
+> *The first half of this document is a refresher on SOAP and REST.* <br>
+> *The second half of this document is about Microservices and tools we use within them* - *A common accronym for Microservices is **MSA***.
 
 ## Web Services
 A **web service** is a collection of open protocols and standards used for exchanging data between applications or systems.<br>
