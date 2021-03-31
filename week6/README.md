@@ -1,5 +1,6 @@
 > *Below are the questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.* <br><br>
-> *I will post more material regarding Docker including a shell script of all of the commands we ran today so that you have these resources for future work.*
+> *I will post more material regarding Docker including a shell script of all of the commands we ran today so that you have these resources for future work.* <br>
+> *I reccomend this resource for understanding the basics of virtualization vs. containerization.  Read: **[What is Docker? In Simple English](https://blog.usejournal.com/what-is-docker-in-simple-english-a24e8136b90b#:~:text=Terms%20definition,all%20out%20as%20one%20package)**
 
 <br>
 
