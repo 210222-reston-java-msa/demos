@@ -36,6 +36,10 @@
   
 <br>  
 
+## *Running `nsnake` *Container in an EC2*
+
+
+
 # Docker Images
 Blueprint for a container 
 
