@@ -4,9 +4,8 @@
 > *Note that I've also included MicroService Questions.  I suggest dedicating 85% of your time to MSA and 15% to Docker.*
 > 
 
-# Microservices/REST/SOAP QC Questions:
-
-### MSA Questions ⁉️
+## Microservice Questions ⁉️
+> Microservice notes are [here](https://github.com/210222-reston-java-msa/demos/edit/main/week6/microservices.md)
 
 1.  Compare the microservice and monolithic architectures. What are the advantages / disadvantages of each?
 
