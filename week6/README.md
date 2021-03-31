@@ -2,7 +2,7 @@
 
 > *Below are some questions that may be asked about Docker, most likely 2 or 3 of these will be asked in your cumulative QC.  They are good questions to research.* <br><br>
 > *Note that I've also included MicroService Questions.  I suggest dedicating 85% of your time to MSA and 15% to Docker.*
-> 
+<br>
 
 ## Microservice Questions ⁉️
 > [Here](https://github.com/210222-reston-java-msa/demos/edit/main/week6/microservices.md) are the Microservice notes.
