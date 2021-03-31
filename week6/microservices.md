@@ -83,8 +83,11 @@ There are six architectural constraints which makes any web service are listed b
 # Service Oriented Architecture - *SOA* :star:
 - SOA involves designing your application as a collection of services
   - **What's a Service?** Services are programs that run independently and achieve some business logic and communicate over a network.
+  <br>
 - See Martin Fowler's Essay on SOA ["Service Oriented Ambiguty"](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html)
 - See OpenGroup's [introduction to Service Oriented Architecture](https://www.opengroup.org/soa/source-book/soa/p1.html)
+
+> **SOA is better suited for large and complex business application environments that require integration with many heterogeneous applications**; smaller applications are not a good fit for SOA as they don’t need a messaging middleware component. **Microservices, on the other hand, are better suited for smaller and well-partitioned, web-based systems in which microservices give you much greater control as a developer**. 
 
 <br>
 
@@ -99,12 +102,14 @@ Microservices - also known as the microservice architecture - is an architectura
 - Independently deployable. 
 - Organized around business capabilities
 
-- MSA is a subset of SOA, but it satisfies a few other conditions:
+- MSA is a subset of SOA, but it satisfies a few other conditions: :star: :star: :star:
   - **Each Microservice MUST satisfy the SRP (Single Responsibility Principle)
     - Each Module should be responsible for ONE thing! (And do it well).
   - MSA can't be composed of other services
   - MSA achieve scalability and resilience through independence (we can take down or spin up instances of each service).
-  
+<br>
+> Like SOA, microservices architectures are made up of loosely coupled, reusable, and specialized components. However, rather than being adopted enterprise-wide, microservices are typically used to build individual applications in a way that makes them more agile, scalable, and resilient.
+<br>
 - In older models of Enterprise level SOA, services communicate using SOAP, so that means that each service has a `WSDL` which it uses to communicate with another service.
 - Today, most companies use RESTful Services
 - MSA in general, use **Service Registries and Discovery Clients** to allow communication without centralized routing.
