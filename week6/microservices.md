@@ -74,14 +74,25 @@ There are six architectural constraints which makes any web service are listed b
   - `xmlns:xsd, xmlns:soap`
 - WSDL specifies ports, messaes, operations, services
 
+<br>
 
-# Service Oriented Architecture - *SOA*
+<hr>
+
+<br>
+
+# Service Oriented Architecture - *SOA* :star:
 - SOA involves designing your application as a collection of services
   - **What's a Service?** Services are programs that run independently and achieve some business logic and communicate over a network.
 - See Martin Fowler's Essay on SOA ["Service Oriented Ambiguty"](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html)
 - See OpenGroup's [introduction to Service Oriented Architecture](https://www.opengroup.org/soa/source-book/soa/p1.html)
 
-## Microservices - *MSA*
+<br>
+
+<hr>
+
+<br>
+
+# Microservices - *MSA* :star:
 Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are:
 - Highly maintainable and testable. 
 - Loosely coupled. 
@@ -98,7 +109,13 @@ Microservices - also known as the microservice architecture - is an architectura
 - Today, most companies use RESTful Services
 - MSA in general, use **Service Registries and Discovery Clients** to allow communication without centralized routing.
 
-# Benefits of MSA over Monoliths
+<br>
+
+<hr>
+
+<br>
+
+# Benefits of MSA over Monoliths :star:
 Microservices are:
 - Loosely coupled 
 - Modular
@@ -116,6 +133,12 @@ Microservices are:
     - HTTP traffic can reduced by replacing it with **Messaging Queue's** like *Kafka* and *RabbitMQ*.
   - Spring Cloud Sleuth and Zipkin allows logging and tracing across your services.
   - Docker, Kubernetes (container orchestrator) or Docker Swarm and cloud platforms enable us to deploy MSA's
+
+<br>
+
+<hr>
+
+<br>
 
 # Netflix OSS for Microservices:
 - **Eureka Server**: Service Registry.  MSA's register their URI and status with Eureka
