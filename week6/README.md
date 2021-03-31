@@ -39,6 +39,7 @@
 ## *Running `nsnake` *Container in an EC2*
 
 1. SSH into an EC2 instance.  You will only need 1 security rule which is supplied to you by default (SSH port 20).
+
 2. Once you've ssh's in, run the following commands:
 
 ``` sh
@@ -51,7 +52,7 @@ sudo service docker start
 mkdir snakedocker
 cd snakedocker
 
-# Use the nano command to open up a text editor,
+# Use the nano command to open up a text editor
 nano Dockerfile
 
 # The following commands go inside your Dockerfile
@@ -68,15 +69,23 @@ install -y nsnake
 CMD ["/usr/games/nsnake"]
 ```
 
+3. Exit the `nano` text editor with the keyboard commands `ctrl` + `X`, then press `Y` to save.
 
+4. Build the image from the `Dockerfile` with the following command: 
+    `sudo docker build -t snake:auto .`
+    
+5. Finally, run the image with the following command and you'll load up the game thanks to the `CMD` command.
+    `sudo docker run -it snake:auto`
+        > the `-it` flag allows you to interact with the executable file, which, in this case, is the game itself.
 
+<hr>
 
 # Docker Images
 Blueprint for a container 
 
 [This video from VMWare draws an analogy to docker images being like Java classes with containers being analogous to Java objects](https://www.youtube.com/watch?v=EnJ7qX9fkcU&t=4s)
 
-Images form a kind of heirarchy. One image will be "From" another with added info, dependencies, commands, applications, etc. The  added info and command each form a new layer on the image. With each of these layers being indicated in a the Dockerfile that defines what's needed for the image. 
+Images form a kind of heirarchy. One image will be "From" another with added info, dependencies, commands, applications, etc. The  added info and command each form a new layer on the image. With each of these layers being indicated in a the Dockerfile that defines what's needed for the image.
 
 Images are named and tagged with the version. They also have an id which uniquely identifies them. 
 
