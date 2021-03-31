@@ -75,7 +75,7 @@ CMD ["/usr/games/nsnake"]
     >`sudo docker build -t snake:auto .`
     
 5. Finally, run the image with the following command and you'll load up the game thanks to the `CMD` command.
-    >`sudo docker run -it snake:auto`
+    >`sudo docker run -it snake:auto` <br>
         > the `-it` flag allows you to interact with the executable file, which, in this case, is the game itself.
 
 <hr>
