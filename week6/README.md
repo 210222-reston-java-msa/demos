@@ -85,8 +85,7 @@ CMD ["/usr/games/nsnake"]
 
 <br>
 
-## Creating our Own `Dockerfile` to deploy Angular resources onto nginx web server
-*This is called Dockerizing an Angular application*
+## How to `Dockerize` and Angular app
 
 1. Open an angular applicaiton (like [hero-frontend](https://github.com/210222-reston-java-msa/demos/tree/main/week5/hero-frontend)) in VScode.
 
