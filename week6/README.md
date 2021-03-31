@@ -36,7 +36,7 @@
   
 <br>  
 
-## *Running `nsnake` *Container in an EC2*
+## *Running* `nsnake` *Container in an EC2*
 
 1. SSH into an EC2 instance.  You will only need 1 security rule which is supplied to you by default (SSH port 20).
 
