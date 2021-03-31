@@ -6,11 +6,8 @@ This tutorial will cover converting a basic monolithic Spring Boot application i
 
 ### Getting Started: Prerequisites
 
-* Obtain the starting application by cloning this repository
-```bash
-git clone 
-```
-The starting project is located at ``
+* Obtain the starting application by cloning the starter **monolith** applicaiton [here](https://classroom.github.com/a/pPeCOHgo).
+  - You will need to clone the repository that's generated for you onto your local machine.  Then import it into your IDE.
 
 * You will need to have an IDE, we recommend [Spring Tool Suite](https://spring.io/tools)
 
