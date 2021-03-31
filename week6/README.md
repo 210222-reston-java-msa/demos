@@ -64,7 +64,4 @@ We can use the docker CLI to manage the images on our local system. We can list 
 Additionally, we can use the CLI to aid in connecting to a registry to quickly and easily distribute changes. In this case updating the software is as simple as updating the image. 
 
 Users can easily pull new images and spin up containers/applications with the modifications made. 
-    
-#### References
-- Video linked to above from VMWare (This is also in the Containerization References)
-- [References listed in Refernces in Containerization Refs.](./containerization.md#reference) 
+
