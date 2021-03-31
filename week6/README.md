@@ -5,7 +5,8 @@
 > 
 
 ## Microservice Questions ⁉️
-> Microservice notes are [here](https://github.com/210222-reston-java-msa/demos/edit/main/week6/microservices.md)
+> [Here](https://github.com/210222-reston-java-msa/demos/edit/main/week6/microservices.md) are the Microservice notes.
+<br>
 
 1.  Compare the microservice and monolithic architectures. What are the advantages / disadvantages of each?
 
@@ -66,6 +67,7 @@
 *Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.*
 
 > [Here](https://github.com/210222-reston-java-msa/demos/blob/main/week6/docker.md) are the notes and guide on Docker
+<br>
 
 1.  What is containerization?
     
