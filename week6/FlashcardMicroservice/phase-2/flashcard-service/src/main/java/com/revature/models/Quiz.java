@@ -1,12 +1,14 @@
 package com.revature.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -17,23 +19,20 @@ import lombok.ToString;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @EqualsAndHashCode @ToString
-public class Flashcard {
+public class Quiz {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	private String question;
-	private String answer;
+	private double grade;
 	private String name;
-	private Difficulty difficulty;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "topic_id")
-	private Topic topic;
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable
+	private List<Flashcard> cards;
 	
 	public int getId() {
 		return id;
 	}
-	
 }

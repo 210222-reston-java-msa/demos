@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+// Load balancing is done by Ribbon on the client side
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +21,8 @@ import com.revature.models.Quiz;
 import com.revature.repositories.QuizRepository;
 
 @RestController
-@RequestMapping("/quiz")
+// we remove the RequestMapping because the Gateway is handling all of our routing based on the uri of the service
+//@RequestMapping("/quiz")
 public class QuizController {
 
 	@Autowired
@@ -32,6 +35,7 @@ public class QuizController {
 	
 	// First we declare the RestTemplate as a bean to be autowired
 	@Bean
+	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
@@ -77,7 +81,7 @@ public class QuizController {
 	@GetMapping("/cards")
 	public ResponseEntity<List<Flashcard>> getCards() {
 		// Use the RestTemplate to CALL another service
-		List<Flashcard> all = this.restTemplate.getForObject("http://localhost:8081/flashcard", List.class);
+		List<Flashcard> all = this.restTemplate.getForObject("http://flashcard", List.class);
 		
 		if(all.isEmpty()) {
 			return ResponseEntity.noContent().build();

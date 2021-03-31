@@ -32,9 +32,8 @@ public class Flashcard {
 	@JoinColumn(name = "topic_id")
 	private Topic topic;
 	
-	
-	
 	public int getId() {
 		return id;
 	}
+	
 }

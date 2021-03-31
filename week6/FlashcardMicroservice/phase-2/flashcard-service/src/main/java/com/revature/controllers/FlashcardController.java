@@ -17,7 +17,6 @@ import com.revature.models.Flashcard;
 import com.revature.repositories.FlashcardRepository;
 
 @RestController
-@RequestMapping("flashcard")
 public class FlashcardController {
 	
 	@Autowired
