@@ -21,7 +21,7 @@ We will start off by separating the application into multiple smaller services t
 
 In our case, we will have 2 services for the quiz and flashcard services.
 
-The details can be found in [Phase 1](./phase1).
+The details can be found in [Phase 1](https://github.com/210222-reston-java-msa/demos/tree/main/week6/FlashcardMicroservice/phase-1).
 
 ## Phase 2: Manage our Services
 
