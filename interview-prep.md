@@ -1,0 +1,22 @@
+### **First** the **key points** you need to focus on is being :one: strong in your core Java knowledge, :two: know the Java 8 features, and :three: be able to adequately explain your **Project 3** work. 
+
+- What is a ClassLoader ?
+- What is Angular?
+- What are Angular directives?
+- What is Angular HTTPClientModule and HttpClient service and methods?
+- What is Node.JS?
+- Did you use POSTMAN and how did you use it?
+- What us Junit and give me some annotations?
+- What is Collection framework in Java?
+- What is difference between Set and Map? Set vs. List?
+- What is Stream API?
+- How can you sort data using Stream API?
+- What is Spring framework?
+- What is Spring Boot and features?
+- What is SpringBoot actuator?
+- What is hibernate?
+- What is hibernate advantanges over JDBC?
+- Give some annotations in Hibernate?
+- Did you use filter method in you project?
+- What is Docker and some commands?
+- What is Maven?
