@@ -1,5 +1,7 @@
 ### **First** the **key points** you need to focus on is being :one: strong in your core Java knowledge, :two: know the Java 8 features, and :three: be able to adequately explain your **Project 3** work. 
 
+- How to create routing for an angular application? 
+- How do you create and use mock objects for testing
 - What is a ClassLoader ?
 - What is Angular?
 - What are Angular directives?
