@@ -16,6 +16,9 @@
 2. Once you've ssh's in, run the following commands:
 
 ``` sh
+# Install Docker
+sudo yum install docker
+
 # Create a group of users within your EC@ instance with Docker permissions
 sudo groupadd docker
 sudo usermod -a -G docker ec2-user
