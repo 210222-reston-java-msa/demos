@@ -5,7 +5,7 @@ import java.util.List;
 import com.revature.models.Employee;
 
 /*
- * DAO stands for dsata access object -- the object (in impl form) that we use to access our DB
+ * DAO stands for data access object -- the object (in impl form) that we use to access our DB
  * We use the DAO design pattern to separate business logic (java) from our persistence layer
  */
 public interface EmployeeDAO {

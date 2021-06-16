@@ -14,7 +14,7 @@
 	</properties>
 	
 	
-	<!-- We are able to run mvn test because of this particular plugin  -->
+	<!-- We are able to run mvn test because of this particular plugin 
 	<build>
 		<finalName>maven-unit-test</finalName>
 		<plugins>
@@ -28,7 +28,7 @@
 		</plugins>
 	</build>
 	
-	
+	 -->
 
 	<dependencies>
 
