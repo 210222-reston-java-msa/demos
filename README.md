@@ -3,7 +3,7 @@ This is the batch repository for the remote Fullstack Java and Microservices Rev
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
 ### Slides (in PDF form) can be found [here](https://github.com/210222-reston-java-msa/demos/blob/main/slides.pdf)
-### Most Recent QC/Interview Guide can be found [here](https://github.com/210222-reston-java-msa/demos/blob/main/week6/README.md) :star:
+### Most Recent QC/Interview Guide can be found [here]() :star:
 > QC is important! It is meant to simulate the interview process.  Check out [this guide on how to do well](https://github.com/210222-reston-java-msa/demos/blob/main/how-to-do-well-in-qc.md). 
 
 ### Environment Setup Guide can be found [here](https://github.com/sophiagavrila/environment-setup).
