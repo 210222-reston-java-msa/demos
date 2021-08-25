@@ -51,8 +51,8 @@ public class Student {
 		id++;
 		this.studentId = gradeYear + "" + id; 
 	}
+	
 	// enroll() method
-
 	public void enroll() {
 		// Get inside a loop, then the user will hit 'Q' for quit to quit the program
 
@@ -97,6 +97,18 @@ public class Student {
 		System.out.println("Thank you for your payment of: $" + payment);
 		viewBalance();
 	}
+
+
+
+	// 5. Show Info 
+	public void showInfo() {
+		System.out.println("\nName: " + this.firstName + " " + this.lastName +  
+				"\nMember ID: " + this.memberId + 
+				"\nClasses enrolled in: " + this.enrolledClasses + 
+				"\nMonthly Dues: " + this.tuitionBalance);
+		
+	}
+
 
 	@Override
 	public String toString() {
