@@ -113,11 +113,14 @@ public class Student {
 				
 				coursesToAdd.add(newCourse);
 				tuitionBalance += Course.costOfCourse;
+				
+				scan.nextLine();
 
 			} else {
 
-				System.out.println("BREAK!");
+				System.out.println("======== breaking =======");
 				isDone = true;
+				
 				
 			}
 			

@@ -6,12 +6,16 @@ import java.util.Scanner;
 import com.revature.exceptions.NotAGradeException;
 import com.revature.models.Student;
 import com.revature.util.UtilityMethods;
+import com.google.UtilityClass;
 
 public class Driver {
 
-	public static Scanner scan = new Scanner(System.in);
+	private static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
+
+		UtilityClass.specialMethod();
+		
 		run();
 	}
 
